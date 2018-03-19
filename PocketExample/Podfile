@@ -1,0 +1,21 @@
+# Podspec Sources
+source 'https://github.com/CocoaPods/Specs.git'
+
+# Configuration
+inhibit_all_warnings!
+use_frameworks!
+platform :ios, '10.0'
+
+# Plugins
+plugin 'cocoapods-wholemodule'
+
+# Example App Target
+target 'Pocket' do
+    # UnicornKit
+    pod 'Pocket', :path => '..'
+
+    # Test Target
+    target 'PocketTests' do
+        inherit! :search_paths
+    end
+end

@@ -11,7 +11,6 @@ plugin 'cocoapods-wholemodule'
 
 # Example App Target
 target 'Pocket' do
-    # UnicornKit
     pod 'Pocket', :path => '..'
 
     # Test Target

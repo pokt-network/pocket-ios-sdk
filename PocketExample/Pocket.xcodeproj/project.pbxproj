@@ -15,6 +15,10 @@
 		8E953D3A205F3A380059105D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E953D39205F3A380059105D /* Assets.xcassets */; };
 		8E953D3D205F3A380059105D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E953D3B205F3A380059105D /* LaunchScreen.storyboard */; };
 		8E953D48205F3A380059105D /* PocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E953D47205F3A380059105D /* PocketTests.swift */; };
+		C502070A208F9C1500E4BA49 /* PocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5020709208F9C1500E4BA49 /* PocketProtocol.swift */; };
+		C502070C208F9CA900E4BA49 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502070B208F9CA900E4BA49 /* Wallet.swift */; };
+		C502070E208F9CB600E4BA49 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502070D208F9CB600E4BA49 /* Transaction.swift */; };
+		C50207102090C4BA00E4BA49 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C502070F2090C4BA00E4BA49 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		90B20D18E98992031EE0EB1B /* Pods_Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3869C686E756937731434E0 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 		A443E34B9F3AA3389C66AAA3 /* Pods-PocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C5020709208F9C1500E4BA49 /* PocketProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketProtocol.swift; sourceTree = "<group>"; };
+		C502070B208F9CA900E4BA49 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		C502070D208F9CB600E4BA49 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		C502070F2090C4BA00E4BA49 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		D5C17330B3488F4893FB9081 /* Pods_PocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,10 +108,12 @@
 		8E953D31205F3A380059105D /* Pocket */ = {
 			isa = PBXGroup;
 			children = (
+				C5020707208F9BC700E4BA49 /* Models */,
 				8E953D52205F3C0A0059105D /* AppDelegate */,
 				8E953D54205F3C1A0059105D /* Resources */,
 				8E953D53205F3C140059105D /* Storyboards */,
 				8E953D55205F3C210059105D /* ViewControllers */,
+				C5020709208F9C1500E4BA49 /* PocketProtocol.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -149,6 +159,16 @@
 				8E953D34205F3A380059105D /* ViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C5020707208F9BC700E4BA49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C502070B208F9CA900E4BA49 /* Wallet.swift */,
+				C502070D208F9CB600E4BA49 /* Transaction.swift */,
+				C502070F2090C4BA00E4BA49 /* Network.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ED43583FA1EB10854515C7F5 /* Frameworks */ = {
@@ -371,8 +391,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C502070C208F9CA900E4BA49 /* Wallet.swift in Sources */,
+				C502070A208F9C1500E4BA49 /* PocketProtocol.swift in Sources */,
+				C50207102090C4BA00E4BA49 /* Network.swift in Sources */,
 				8E953D35205F3A380059105D /* ViewController.swift in Sources */,
 				8E953D33205F3A380059105D /* AppDelegate.swift in Sources */,
+				C502070E208F9CB600E4BA49 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

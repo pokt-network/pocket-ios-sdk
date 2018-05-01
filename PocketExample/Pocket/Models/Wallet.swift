@@ -8,16 +8,10 @@
 
 import Foundation
 
-class Wallet {
-    var address: String
-    var privateKey: String
+struct Wallet {
+    var address = ""
+    var privateKey = ""
     var network: Network?
-    
-    init(address: String, privateKey: String, network: Network) {
-        self.address = address
-        self.privateKey = privateKey
-        self.network = network
-    }
 
     func createWalletWith(passphrase: String, network: Network) -> Wallet {
         // Create Wallet with passphrase

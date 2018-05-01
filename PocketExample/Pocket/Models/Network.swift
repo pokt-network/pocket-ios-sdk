@@ -8,9 +8,6 @@
 
 import Foundation
 
-class Network {
-    var tokenID: String
-    init(tokenID: String) {
-        self.tokenID = tokenID
-    }
+struct Network {
+    var tokenID = ""
 }

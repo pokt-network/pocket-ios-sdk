@@ -8,23 +8,15 @@
 
 import Foundation
 
-class Transaction {
+struct Transaction {
     
-    var nonce: String
-    var recipient: String
-    var value: String
-    var data: NSDictionary
-    var signed: String
+    var nonce = ""
+    var recipient = ""
+    var value = ""
+    var data = [AnyHashable: Any]()
+    var signed = ""
     
-    init(nonce: String, recipient: String, value: String, data: NSDictionary) {
-        self.nonce = nonce
-        self.recipient = recipient
-        self.value = value
-        self.data = data
-        self.signed = ""
-    }
-    
-    func signTransaction(transaction: Transaction) {
+    mutating func signTransaction(transaction: Transaction) {
         // Sign transaction
         let signedTransaction = ""
         self.signed = signedTransaction

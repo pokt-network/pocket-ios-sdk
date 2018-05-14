@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Pocket {
+public protocol Pocket {
     func createWallet(passphrase: String) -> Wallet
     func importWallet(walletKey: String, address: String) -> Wallet
     func createTransaction(nonce: String, recipient: String, value: String, data: Dictionary<AnyHashable, Any>) -> Transaction

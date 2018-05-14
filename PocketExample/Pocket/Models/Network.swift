@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct Network {
-    var tokenID = ""
+public struct Network {
+    public var tokenID = ""
 }

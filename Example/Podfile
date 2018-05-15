@@ -10,11 +10,11 @@ platform :ios, '10.0'
 plugin 'cocoapods-wholemodule'
 
 # Example App Target
-target 'Pocket' do
+target 'Example' do
     pod 'Pocket', :path => '..'
 
     # Test Target
-    target 'PocketTests' do
+    target 'ExampleTests' do
         inherit! :search_paths
     end
 end

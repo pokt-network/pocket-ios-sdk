@@ -1,0 +1,16 @@
+PODS:
+  - Pocket (0.0.1)
+
+DEPENDENCIES:
+  - Pocket (from `..`)
+
+EXTERNAL SOURCES:
+  Pocket:
+    :path: ..
+
+SPEC CHECKSUMS:
+  Pocket: 287782776413022c803e0c84200ae1dac587ac73
+
+PODFILE CHECKSUM: 3f7aee19afbd343d3573b9e79557ff5f7f6f65b3
+
+COCOAPODS: 1.4.0

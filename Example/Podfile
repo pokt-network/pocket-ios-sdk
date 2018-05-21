@@ -12,6 +12,8 @@ plugin 'cocoapods-wholemodule'
 # Example App Target
 target 'Example' do
     pod 'Pocket', :path => '..'
+    pod 'web3swift', :git => 'https://github.com/MercuryProtocol/web3.swift.git', :branch => 'master'
+    pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "develop"
 
     # Test Target
     target 'ExampleTests' do

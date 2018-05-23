@@ -13,9 +13,11 @@
 		8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */; };
 		8EA0AC5220AB204F006EE2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4E20AB204F006EE2D8 /* AppDelegate.swift */; };
 		8EA0AC5620AB205E006EE2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC5420AB205E006EE2D8 /* Assets.xcassets */; };
-		C5A2328B20B31624005EB924 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = C5A2328920B31624005EB924 /* Models */; };
-		C5A2328C20B31624005EB924 /* Protocols in Resources */ = {isa = PBXBuildFile; fileRef = C5A2328A20B31624005EB924 /* Protocols */; };
 		C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2328E20B31BE7005EB924 /* AccountViewController.swift */; };
+		C5E6625A20B59E24002B2E0A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625520B59E23002B2E0A /* Network.swift */; };
+		C5E6625B20B59E24002B2E0A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625620B59E23002B2E0A /* Transaction.swift */; };
+		C5E6625C20B59E24002B2E0A /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625720B59E23002B2E0A /* Wallet.swift */; };
+		C5E6625D20B59E24002B2E0A /* PocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625920B59E23002B2E0A /* PocketProtocol.swift */; };
 		F8113B342655585BC1408CD0 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD16E1AC8F7135DE1C964541 /* Pods_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +44,11 @@
 		8EA0AC5520AB205E006EE2D8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FC3302B34C9F8F580DC1830 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9C66DC876B5B807F5C7DD10F /* Pods_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5A2328920B31624005EB924 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		C5A2328A20B31624005EB924 /* Protocols */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Protocols; sourceTree = "<group>"; };
 		C5A2328E20B31BE7005EB924 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C5E6625520B59E23002B2E0A /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		C5E6625620B59E23002B2E0A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		C5E6625720B59E23002B2E0A /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		C5E6625920B59E23002B2E0A /* PocketProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketProtocol.swift; sourceTree = "<group>"; };
 		D4786E4E12C56198E341F2C8 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		DD16E1AC8F7135DE1C964541 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2F9E7F0663D1CD1DD817FE /* Pods-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleTests/Pods-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,8 +97,8 @@
 		8E953D26205F3A380059105D = {
 			isa = PBXGroup;
 			children = (
-				C5A2328920B31624005EB924 /* Models */,
-				C5A2328A20B31624005EB924 /* Protocols */,
+				C5E6625420B59E23002B2E0A /* Models */,
+				C5E6625820B59E23002B2E0A /* Protocols */,
 				8EA0AC4D20AB204F006EE2D8 /* AppDelegate */,
 				8EA0AC5320AB205E006EE2D8 /* Resources */,
 				8EA0AC4620AB204F006EE2D8 /* Storyboards */,
@@ -156,6 +160,24 @@
 				8EA0AC5520AB205E006EE2D8 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5E6625420B59E23002B2E0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C5E6625520B59E23002B2E0A /* Network.swift */,
+				C5E6625620B59E23002B2E0A /* Transaction.swift */,
+				C5E6625720B59E23002B2E0A /* Wallet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C5E6625820B59E23002B2E0A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C5E6625920B59E23002B2E0A /* PocketProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,8 +268,6 @@
 			files = (
 				8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */,
 				8EA0AC5620AB205E006EE2D8 /* Assets.xcassets in Resources */,
-				C5A2328B20B31624005EB924 /* Models in Resources */,
-				C5A2328C20B31624005EB924 /* Protocols in Resources */,
 				8EA0AC4F20AB204F006EE2D8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,9 +343,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E6625D20B59E24002B2E0A /* PocketProtocol.swift in Sources */,
+				C5E6625C20B59E24002B2E0A /* Wallet.swift in Sources */,
 				8EA0AC5220AB204F006EE2D8 /* AppDelegate.swift in Sources */,
 				8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */,
+				C5E6625A20B59E24002B2E0A /* Network.swift in Sources */,
 				C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */,
+				C5E6625B20B59E24002B2E0A /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

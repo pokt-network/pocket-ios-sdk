@@ -14,8 +14,20 @@ struct Quest: Codable {
     let lives: Int // number of tries left to complete
     let merkleRoot: String
     let hint: String
+
     
-    enum CodingKeys: String, CodingKeys {
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        title = try values.decode(String.self, forKey: .title)
+        lives = try values.decode(Int.self, forKey: .lives)
+        merkleRoot = try values.decode(String.self, forKey: .merkleRoot)
+        hint = try values.decode(String.self, forKey: .hint)
+    }
+    func encode(to encoder: Encoder) throws {
+        
+    }
+
+    enum CodingKeys: String, CodingKey {
         case title = "title"
         case lives = "lives"
         case merkleRoot = "merkleRoot"
@@ -25,7 +37,7 @@ struct Quest: Codable {
 }
 
 
-struct QuestToken {
+struct QuestToken: Codable {
     
     let name: String
     

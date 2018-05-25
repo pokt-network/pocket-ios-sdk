@@ -96,7 +96,7 @@ class ViewController: UIViewController {
     }
     
     func signTransaction (transaction: GethTransaction) {
-        
+        signTransaction(transaction: transaction)
     }
     
     func presentAccountViewController() {

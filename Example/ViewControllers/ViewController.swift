@@ -8,6 +8,7 @@
 
 import UIKit
 import web3swift
+import Geth
 
 class ViewController: UIViewController {
 
@@ -77,6 +78,25 @@ class ViewController: UIViewController {
         }
         
         return bool
+    }
+    
+    func createTransaction() -> GethTransaction {
+
+        let nonce = Int64(0)
+        let toAddress = GethAddress(fromHex: "0x")
+        let amount = GethNewBigInt(1)
+        let gasLimit = Int64(1)
+        let gasPrice = GethNewBigInt(1)
+        let data = Data()
+
+
+        let transaction = GethNewTransaction(nonce, toAddress!, amount, gasLimit, gasPrice, data)
+
+        return transaction!
+    }
+    
+    func signTransaction (transaction: GethTransaction) {
+        
     }
     
     func presentAccountViewController() {

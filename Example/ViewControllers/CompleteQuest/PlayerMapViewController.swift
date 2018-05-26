@@ -9,13 +9,14 @@
 import UIKit
 import MapKit
 
-class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
-    
+class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDataSource, AnnotationViewDelegate {
+
     @IBOutlet weak var mapView: MKMapView!
 
     fileprivate let locationManager = CLLocationManager()
-    fileprivate var startedLoadingPOIs = false
-
+    fileprivate var arViewController: ARViewController!
+    var currentUserLocation: CLLocation?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +53,9 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if locations.count > 0 {
             let location = locations.last!
+            
+            currentUserLocation = location
+            
             print("Accuracy: \(location.horizontalAccuracy)")
             if location.horizontalAccuracy < 100 {
                 
@@ -68,9 +72,37 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
 
+    @IBAction func completeQuest(_ sender: Any) {
+        arViewController = ARViewController()
 
-}
-// MARK: - Extensions
-extension ViewController: CLLocationManagerDelegate {
+        arViewController.dataSource = self
+        arViewController.maxVisibleAnnotations = 30
+        arViewController.headingSmoothingFactor = 0.05
+        
+        // TODO: Annotation should be added after verifying user is in 10 meters around the quest location.
+        let annotation = ARAnnotation()
+        annotation.title = "Test yeah"
+       
+        annotation.location = CLLocation.init(latitude: -34.586101, longitude: -58.432100)
+        
+        arViewController.setAnnotations([annotation])
+        
+        self.present(arViewController, animated: true, completion: nil)
+    }
+    
+    func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let annotationView = AnnotationView()
+        annotationView.annotation = viewForAnnotation
+        annotationView.delegate = self
+        annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        
+        return annotationView
+    }
+    
+    func didTouch(annotationView: AnnotationView) {
+        print("Tapped view for POI: \(annotationView.titleLabel?.text ?? "empty value")")
+    }
     
 }
+// MARK: - Extensions
+

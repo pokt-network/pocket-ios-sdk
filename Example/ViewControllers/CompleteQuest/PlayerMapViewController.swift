@@ -15,7 +15,7 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
 
     fileprivate let locationManager = CLLocationManager()
     fileprivate var startedLoadingPOIs = false
-    //fileprivate var places = [Place]()
+    fileprivate var places = [Place]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

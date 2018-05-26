@@ -22,7 +22,8 @@
                                 <rect key="frame" x="0.0" y="617" width="375" height="30"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <segue destination="kdm-hk-oNG" kind="show" id="tEv-5y-xeI"/>
+                                    <action selector="nextButtonPressed:" destination="1rW-Bd-HoS" eventType="touchUpInside" id="5UW-wg-IUK"/>
+                                    <segue destination="kdm-hk-oNG" kind="show" identifier="nextSegue" id="tEv-5y-xeI"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quest Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiv-XJ-mzh">
@@ -90,15 +91,21 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B5e-hf-GPG"/>
                     </view>
+                    <connections>
+                        <outlet property="hintTextField" destination="XpH-23-xqb" id="ifH-lp-hJD"/>
+                        <outlet property="numberOfTokensTextField" destination="xEW-VK-LUo" id="D07-wh-Ylu"/>
+                        <outlet property="questNameTextField" destination="Gs3-Xo-9xS" id="MOq-Sl-Ayd"/>
+                        <outlet property="tokenNameTextField" destination="bnT-L6-Phv" id="EkZ-5E-fQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qgp-qU-SYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="91.5" y="190.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Coordinates View Controller-->
         <scene sceneID="h0i-Kn-u6q">
             <objects>
-                <viewController id="kdm-hk-oNG" sceneMemberID="viewController">
+                <viewController id="kdm-hk-oNG" customClass="ChooseCoordinatesViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1TD-dz-NXc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,10 +130,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ntt-Fx-KGb"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="vb3-jT-oS2" id="w3X-yI-4AC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpC-rk-Fbw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="191"/>
+            <point key="canvasLocation" x="876" y="190"/>
         </scene>
     </scenes>
 </document>

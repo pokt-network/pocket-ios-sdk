@@ -12,15 +12,28 @@ import MapKit
 class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    
     fileprivate let locationManager = CLLocationManager()
+    fileprivate var startedLoadingPOIs = false
+    fileprivate var places = [Place]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.showsUserLocation = true
+
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+            locationManager.requestWhenInUseAuthorization()
+        }else{
+            print("Location services are disabled, please enable before trying again.")
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,7 +61,22 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
                 mapView.region = region
-                // More code later...
+                
+                if !startedLoadingPOIs {
+                    startedLoadingPOIs = true
+                    //2
+                    let loader = PlacesLoader()
+                    loader.loadPOIS(location: location, radius: 1000) { placesDict, error in
+                        //3
+                        if let dict = placesDict {
+                            print(dict)
+                        }
+                    }
+                }else{
+                    print("Not loading POIs")
+                }
+            }else{
+                print("Location accuracy is not under 100 meters, skipping...")
             }
         }else{
             print("Failed to get current location")

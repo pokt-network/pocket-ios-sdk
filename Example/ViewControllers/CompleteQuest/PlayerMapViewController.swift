@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDataSource, AnnotationViewDelegate {
-
+    
     @IBOutlet weak var mapView: MKMapView!
 
     fileprivate let locationManager = CLLocationManager()
@@ -81,10 +81,12 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
         
         // TODO: Annotation should be added after verifying user is in 10 meters around the quest location.
         let annotation = ARAnnotation()
-        annotation.title = "Test yeah"
+        annotation.title = "Banano quest"
        
         annotation.location = CLLocation.init(latitude: -34.586101, longitude: -58.432100)
-        
+        arViewController.addDebugUi()
+        arViewController.uiOptions.debugEnabled = true
+        arViewController.maxDistance = 10
         arViewController.setAnnotations([annotation])
         
         self.present(arViewController, animated: true, completion: nil)

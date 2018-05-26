@@ -14,13 +14,10 @@
         <scene sceneID="hvh-vj-QTK">
             <objects>
                 <viewController storyboardIdentifier="arViewControllerID" id="reX-H6-E5F" customClass="ARViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6xk-PX-XNb">
+                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" playing="YES" sceneName="banana.dae" allowsCameraControl="YES" id="6xk-PX-XNb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
-                    <connections>
-                        <outlet property="sceneView" destination="6xk-PX-XNb" id="6BL-n2-dIb"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8OF-XN-Kqx" sceneMemberID="firstResponder"/>
             </objects>

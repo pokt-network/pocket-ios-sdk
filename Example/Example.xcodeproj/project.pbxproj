@@ -31,6 +31,8 @@
 		C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2328E20B31BE7005EB924 /* AccountViewController.swift */; };
 		C5A6DE8D20B9A0AC00CEF45D /* CreateQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */; };
 		C5A6DE8F20B9A0B700CEF45D /* CompleteQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */; };
+		C5B1CBB820B9EC6D00DDF03A /* banana.dae in Resources */ = {isa = PBXBuildFile; fileRef = C5B1CBB720B9EC6D00DDF03A /* banana.dae */; };
+		C5B1CBBA20B9ED4000DDF03A /* ARBananaScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = C5B1CBB920B9ED4000DDF03A /* ARBananaScene.scn */; };
 		C5D9F2D320B9A418001B8509 /* PlayerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9F2D220B9A418001B8509 /* PlayerMapViewController.swift */; };
 		C5E6625A20B59E24002B2E0A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625520B59E23002B2E0A /* Network.swift */; };
 		C5E6625B20B59E24002B2E0A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625620B59E23002B2E0A /* Transaction.swift */; };
@@ -81,6 +83,8 @@
 		C5A2328E20B31BE7005EB924 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateQuest.storyboard; sourceTree = "<group>"; };
 		C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompleteQuest.storyboard; sourceTree = "<group>"; };
+		C5B1CBB720B9EC6D00DDF03A /* banana.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = banana.dae; sourceTree = "<group>"; };
+		C5B1CBB920B9ED4000DDF03A /* ARBananaScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARBananaScene.scn; sourceTree = "<group>"; };
 		C5D9F2D220B9A418001B8509 /* PlayerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMapViewController.swift; sourceTree = "<group>"; };
 		C5E6625520B59E23002B2E0A /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C5E6625620B59E23002B2E0A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -241,6 +245,8 @@
 				C53DA44420B9C396000F3FAD /* hdar_close@2x.png */,
 				C53DA44520B9C396000F3FAD /* DebugMapViewController.xib */,
 				C53DA44620B9C396000F3FAD /* hdar_close.png */,
+				C5B1CBB920B9ED4000DDF03A /* ARBananaScene.scn */,
+				C5B1CBB720B9EC6D00DDF03A /* banana.dae */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -379,6 +385,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B1CBBA20B9ED4000DDF03A /* ARBananaScene.scn in Resources */,
 				8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */,
 				C53DA45020B9C396000F3FAD /* hdar_close.png in Resources */,
 				C53DA44D20B9C396000F3FAD /* hdar_close@3x.png in Resources */,
@@ -388,6 +395,7 @@
 				C5A6DE8D20B9A0AC00CEF45D /* CreateQuest.storyboard in Resources */,
 				C5A6DE8F20B9A0B700CEF45D /* CompleteQuest.storyboard in Resources */,
 				C53DA44F20B9C396000F3FAD /* DebugMapViewController.xib in Resources */,
+				C5B1CBB820B9EC6D00DDF03A /* banana.dae in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

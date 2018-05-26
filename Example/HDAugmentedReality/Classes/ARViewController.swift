@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 import CoreLocation
+import SceneKit
+import ARKit
 
 /**
  *      Augmented reality view controller.
@@ -26,8 +28,10 @@ import CoreLocation
  *      https://github.com/DanijelHuis/HDAugmentedReality.git
  *
  */
-open class ARViewController: UIViewController, ARTrackingManagerDelegate
+open class ARViewController: UIViewController, ARTrackingManagerDelegate, ARSCNViewDelegate
 {
+    var sceneView: ARSCNView!
+    
     /// Data source
     open weak var dataSource: ARDataSource?
     /// Orientation mask for view controller. Make sure orientations are enabled in project settings also.
@@ -1178,6 +1182,7 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate
         /// Enables/Disables close button.
         public var closeButtonEnabled = true
     }
+    
 }
 
 

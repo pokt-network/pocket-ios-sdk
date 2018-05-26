@@ -11,6 +11,7 @@
 		6334239A20B87234004B2D5A /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239920B87234004B2D5A /* Networking.swift */; };
 		6334239C20B9B14C004B2D5A /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239B20B9B14C004B2D5A /* ChooseViewController.swift */; };
 		6334239E20B9B4AC004B2D5A /* CreateQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239D20B9B4AC004B2D5A /* CreateQuestViewController.swift */; };
+		633423A020B9C228004B2D5A /* ChooseCoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */; };
 		8EA0AC4F20AB204F006EE2D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4720AB204F006EE2D8 /* LaunchScreen.storyboard */; };
 		8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4920AB204F006EE2D8 /* Main.storyboard */; };
 		8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 		6334239920B87234004B2D5A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		6334239B20B9B14C004B2D5A /* ChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		6334239D20B9B4AC004B2D5A /* CreateQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateQuestViewController.swift; path = ViewControllers/Account/CreateQuestViewController.swift; sourceTree = SOURCE_ROOT; };
+		6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCoordinatesViewController.swift; path = ViewControllers/Account/ChooseCoordinatesViewController.swift; sourceTree = SOURCE_ROOT; };
 		8E953D2F205F3A380059105D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D43205F3A380059105D /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D49205F3A380059105D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				6334239D20B9B4AC004B2D5A /* CreateQuestViewController.swift */,
+				6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */,
 			);
 			path = CreateQuest;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				C5D9F2D320B9A418001B8509 /* PlayerMapViewController.swift in Sources */,
 				C5D9F2D820B9AE23001B8509 /* PlacesLoader.swift in Sources */,
 				8EA0AC5220AB204F006EE2D8 /* AppDelegate.swift in Sources */,
+				633423A020B9C228004B2D5A /* ChooseCoordinatesViewController.swift in Sources */,
 				6334239A20B87234004B2D5A /* Networking.swift in Sources */,
 				8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */,
 				C5E6625A20B59E24002B2E0A /* Network.swift in Sources */,

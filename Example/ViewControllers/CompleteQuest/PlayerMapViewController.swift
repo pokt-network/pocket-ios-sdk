@@ -15,12 +15,12 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
 
     fileprivate let locationManager = CLLocationManager()
     fileprivate var startedLoadingPOIs = false
-    fileprivate var places = [Place]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mapView.showsUserLocation = true
+        mapView.showsCompass = true
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -53,28 +53,13 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate {
         if locations.count > 0 {
             let location = locations.last!
             print("Accuracy: \(location.horizontalAccuracy)")
-
-            //2
             if location.horizontalAccuracy < 100 {
-                //3
+                
                 manager.stopUpdatingLocation()
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
                 mapView.region = region
 
-                if !startedLoadingPOIs {
-                    startedLoadingPOIs = true
-                    //2
-                    let loader = PlacesLoader()
-                    loader.loadPOIS(location: location, radius: 1000) { placesDict, error in
-                        //3
-                        if let dict = placesDict {
-                            print(dict)
-                        }
-                    }
-                }else{
-                    print("Not loading POIs")
-                }
             }else{
                 print("Location accuracy is not under 100 meters, skipping...")
             }

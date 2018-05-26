@@ -53,9 +53,11 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         
         // test transaction
         let configB = EthAccountConfiguration(namespace: "walletB", password: "12345")
-        let (keystoreB, accountB): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(configB)
         
-        print(accountAddress)
+        // KeyStore A & B
+        let (_, _): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(configB)
+        
+        print(accountAddress ?? "nil")
         
 //        if let walletAAccountAddress: GethAddress = accountA?.getAddress() {
             let amount = GethBigInt.bigInt(valueInEther:50)!

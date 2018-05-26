@@ -15,6 +15,10 @@
 		8EA0AC5220AB204F006EE2D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4E20AB204F006EE2D8 /* AppDelegate.swift */; };
 		8EA0AC5620AB205E006EE2D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC5420AB205E006EE2D8 /* Assets.xcassets */; };
 		C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2328E20B31BE7005EB924 /* AccountViewController.swift */; };
+		C5A6DE8D20B9A0AC00CEF45D /* CreateQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */; };
+		C5A6DE8F20B9A0B700CEF45D /* CompleteQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */; };
+		C5D9F2D320B9A418001B8509 /* PlayerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9F2D220B9A418001B8509 /* PlayerMapViewController.swift */; };
+		C5D9F2D520B9A485001B8509 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9F2D420B9A485001B8509 /* ARViewController.swift */; };
 		C5E6625A20B59E24002B2E0A /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625520B59E23002B2E0A /* Network.swift */; };
 		C5E6625B20B59E24002B2E0A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625620B59E23002B2E0A /* Transaction.swift */; };
 		C5E6625C20B59E24002B2E0A /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E6625720B59E23002B2E0A /* Wallet.swift */; };
@@ -47,6 +51,10 @@
 		8FC3302B34C9F8F580DC1830 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9C66DC876B5B807F5C7DD10F /* Pods_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A2328E20B31BE7005EB924 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateQuest.storyboard; sourceTree = "<group>"; };
+		C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompleteQuest.storyboard; sourceTree = "<group>"; };
+		C5D9F2D220B9A418001B8509 /* PlayerMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMapViewController.swift; sourceTree = "<group>"; };
+		C5D9F2D420B9A485001B8509 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		C5E6625520B59E23002B2E0A /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C5E6625620B59E23002B2E0A /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		C5E6625720B59E23002B2E0A /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
@@ -134,6 +142,8 @@
 			children = (
 				8EA0AC4720AB204F006EE2D8 /* LaunchScreen.storyboard */,
 				8EA0AC4920AB204F006EE2D8 /* Main.storyboard */,
+				C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */,
+				C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -141,8 +151,9 @@
 		8EA0AC4B20AB204F006EE2D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */,
-				C5A2328E20B31BE7005EB924 /* AccountViewController.swift */,
+				C5A6DE8B20B9A01800CEF45D /* Account */,
+				C5A6DE8A20B9A00D00CEF45D /* CompleteQuest */,
+				C5A6DE8920B99FD800CEF45D /* CreateQuest */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -162,6 +173,31 @@
 				8EA0AC5520AB205E006EE2D8 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C5A6DE8920B99FD800CEF45D /* CreateQuest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CreateQuest;
+			sourceTree = "<group>";
+		};
+		C5A6DE8A20B9A00D00CEF45D /* CompleteQuest */ = {
+			isa = PBXGroup;
+			children = (
+				C5D9F2D220B9A418001B8509 /* PlayerMapViewController.swift */,
+				C5D9F2D420B9A485001B8509 /* ARViewController.swift */,
+			);
+			path = CompleteQuest;
+			sourceTree = "<group>";
+		};
+		C5A6DE8B20B9A01800CEF45D /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */,
+				C5A2328E20B31BE7005EB924 /* AccountViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		C5E6625420B59E23002B2E0A /* Models */ = {
@@ -272,6 +308,8 @@
 				8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */,
 				8EA0AC5620AB205E006EE2D8 /* Assets.xcassets in Resources */,
 				8EA0AC4F20AB204F006EE2D8 /* LaunchScreen.storyboard in Resources */,
+				C5A6DE8D20B9A0AC00CEF45D /* CreateQuest.storyboard in Resources */,
+				C5A6DE8F20B9A0B700CEF45D /* CompleteQuest.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,12 +386,14 @@
 			files = (
 				C5E6625D20B59E24002B2E0A /* PocketProtocol.swift in Sources */,
 				C5E6625C20B59E24002B2E0A /* Wallet.swift in Sources */,
+				C5D9F2D320B9A418001B8509 /* PlayerMapViewController.swift in Sources */,
 				8EA0AC5220AB204F006EE2D8 /* AppDelegate.swift in Sources */,
 				6334239A20B87234004B2D5A /* Networking.swift in Sources */,
 				8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */,
 				C5E6625A20B59E24002B2E0A /* Network.swift in Sources */,
 				C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */,
 				C5E6625B20B59E24002B2E0A /* Transaction.swift in Sources */,
+				C5D9F2D520B9A485001B8509 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

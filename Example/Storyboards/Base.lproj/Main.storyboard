@@ -81,6 +81,11 @@
                                 <state key="normal" title="Import Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="importWalletAction:" destination="VKJ-1M-xVE" eventType="touchUpInside" id="cIp-oi-Tlw"/>
                                 </connections>
@@ -215,6 +220,8 @@
                             <constraint firstItem="49Z-YP-QeI" firstAttribute="top" secondItem="lQr-UY-jkm" secondAttribute="bottom" constant="20" id="1ay-QD-u3C"/>
                             <constraint firstItem="q3t-C8-mey" firstAttribute="centerX" secondItem="wg2-Ta-qfZ" secondAttribute="centerX" id="29Z-J5-oeN"/>
                             <constraint firstItem="iQ5-sA-aDC" firstAttribute="top" secondItem="HA1-he-U5M" secondAttribute="bottom" constant="30" id="4XQ-wX-XYQ"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lQr-UY-jkm" secondAttribute="trailing" constant="20" symbolic="YES" id="AQy-9f-xIE"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="49Z-YP-QeI" secondAttribute="trailing" constant="20" symbolic="YES" id="BuU-Sc-tsZ"/>
                             <constraint firstItem="kiA-Db-Owm" firstAttribute="trailing" secondItem="6HX-gq-f0o" secondAttribute="trailing" constant="20" id="M6U-ei-hHf"/>
                             <constraint firstItem="SKi-qS-ZPG" firstAttribute="leading" secondItem="6HX-gq-f0o" secondAttribute="leading" id="MKm-FF-63z"/>
                             <constraint firstItem="cwb-fA-WJb" firstAttribute="centerX" secondItem="wg2-Ta-qfZ" secondAttribute="centerX" id="N4c-Ne-f3D"/>
@@ -222,6 +229,7 @@
                             <constraint firstItem="lQr-UY-jkm" firstAttribute="leading" secondItem="6HX-gq-f0o" secondAttribute="leading" id="Qb9-GS-eJc"/>
                             <constraint firstItem="49Z-YP-QeI" firstAttribute="leading" secondItem="lQr-UY-jkm" secondAttribute="leading" id="UE9-ye-UYm"/>
                             <constraint firstItem="9Rz-k6-gLg" firstAttribute="top" secondItem="q3t-C8-mey" secondAttribute="bottom" constant="10" id="V1t-09-z9y"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SKi-qS-ZPG" secondAttribute="trailing" constant="20" symbolic="YES" id="Xlt-Uk-IdR"/>
                             <constraint firstItem="q3t-C8-mey" firstAttribute="top" secondItem="cwb-fA-WJb" secondAttribute="bottom" constant="15" id="csb-Ue-opl"/>
                             <constraint firstItem="HA1-he-U5M" firstAttribute="centerX" secondItem="kiA-Db-Owm" secondAttribute="centerX" id="fMi-4o-hdG"/>
                             <constraint firstItem="lQr-UY-jkm" firstAttribute="top" secondItem="SKi-qS-ZPG" secondAttribute="bottom" constant="30" id="g5E-nE-95T"/>

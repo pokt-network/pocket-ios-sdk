@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     
     func presentAccountViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "accountViewControllerID")
+        let mainViewController = storyboard.instantiateViewController(withIdentifier: "ChooseVC")
         
         self.present(mainViewController, animated: true, completion: nil)
     }

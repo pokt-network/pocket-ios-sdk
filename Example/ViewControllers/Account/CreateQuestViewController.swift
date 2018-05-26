@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
 class CreateQuestViewController: UIViewController {
 
+    @IBOutlet weak var questNameTextField: UITextField!
+    @IBOutlet weak var tokenNameTextField: UITextField!
+    @IBOutlet weak var hintTextField: UITextField!
+    @IBOutlet weak var numberOfTokensTextField: UITextField!
+    
+    var questModel: QuestModel?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +38,22 @@ class CreateQuestViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "nextSegue" {
+            
+                let controller = segue.destination as! ChooseCoordinatesViewController
+                controller.questModel = questModel
+            
+        }
+    }
+    @IBAction func nextButtonPressed(_ sender: Any) {
+        
+        questModel = QuestModel.init(questName: questNameTextField.text ?? "", tokenName: tokenNameTextField.text ?? "", hint: hintTextField.text ?? "", numberOfTokens: Int(numberOfTokensTextField.text ?? "1")!)
+        
+        
+        
+        
+    }
+    
 }

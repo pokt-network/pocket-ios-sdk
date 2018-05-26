@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var newPassphraseTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -80,24 +79,7 @@ class ViewController: UIViewController {
         return bool
     }
     
-    func createTransaction() -> GethTransaction {
 
-        let nonce = Int64(0)
-        let toAddress = GethAddress(fromHex: "0x")
-        let amount = GethNewBigInt(1)
-        let gasLimit = Int64(1)
-        let gasPrice = GethNewBigInt(1)
-        let data = Data()
-
-
-        let transaction = GethNewTransaction(nonce, toAddress!, amount, gasLimit, gasPrice, data)
-
-        return transaction!
-    }
-    
-    func signTransaction (transaction: GethTransaction) {
-        signTransaction(transaction: transaction)
-    }
     
     func presentAccountViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

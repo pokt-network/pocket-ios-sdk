@@ -22,7 +22,7 @@ class ChooseViewController: UIViewController {
         
         var key: Data?
         let account = EthAccountCoordinator.default.account
-
+        print(EthAccountCoordinator.default.account?.getAddress().getHex())
         do {
          key = try EthAccountCoordinator.default.keystore?.exportKey(account, passphrase: "123", newPassphrase: "123")
         } catch _ {
@@ -30,14 +30,41 @@ class ChooseViewController: UIViewController {
         }
         do {
         let json = try JSON(data: key!)
+        let account = try EthAccountCoordinator.default.keystore?.importKey(json.rawData(), passphrase: "123", newPassphrase: "123")
+        print(account)
+            //print(json)
             
-            let cipherText = json["crypto"]["ciphertext"]
-            let iv = json["crypto"]["cipherparams"]["iv"]
             
+            print(json["crypto"])
+            let ciphertext = json["crypto"]["ciphertext"].string
+            let iv = json["crypto"]["cipherparams"]["iv"].string
+            print(ciphertext)
+            print(iv)
+            
+            let bytes: Array<UInt8> = ciphertext!.bytes
+
+            let bytesIV: Array<UInt8> = iv!.bytes
             do {
-                let aes = try AES(key: "keykeykeykeykeyk", iv: "drowssapdrowssap") // aes128
-                let test = try aes.encrypt(Array("Nullam quis risus eget urna mollis ornare vel eu leo.".utf8))
-            } catch { }
+                
+                
+               //let aes = try AES(key: bytes, blockMode: CBC(iv: bytesIV))
+                
+                let aes = try AES(key: ciphertext!, iv: iv!)
+                
+            //let aes = try AES(key: "\(bytes)", iv: iv!)
+                print(aes)
+                
+                
+            } catch {}
+            //cipher
+            //print(aes)
+            //print(bytes)
+            //let cipher:
+            //let decrypted = Cipher.decrypt(bytes)
+            
+            //print(decrypted)
+            //let decryptedAES = aes.decrypt(<#T##bytes: ArraySlice<UInt8>##ArraySlice<UInt8>#>)
+            //print("\(aes)")
             
             
         } catch {

@@ -49,10 +49,7 @@ class CreateQuestViewController: UIViewController {
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
         
-        questModel = Quest.init(name: questNameTextField.text ?? "", tokenName: tokenNameTextField.text ?? "", hint: hintTextField.text ?? "", numTokens: Int32(numberOfTokensTextField.text ?? "1")!, id: Int32(0))
-        
-        
-        
+        questModel = Quest.init(name: questNameTextField.text ?? "", tokenName: tokenNameTextField.text ?? "", hint: hintTextField.text ?? "", numTokens: Int32(numberOfTokensTextField.text ?? "1")!, id: Int32(0), latitude: 0.0, longitude: 0.0)
         
     }
     

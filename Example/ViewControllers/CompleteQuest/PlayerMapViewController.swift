@@ -15,7 +15,9 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
 
     fileprivate let locationManager = CLLocationManager()
     fileprivate var arViewController: ARViewController!
+    
     var currentUserLocation: CLLocation?
+    var activeQuest: Quest?
     
     override func viewDidLoad() {
         super.viewDidLoad()

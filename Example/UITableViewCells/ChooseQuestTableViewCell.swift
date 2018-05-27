@@ -11,6 +11,8 @@ import UIKit
 class ChooseQuestTableViewCell: UITableViewCell {
 
     @IBOutlet weak var questNameLabel: UILabel!
+    @IBOutlet weak var tokenCountsLabel: UILabel!
+    @IBOutlet weak var questHintLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -32,33 +32,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-Yb-j8z">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-Yb-j8z">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Hok-Af-E9I" customClass="ChooseQuestTableViewCell" customModule="Example" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="66" id="Hok-Af-E9I" customClass="ChooseQuestTableViewCell" customModule="Example" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hok-Af-E9I" id="lYa-V8-cJu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quest name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSy-ij-w5c">
-                                                    <rect key="frame" x="25" y="11" width="325" height="21"/>
+                                                    <rect key="frame" x="10" y="12.5" width="98.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAY-Vq-cYB" userLabel="Tokens Count Label">
+                                                    <rect key="frame" x="349" y="22.5" width="11" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g87-pT-qAe" userLabel="Quest Hint Label">
+                                                    <rect key="frame" x="10" y="38" width="355" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="bSy-ij-w5c" firstAttribute="centerY" secondItem="lYa-V8-cJu" secondAttribute="centerY" id="Z04-JP-fDy"/>
-                                                <constraint firstItem="bSy-ij-w5c" firstAttribute="leading" secondItem="lYa-V8-cJu" secondAttribute="leadingMargin" constant="10" id="pSl-Bp-a01"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="bSy-ij-w5c" secondAttribute="trailing" constant="10" id="wNI-Y3-ghf"/>
+                                                <constraint firstItem="bSy-ij-w5c" firstAttribute="leading" secondItem="g87-pT-qAe" secondAttribute="leading" id="C6A-Ex-FnN"/>
+                                                <constraint firstItem="g87-pT-qAe" firstAttribute="top" secondItem="bSy-ij-w5c" secondAttribute="bottom" constant="5" id="PkT-c1-U2V"/>
+                                                <constraint firstItem="g87-pT-qAe" firstAttribute="leading" secondItem="lYa-V8-cJu" secondAttribute="leading" constant="10" id="Q8N-NP-mYt"/>
+                                                <constraint firstItem="AAY-Vq-cYB" firstAttribute="trailing" secondItem="lYa-V8-cJu" secondAttribute="trailingMargin" id="QVd-3a-mYw"/>
+                                                <constraint firstItem="bSy-ij-w5c" firstAttribute="centerY" secondItem="lYa-V8-cJu" secondAttribute="centerY" constant="-10" id="Z04-JP-fDy"/>
+                                                <constraint firstItem="AAY-Vq-cYB" firstAttribute="centerY" secondItem="lYa-V8-cJu" secondAttribute="centerY" id="vMQ-8w-C4v"/>
+                                                <constraint firstAttribute="trailing" secondItem="g87-pT-qAe" secondAttribute="trailing" constant="10" id="x23-lU-VfK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="questHintLabel" destination="g87-pT-qAe" id="9Cw-CD-lIh"/>
                                             <outlet property="questNameLabel" destination="bSy-ij-w5c" id="9iD-BD-JJ3"/>
+                                            <outlet property="tokenCountsLabel" destination="AAY-Vq-cYB" id="Wgl-Sj-lrX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -84,7 +103,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4X-hg-AVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="73" y="133"/>
+            <point key="canvasLocation" x="72.799999999999997" y="132.68365817091455"/>
         </scene>
         <!--Map View-->
         <scene sceneID="8wA-ck-Mut">

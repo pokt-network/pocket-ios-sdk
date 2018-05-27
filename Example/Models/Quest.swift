@@ -16,12 +16,7 @@ public struct Quest {
     public var hint:String?
     public var numTokens:Int32?
     public var id:Int32
+    public var latitude:Double?
+    public var longitude:Double?
 
-    
-//    public init(questName: String?,tokenName: String?,hint: String?,numberOfTokens: Int?){
-//        self.questName = questName
-//        self.tokenName = tokenName
-//        self.hint = hint
-//        self.numberOfTokens = numberOfTokens
-//        }
 }

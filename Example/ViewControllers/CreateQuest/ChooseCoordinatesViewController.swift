@@ -44,6 +44,8 @@ class ChooseCoordinatesViewController: UIViewController, CLLocationManagerDelega
         
         // get coordinates
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        questModel?.latitude = locValue.latitude
+        questModel?.longitude = locValue.longitude
         print("locations = \(locValue.latitude) \(locValue.longitude)")
         
         // zoom in

@@ -26,12 +26,12 @@ class ChooseViewController: UIViewController {
         let gethAccount = EthAccountCoordinator.default.importPrivateKey(jsonKey, passphrase: currentPassphrase, newPassphrase: currentPassphrase)
     
     
-        completeButton.backgroundColor = .clear
+        //completeButton.backgroundColor = .clear
         completeButton.layer.cornerRadius = 5
         completeButton.layer.borderWidth = 1
         completeButton.layer.borderColor = UIColor.black.cgColor
         
-        createButton.backgroundColor = .clear
+        //createButton.backgroundColor = .clear
         createButton.layer.cornerRadius = 5
         createButton.layer.borderWidth = 1
         createButton.layer.borderColor = UIColor.black.cgColor

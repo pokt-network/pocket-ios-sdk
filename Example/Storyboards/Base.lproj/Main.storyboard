@@ -24,6 +24,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="oeE-BC-T7j"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <state key="normal" title="PLAY">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -37,9 +38,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANANO QUEST" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OA-DM-9tx">
-                                <rect key="frame" x="47.5" y="312.5" width="281" height="43"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BANANO QUEST" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6OA-DM-9tx">
+                                <rect key="frame" x="20" y="254" width="335" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="fAI-hW-SNP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="67"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -49,10 +53,12 @@
                         <constraints>
                             <constraint firstItem="ESE-JR-erx" firstAttribute="top" secondItem="go2-8H-eFX" secondAttribute="top" constant="77" id="Azw-qT-pgF"/>
                             <constraint firstItem="6OA-DM-9tx" firstAttribute="centerY" secondItem="Zc2-ly-9Ps" secondAttribute="centerY" id="Fsy-UB-U8K"/>
+                            <constraint firstItem="go2-8H-eFX" firstAttribute="trailing" secondItem="6OA-DM-9tx" secondAttribute="trailing" constant="20" id="V6b-RA-5F0"/>
                             <constraint firstItem="ESE-JR-erx" firstAttribute="centerX" secondItem="Zc2-ly-9Ps" secondAttribute="centerX" id="e4P-yO-tt5"/>
                             <constraint firstItem="go2-8H-eFX" firstAttribute="trailing" secondItem="ghX-3S-hRg" secondAttribute="trailing" constant="16" id="h0J-0f-ahQ"/>
                             <constraint firstItem="go2-8H-eFX" firstAttribute="bottom" secondItem="ghX-3S-hRg" secondAttribute="bottom" constant="20" id="o8G-2E-at6"/>
                             <constraint firstItem="6OA-DM-9tx" firstAttribute="centerX" secondItem="Zc2-ly-9Ps" secondAttribute="centerX" id="sNJ-aL-oGN"/>
+                            <constraint firstItem="6OA-DM-9tx" firstAttribute="leading" secondItem="go2-8H-eFX" secondAttribute="leading" constant="20" id="tyL-H5-lWX"/>
                             <constraint firstItem="ghX-3S-hRg" firstAttribute="leading" secondItem="go2-8H-eFX" secondAttribute="leading" constant="16" id="x5y-Vi-wzr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="go2-8H-eFX"/>
@@ -65,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DPf-63-jak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2586" y="116"/>
+            <point key="canvasLocation" x="2584.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Create-->
         <scene sceneID="7Tj-q8-qVv">
@@ -191,27 +197,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-xc-ZTh">
-                                <rect key="frame" x="82" y="138" width="210" height="90"/>
-                                <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="CCv-2k-JNu"/>
-                                    <constraint firstAttribute="height" constant="90" id="c4M-hI-4sY"/>
-                                </constraints>
-                                <state key="normal" title="Create Quest">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="createQuestPressed:" destination="St9-00-dXZ" eventType="touchUpInside" id="F5a-qG-j8u"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjZ-SG-Ubr">
-                                <rect key="frame" x="82" y="406" width="210" height="90"/>
+                                <rect key="frame" x="20" y="406" width="335" height="90"/>
                                 <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="JTN-vd-VbZ"/>
-                                    <constraint firstAttribute="width" constant="210" id="qZd-ib-PBI"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
                                 <state key="normal" title="Complete Quest">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -219,13 +211,30 @@
                                     <action selector="completeQuestPressed:" destination="St9-00-dXZ" eventType="touchUpInside" id="rUC-ro-Zt1"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-xc-ZTh">
+                                <rect key="frame" x="20" y="138" width="335" height="90"/>
+                                <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="c4M-hI-4sY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <state key="normal" title="Create Quest">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createQuestPressed:" destination="St9-00-dXZ" eventType="touchUpInside" id="F5a-qG-j8u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.9841768327" green="1" blue="0.1118673192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hIh-xc-ZTh" firstAttribute="centerX" secondItem="Rbl-jD-VmP" secondAttribute="centerX" id="PfB-2h-oEG"/>
+                            <constraint firstItem="Rbl-jD-VmP" firstAttribute="trailing" secondItem="EjZ-SG-Ubr" secondAttribute="trailing" constant="20" id="6wt-Mn-ko9"/>
+                            <constraint firstItem="hIh-xc-ZTh" firstAttribute="leading" secondItem="Rbl-jD-VmP" secondAttribute="leading" constant="20" id="CiS-Jc-AV4"/>
+                            <constraint firstItem="Rbl-jD-VmP" firstAttribute="trailing" secondItem="hIh-xc-ZTh" secondAttribute="trailing" constant="20" id="IyS-HZ-FW1"/>
                             <constraint firstItem="EjZ-SG-Ubr" firstAttribute="centerX" secondItem="Rbl-jD-VmP" secondAttribute="centerX" id="TgB-kg-A0h"/>
                             <constraint firstItem="Rbl-jD-VmP" firstAttribute="bottom" secondItem="EjZ-SG-Ubr" secondAttribute="bottom" constant="171" id="X3d-AJ-J3R"/>
                             <constraint firstItem="hIh-xc-ZTh" firstAttribute="top" secondItem="Rbl-jD-VmP" secondAttribute="top" constant="118" id="lfn-rF-ACK"/>
+                            <constraint firstItem="EjZ-SG-Ubr" firstAttribute="leading" secondItem="Rbl-jD-VmP" secondAttribute="leading" constant="20" id="rBV-Lj-gRe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rbl-jD-VmP"/>
                     </view>

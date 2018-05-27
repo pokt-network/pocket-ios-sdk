@@ -51,32 +51,34 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         //createTransaction(nonce: nonce, toAddress: gethContractAddress!, amount: amount!, gasLimit: gasLimit, gasPrice: gasPrice, data: data!)
         //createTransaction(nonce: nonce, address: toAddress!, encodedFunctionData: data, gasLimit: gasLimit!, gasPrice: gasPrice!, data: data)
         
-        // test transaction
-        let configB = EthAccountConfiguration(namespace: "walletB", password: "12345")
+//        // test transaction
+//        let configB = EthAccountConfiguration(namespace: "walletB", password: "12345")
+//
+//        // KeyStore A & B
+//        let (_, _): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(configB)
+//
+//        print(accountAddress ?? "nil")
+//
+////        if let walletAAccountAddress: GethAddress = accountA?.getAddress() {
+//            let amount = GethBigInt.bigInt(valueInEther:50)!
+//            let transferFunction = EthFunction(name: "transfer", inputParameters: [accountAddress!, amount])
+////        }
+//
+//        let encodedTransferFunction = web3swift.encode(transferFunction)
+//        print("\(encodedTransferFunction.toHexString())")
+//
+//        let nonce: Int64 = 0
+//        let gasPrice = GethNewBigInt(20000000000)!
+//        let gasLimit = GethNewBigInt(4300000)!
+//        let contractAddress = "0xb3Bd49E28f8F832b8d1E246106991e546c323502"
+//        var addressError: NSError? = nil
+//        let gethContractAddress: GethAddress! = GethNewAddressFromHex(contractAddress, &addressError)
+//        let signedTx = web3swift.sign(address: gethContractAddress, encodedFunctionData: encodedTransferFunction, nonce: nonce, gasLimit: gasLimit, gasPrice: gasPrice)
+//
+//        let signedTxData = try! signedTx?.encodeRLP()
+//        print("\(signedTxData!.toHexString())\n\(signedTxData!.bytes)")
+//
         
-        // KeyStore A & B
-        let (_, _): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(configB)
-        
-        print(accountAddress ?? "nil")
-        
-//        if let walletAAccountAddress: GethAddress = accountA?.getAddress() {
-            let amount = GethBigInt.bigInt(valueInEther:50)!
-            let transferFunction = EthFunction(name: "transfer", inputParameters: [accountAddress!, amount])
-//        }
-        
-        let encodedTransferFunction = web3swift.encode(transferFunction)
-        print("\(encodedTransferFunction.toHexString())")
-        
-        let nonce: Int64 = 0
-        let gasPrice = GethNewBigInt(20000000000)!
-        let gasLimit = GethNewBigInt(4300000)!
-        let contractAddress = "0xb3Bd49E28f8F832b8d1E246106991e546c323502"
-        var addressError: NSError? = nil
-        let gethContractAddress: GethAddress! = GethNewAddressFromHex(contractAddress, &addressError)
-        let signedTx = web3swift.sign(address: gethContractAddress, encodedFunctionData: encodedTransferFunction, nonce: nonce, gasLimit: gasLimit, gasPrice: gasPrice)
-        
-        let signedTxData = try! signedTx?.encodeRLP()
-        print("\(signedTxData!.toHexString())\n\(signedTxData!.bytes)")
         
     }
     override func viewWillAppear(_ animated: Bool) {

@@ -9,12 +9,13 @@
 import Foundation
 import MapKit
 
-public struct QuestModel {
+public struct Quest {
     
-    public var questName = ""
-    public var tokenName = ""
-    public var hint = ""
-    public var numberOfTokens = 1
+    public var name:String?
+    public var tokenName:String?
+    public var hint:String?
+    public var numTokens:Int32?
+    public var id:Int32
 
     
 //    public init(questName: String?,tokenName: String?,hint: String?,numberOfTokens: Int?){

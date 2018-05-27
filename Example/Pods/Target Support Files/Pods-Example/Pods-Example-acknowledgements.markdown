@@ -15,18 +15,6 @@ Permission is granted to anyone to use this software for any purpose,including c
 - This notice may not be removed or altered from any source or binary distribution.
 - Redistributions of any form whatsoever must retain the following acknowledgment: 'This product includes software developed by the "Marcin Krzyzanowski" (http://krzyzanowskim.com/).'
 
-## GoogleMaps
-
-Copyright 2018 Google
-
-## GooglePlacePicker
-
-Copyright 2018 Google
-
-## GooglePlaces
-
-Copyright 2018 Google
-
 ## Pocket
 
 The MIT License (MIT)

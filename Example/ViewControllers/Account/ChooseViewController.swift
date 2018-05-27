@@ -7,19 +7,17 @@
 //
 
 import UIKit
-import Geth
-import web3swift
+import MapKit
 import SwiftyJSON
-import CryptoSwift
-
+import web3swift
 class ChooseViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         var key: Data?
         let account = EthAccountCoordinator.default.account
         print(EthAccountCoordinator.default.account?.getAddress().getHex())
@@ -56,46 +54,46 @@ class ChooseViewController: UIViewController {
 //        print(account)
             //print(json)
             
-        
-            
-            print(json["crypto"])
-            let ciphertext = json["crypto"]["ciphertext"].string
-            let iv = json["crypto"]["cipherparams"]["iv"].string
-            print(ciphertext)
-            print(iv)
-            
-            let bytes: Array<UInt8> = ciphertext!.bytes
-
-            let bytesIV: Array<UInt8> = iv!.bytes
-            do {
-                
-                
-               //let aes = try AES(key: bytes, blockMode: CBC(iv: bytesIV))
-                
-                let aes = try AES(key: ciphertext!, iv: iv!)
-                
-            //let aes = try AES(key: "\(bytes)", iv: iv!)
-                print(aes)
-                
-                
-            } catch {}
-            //cipher
-            //print(aes)
-            //print(bytes)
-            //let cipher:
-            //let decrypted = Cipher.decrypt(bytes)
-            
-            //print(decrypted)
-            //let decryptedAES = aes.decrypt(<#T##bytes: ArraySlice<UInt8>##ArraySlice<UInt8>#>)
-            //print("\(aes)")
-            
-            
+//
+//
+//            print(json["crypto"])
+//            let ciphertext = json["crypto"]["ciphertext"].string
+//            let iv = json["crypto"]["cipherparams"]["iv"].string
+//            print(ciphertext)
+//            print(iv)
+//
+//            let bytes: Array<UInt8> = ciphertext!.bytes
+//
+//            let bytesIV: Array<UInt8> = iv!.bytes
+//            do {
+//
+//
+//               //let aes = try AES(key: bytes, blockMode: CBC(iv: bytesIV))
+//
+//                let aes = try AES(key: ciphertext!, iv: iv!)
+//
+//            //let aes = try AES(key: "\(bytes)", iv: iv!)
+//                print(aes)
+//
+//
+//            } catch {}
+//            //cipher
+//            //print(aes)
+//            //print(bytes)
+//            //let cipher:
+//            //let decrypted = Cipher.decrypt(bytes)
+//
+//            //print(decrypted)
+//            //let decryptedAES = aes.decrypt(<#T##bytes: ArraySlice<UInt8>##ArraySlice<UInt8>#>)
+//            //print("\(aes)")
+//
+//
         } catch {
             print(error)
         }
-        
 
-        
+
+
 //        do {
 //            json = try JSONDecoder
 //            print(json)
@@ -103,7 +101,7 @@ class ChooseViewController: UIViewController {
 //            json = nil
 //        }
 //        print(EthAccountCoordinator.default.keystore?.exportKey(account, passphrase: "12", newPassphrase: "123"))
-        
+
         completeButton.backgroundColor = .clear
         completeButton.layer.cornerRadius = 5
         completeButton.layer.borderWidth = 1

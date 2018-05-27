@@ -15,6 +15,7 @@
 		633423A220B9CFCB004B2D5A /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A120B9CFCB004B2D5A /* Quest.swift */; };
 		633423A420B9EC6E004B2D5A /* ChooseQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */; };
 		633423A720BA4AD8004B2D5A /* Keystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A620BA4AD8004B2D5A /* Keystore.swift */; };
+		633423A920BA5B5E004B2D5A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A820BA5B5E004B2D5A /* WelcomeViewController.swift */; };
 		8EA0AC4F20AB204F006EE2D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4720AB204F006EE2D8 /* LaunchScreen.storyboard */; };
 		8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4920AB204F006EE2D8 /* Main.storyboard */; };
 		8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		633423A120B9CFCB004B2D5A /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseQuestViewController.swift; sourceTree = "<group>"; };
 		633423A620BA4AD8004B2D5A /* Keystore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keystore.swift; sourceTree = "<group>"; };
+		633423A820BA5B5E004B2D5A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		8E953D2F205F3A380059105D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D43205F3A380059105D /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D49205F3A380059105D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */,
 				C5A2328E20B31BE7005EB924 /* AccountViewController.swift */,
 				6334239B20B9B14C004B2D5A /* ChooseViewController.swift */,
+				633423A820BA5B5E004B2D5A /* WelcomeViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -325,7 +328,6 @@
 				8E953D2C205F3A380059105D /* Frameworks */,
 				8E953D2D205F3A380059105D /* Resources */,
 				449E6B6673056385940AD4C5 /* [CP] Embed Pods Frameworks */,
-				137C7A04210E2B7B490F8355 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -424,28 +426,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		137C7A04210E2B7B490F8355 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
-				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
-				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		449E6B6673056385940AD4C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -514,6 +494,7 @@
 				633423A220B9CFCB004B2D5A /* Quest.swift in Sources */,
 				6334239C20B9B14C004B2D5A /* ChooseViewController.swift in Sources */,
 				6334239E20B9B4AC004B2D5A /* CreateQuestViewController.swift in Sources */,
+				633423A920BA5B5E004B2D5A /* WelcomeViewController.swift in Sources */,
 				C5D9F2D320B9A418001B8509 /* PlayerMapViewController.swift in Sources */,
 				C53DA44920B9C396000F3FAD /* ARAnnotationView.swift in Sources */,
 				C53DA44720B9C396000F3FAD /* ARAnnotation.swift in Sources */,

@@ -16,7 +16,7 @@ class CreateQuestViewController: UIViewController {
     @IBOutlet weak var hintTextField: UITextField!
     @IBOutlet weak var numberOfTokensTextField: UITextField!
     
-    var questModel: QuestModel?
+    var questModel: Quest?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -49,7 +49,7 @@ class CreateQuestViewController: UIViewController {
     }
     @IBAction func nextButtonPressed(_ sender: Any) {
         
-        questModel = QuestModel.init(questName: questNameTextField.text ?? "", tokenName: tokenNameTextField.text ?? "", hint: hintTextField.text ?? "", numberOfTokens: Int(numberOfTokensTextField.text ?? "1")!)
+        questModel = Quest.init(name: questNameTextField.text ?? "", tokenName: tokenNameTextField.text ?? "", hint: hintTextField.text ?? "", numTokens: Int32(numberOfTokensTextField.text ?? "1")!, id: Int32(0))
         
         
         

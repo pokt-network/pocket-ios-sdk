@@ -1,16 +1,6 @@
 PODS:
   - CryptoSwift (0.9.0)
-  - Geth (1.8.3)
-  - GoogleMaps (2.7.0):
-    - GoogleMaps/Maps (= 2.7.0)
-  - GoogleMaps/Base (2.7.0)
-  - GoogleMaps/Maps (2.7.0):
-    - GoogleMaps/Base
-  - GooglePlacePicker (2.7.0):
-    - GoogleMaps (= 2.7.0)
-    - GooglePlaces (= 2.7.0)
-  - GooglePlaces (2.7.0):
-    - GoogleMaps/Base (= 2.7.0)
+  - Geth (1.8.8)
   - Pocket (0.0.1)
   - SwiftyJSON (4.1.0)
   - web3swift (0.0.9):
@@ -19,9 +9,6 @@ PODS:
 
 DEPENDENCIES:
   - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `develop`)
-  - GoogleMaps
-  - GooglePlacePicker
-  - GooglePlaces
   - Pocket (from `..`)
   - SwiftyJSON
   - web3swift (from `https://github.com/MercuryProtocol/web3.swift.git`, branch `master`)
@@ -29,9 +16,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Geth
-    - GoogleMaps
-    - GooglePlacePicker
-    - GooglePlaces
     - SwiftyJSON
 
 EXTERNAL SOURCES:
@@ -54,14 +38,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CryptoSwift: ba0dcdfcb2f5307ae8ef55a2d4ad394d2c3cf80f
-  Geth: e00dad6a7592facdf063214be13b28b7e73b0df2
-  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
-  GooglePlacePicker: 59ea44db173c58486ad6123993e81feefcbce9c3
-  GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
+  Geth: 483ea44b5f930b72320218290b939ba8e2389aaf
   Pocket: 287782776413022c803e0c84200ae1dac587ac73
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   web3swift: 9cf4ccef0c7f7e9f9abb3bc5867789b928800af6
 
-PODFILE CHECKSUM: 3260f595e10a142e44d63a8dd3b7b43118726e59
+PODFILE CHECKSUM: 1158f3ff7210b9575ddb931f6e9e0cccd2e87903
 
 COCOAPODS: 1.5.2

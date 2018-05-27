@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 class ChooseCoordinatesViewController: UIViewController, CLLocationManagerDelegate {
-    var questModel: QuestModel?
+    var questModel: Quest?
     @IBOutlet weak var mapView: MKMapView!
     fileprivate let locationManager = CLLocationManager()
     

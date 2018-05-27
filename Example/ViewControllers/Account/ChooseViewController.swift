@@ -22,7 +22,7 @@ class ChooseViewController: UIViewController {
         
         var key: Data?
         let account = EthAccountCoordinator.default.account
-        print(EthAccountCoordinator.default.account?.getAddress().getHex())
+
         do {
          key = try EthAccountCoordinator.default.keystore?.exportKey(account, passphrase: "123", newPassphrase: "123")
         } catch _ {
@@ -30,16 +30,14 @@ class ChooseViewController: UIViewController {
         }
         do {
         let json = try JSON(data: key!)
-            //print(json)
-            print(json["crypto"])
-            let ciphertext = json["crypto"]["ciphertext"]
-            let iv = json["crypto"]["cipherparams"]["iv"]
-            print(ciphertext)
-            print(iv)
-            let aes = try AES(key: "\(ciphertext)", iv: "\(iv)")
             
-            let decryptedAES = aes.decrypt(<#T##bytes: ArraySlice<UInt8>##ArraySlice<UInt8>#>)
-            print("\(aes)")
+            let cipherText = json["crypto"]["ciphertext"]
+            let iv = json["crypto"]["cipherparams"]["iv"]
+            
+            do {
+                let aes = try AES(key: "keykeykeykeykeyk", iv: "drowssapdrowssap") // aes128
+                let test = try aes.encrypt(Array("Nullam quis risus eget urna mollis ornare vel eu leo.".utf8))
+            } catch { }
             
             
         } catch {

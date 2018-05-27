@@ -60,6 +60,11 @@ class AnnotationView: ARAnnotationView {
             sceneView = myView
             
             self.backgroundColor = UIColor.clear
+            
+            //
+            let button = UIButton(frame: CGRect(x: 10, y: 30, width: 50, height: 50))
+            button.titleLabel?.text = "Submit"
+//            button.addTarget(self, action: #selector(self.pressButton(_:)), for: .touchUpInside)
         }
     }
     

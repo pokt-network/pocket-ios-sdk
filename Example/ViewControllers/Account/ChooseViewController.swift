@@ -26,12 +26,10 @@ class ChooseViewController: UIViewController {
         let gethAccount = EthAccountCoordinator.default.importPrivateKey(jsonKey, passphrase: currentPassphrase, newPassphrase: currentPassphrase)
     
     
-        completeButton.backgroundColor = .clear
         completeButton.layer.cornerRadius = 5
         completeButton.layer.borderWidth = 1
         completeButton.layer.borderColor = UIColor.black.cgColor
         
-        createButton.backgroundColor = .clear
         createButton.layer.cornerRadius = 5
         createButton.layer.borderWidth = 1
         createButton.layer.borderColor = UIColor.black.cgColor
@@ -68,7 +66,7 @@ class ChooseViewController: UIViewController {
         let storyboard = UIStoryboard(name: "CreateQuest", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "CreateVC") as! CreateQuestViewController
         vc.title = "Create"
-        
+        navigationController?.navigationBar.backgroundColor = UIColor.yellow
         navigationController?.pushViewController(vc, animated: true)
         
     }
@@ -78,7 +76,7 @@ class ChooseViewController: UIViewController {
         let storyboard = UIStoryboard(name: "CompleteQuest", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ChooseQuestVC") as! ChooseQuestViewController
         vc.title = "Choose Quest"
-        
+        navigationController?.navigationBar.backgroundColor = UIColor.yellow
         navigationController?.pushViewController(vc, animated: true)
         
     }

@@ -174,7 +174,6 @@
 - (GethHash*)getTxHash;
 - (GethHash*)getUncleHash;
 - (GethHeaders*)getUncles;
-- (NSString*)string;
 @end
 
 @interface GethBloom : NSObject <goSeqRefInterface> {
@@ -367,7 +366,6 @@
 - (int64_t)getTime;
 - (GethHash*)getTxHash;
 - (GethHash*)getUncleHash;
-- (NSString*)string;
 @end
 
 @interface GethHeaders : NSObject <goSeqRefInterface> {
@@ -548,6 +546,8 @@
 - (void)setEthereumNetStats:(NSString*)v;
 - (BOOL)whisperEnabled;
 - (void)setWhisperEnabled:(BOOL)v;
+- (NSString*)pprofAddress;
+- (void)setPprofAddress:(NSString*)v;
 @end
 
 @interface GethNodeInfo : NSObject <goSeqRefInterface> {
@@ -614,8 +614,8 @@
 - (int64_t)getGasUsed;
 - (GethLogs*)getLogs;
 - (NSData*)getPostState;
+- (long)getStatus;
 - (GethHash*)getTxHash;
-- (NSString*)string;
 @end
 
 @interface GethStrings : NSObject <goSeqRefInterface> {
@@ -705,7 +705,6 @@
 - (GethHash*)getSigHash;
 - (GethAddress*)getTo;
 - (GethBigInt*)getValue;
-- (NSString*)string;
 - (GethTransaction*)withSignature:(NSData*)sig chainID:(GethBigInt*)chainID error:(NSError**)error;
 @end
 

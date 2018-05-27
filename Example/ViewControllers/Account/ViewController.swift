@@ -76,7 +76,6 @@ class ViewController: UIViewController {
         let jsonKey = privateKeyTextView.text
         let currentPassphrase = currentPassphraseTextField.text
         let newPassphrase = newPassphraseTextField.text
-        
         if isImportWalletInputsValid() {
             let privateKey = EthAccountCoordinator.default.importPrivateKey(jsonKey!, passphrase: currentPassphrase!, newPassphrase: newPassphrase!)
             if privateKey != nil {

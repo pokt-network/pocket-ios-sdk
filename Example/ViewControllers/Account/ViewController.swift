@@ -41,8 +41,10 @@ class ViewController: UIViewController {
     
     func presentAccountViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainViewController = storyboard.instantiateViewController(withIdentifier: "ChooseVC")
-        present(mainViewController, animated: true, completion: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChooseVC")
+        
+         navigationController?.pushViewController(vc, animated: true)
+//        present(mainViewController, animated: true, completion: nil)
     }
 
 }

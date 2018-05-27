@@ -25,9 +25,10 @@ class ChooseQuestViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.row)"
-        return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ChooseQuestTableViewCell
+        cell?.questNameLabel?.text = "\(indexPath.row)"
+        
+        return cell ?? UITableViewCell.init()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,8 +42,8 @@ class ChooseQuestViewController: UIViewController, UITableViewDelegate, UITableV
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if  segue.identifier == questSegueIdentifier,
-            let destination = segue.destination as? PlayerMapViewController,
-            let blogIndex = tableView.indexPathForSelectedRow?.row
+            let _ = segue.destination as? PlayerMapViewController,
+            let _ = tableView.indexPathForSelectedRow?.row
         {
             //destination.blogName = swiftBlogs[blogIndex]
         }

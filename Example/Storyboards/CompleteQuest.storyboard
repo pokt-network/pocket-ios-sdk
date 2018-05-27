@@ -57,6 +57,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="bSy-ij-w5c" secondAttribute="trailing" constant="10" id="wNI-Y3-ghf"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="questNameLabel" destination="bSy-ij-w5c" id="9iD-BD-JJ3"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

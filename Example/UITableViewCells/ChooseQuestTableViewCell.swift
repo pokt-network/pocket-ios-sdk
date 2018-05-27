@@ -10,9 +10,13 @@ import UIKit
 
 class ChooseQuestTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var questNameLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        questNameLabel.text = ""
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

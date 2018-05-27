@@ -14,9 +14,6 @@ target 'Example' do
     pod 'Pocket', :path => '..'
     pod 'web3swift', :git => 'https://github.com/MercuryProtocol/web3.swift.git', :branch => 'master'
     pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "develop"
-    pod 'GooglePlaces'
-    pod 'GooglePlacePicker'
-    pod 'GoogleMaps'
     pod 'SwiftyJSON'
 
     # Test Target

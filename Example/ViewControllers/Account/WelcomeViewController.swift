@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        playButton.backgroundColor = .clear
+        //playButton.backgroundColor = .clear
         playButton.layer.cornerRadius = 5
         playButton.layer.borderWidth = 1
 //        playButton.layer.borderColor = UIColor.black.cgColor

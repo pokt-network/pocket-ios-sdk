@@ -497,7 +497,7 @@ open class ARViewController: UIViewController, ARTrackingManagerDelegate, ARSCNV
             let x = self.xPositionForAnnotationView(annotationView, heading: self.trackingManager.heading)
             let y = self.yPositionForAnnotationView(annotationView)
             
-            annotationView.frame = CGRect(x: x, y: y, width: annotationView.bounds.size.width, height: annotationView.bounds.size.height)
+            annotationView.frame = CGRect(x: x, y: y, width: annotationView.bounds.size.width + 60, height: annotationView.bounds.size.height + 60)
         }
     }
     

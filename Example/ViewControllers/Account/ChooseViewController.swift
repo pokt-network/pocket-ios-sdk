@@ -29,11 +29,34 @@ class ChooseViewController: UIViewController {
             key = nil
         }
         do {
-        let json = try JSON(data: key!)
-        let account = try EthAccountCoordinator.default.keystore?.importKey(json.rawData(), passphrase: "123", newPassphrase: "123")
-        print(account)
+        var json = try JSON(data: key!)
+            
+            
+            let keystore = Keystore(json: json)
+            
+            if let encoded = try? JSONEncoder().encode(keystore) {
+                UserDefaults.standard.set(encoded, forKey: "keystore")
+            }
+            
+            if let userData = UserDefaults.standard.data(forKey: "keystore"),
+                let user = try? JSONDecoder().decode(Keystore.self, from: userData) {
+                
+                print(user)
+            }
+//            let userDefaults = UserDefaults.standard
+//            userDefaults.setValue(NSKeyedArchiver.archivedData(withRootObject: keystore), forKey: "keystore")
+//            userDefaults.synchronize()
+//            print(json)
+//            
+//            let test: Keystore?
+//            test = NSKeyedUnarchiver.unarchiveObject(with: (userDefaults.object(forKey: "keystore") as! NSData) as Data) as! Keystore
+//            print(test)
+            
+//        let account = try EthAccountCoordinator.default.keystore?.importKey(json.rawData(), passphrase: "123", newPassphrase: "123")
+//        print(account)
             //print(json)
             
+        
             
             print(json["crypto"])
             let ciphertext = json["crypto"]["ciphertext"].string

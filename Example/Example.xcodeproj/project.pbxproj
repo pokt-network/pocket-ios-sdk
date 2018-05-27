@@ -14,6 +14,7 @@
 		633423A020B9C228004B2D5A /* ChooseCoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */; };
 		633423A220B9CFCB004B2D5A /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A120B9CFCB004B2D5A /* Quest.swift */; };
 		633423A420B9EC6E004B2D5A /* ChooseQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */; };
+		633423A720BA4AD8004B2D5A /* Keystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A620BA4AD8004B2D5A /* Keystore.swift */; };
 		8EA0AC4F20AB204F006EE2D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4720AB204F006EE2D8 /* LaunchScreen.storyboard */; };
 		8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4920AB204F006EE2D8 /* Main.storyboard */; };
 		8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCoordinatesViewController.swift; path = ViewControllers/Account/ChooseCoordinatesViewController.swift; sourceTree = SOURCE_ROOT; };
 		633423A120B9CFCB004B2D5A /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseQuestViewController.swift; sourceTree = "<group>"; };
+		633423A620BA4AD8004B2D5A /* Keystore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keystore.swift; sourceTree = "<group>"; };
 		8E953D2F205F3A380059105D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D43205F3A380059105D /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D49205F3A380059105D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				C5E6625620B59E23002B2E0A /* Transaction.swift */,
 				C5E6625720B59E23002B2E0A /* Wallet.swift */,
 				633423A120B9CFCB004B2D5A /* Quest.swift */,
+				633423A620BA4AD8004B2D5A /* Keystore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */,
 				C5E6625A20B59E24002B2E0A /* Network.swift in Sources */,
 				C53DA44A20B9C396000F3FAD /* ARConfiguration.swift in Sources */,
+				633423A720BA4AD8004B2D5A /* Keystore.swift in Sources */,
 				C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */,
 				C5F5011920B9D184005330DF /* AnnotationView.swift in Sources */,
 				C53DA44B20B9C396000F3FAD /* ARViewController.swift in Sources */,

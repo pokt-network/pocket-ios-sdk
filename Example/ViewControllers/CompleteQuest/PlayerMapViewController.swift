@@ -89,20 +89,32 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
         
         // TODO: Annotation should be added after verifying user is in 10 meters around the quest location.
         // following data is for testing
-        let annotation = ARAnnotation()
-        annotation.title = "Banano quest"
-        annotation.location = CLLocation.init(latitude: -34.586101, longitude: -58.432100)
-        // end of testing data
-        
-        // AR options, debugging options should be used only for testing
-        arViewController.addDebugUi()
-        arViewController.uiOptions.debugEnabled = true
-        arViewController.maxDistance = 10
-        
-        // We add the annotations that for Banano quest is 1 at a time
-        arViewController.setAnnotations([annotation])
-        // ARvc presentation
-        self.present(arViewController, animated: true, completion: nil)
+        let questLocation = CLLocation(latitude: (activeQuest?.latitude)!, longitude: (activeQuest?.longitude)!)
+        let distance = questLocation.distance(from: currentUserLocation!)
+        if distance <= 20 {
+            let annotation = ARAnnotation()
+            annotation.title = activeQuest?.name
+            annotation.location = questLocation
+            
+            // AR options, debugging options should be used only for testing
+//            arViewController.addDebugUi()
+            arViewController.uiOptions.debugEnabled = false
+            arViewController.maxDistance = 20
+            
+            // We add the annotations that for Banano quest is 1 at a time
+            arViewController.setAnnotations([annotation])
+            // ARvc presentation
+            self.present(arViewController, animated: true, completion: nil)
+        }else{
+            let alertController = UIAlertController(title: "Not in range", message: "\(activeQuest?.name ?? "") quest is not within 10 meters of your current location", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
+                print("You've pressed Ok");
+                self.dismiss(animated: false, completion: nil)
+            }
+            alertController.addAction(action)
+            self.present(alertController, animated: true, completion: nil)
+        }
+
     }
     
     func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
@@ -118,6 +130,14 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
     func didTouch(annotationView: AnnotationView) {
         // TODO: Add any wanted action to happen when annotation is tapped
         print("Tapped view for POI: \(annotationView.titleLabel?.text ?? "empty value")")
+        
+        let alertController = UIAlertController(title: "Success!", message: "Congratulations, quest completed.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { (action:UIAlertAction) in
+            print("You've pressed Ok");
+            self.dismiss(animated: false, completion: nil)
+        }
+        alertController.addAction(action)
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

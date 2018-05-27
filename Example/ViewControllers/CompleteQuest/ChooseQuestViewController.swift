@@ -61,15 +61,21 @@ class ChooseQuestViewController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         currentIndexPath = IndexPath(row: indexPath.row, section: indexPath.section)
-        self.performSegue(withIdentifier: "ShowQuestSegue", sender: nil)
+        
+        let storyboard = UIStoryboard(name: "CompleteQuest", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PlayerVC") as? PlayerMapViewController
+        vc?.activeQuest = quests[(currentIndexPath?.row)!]
+        
+        navigationController?.pushViewController(vc!, animated: true)
+        
+//        self.performSegue(withIdentifier: "ShowQuestSegue", sender: nil)
     }
     
     func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if  segue.identifier == questSegueIdentifier,
-            let vc = segue.destination as? PlayerMapViewController,
+        if (segue.identifier == questSegueIdentifier) {
+            let vc = segue.destination as? PlayerMapViewController
             let _ = tableView.indexPathForSelectedRow?.row
-        {
-            vc.activeQuest = quests[(currentIndexPath?.row)!]
+            vc?.activeQuest = quests[(currentIndexPath?.row)!]
             //destination.blogName = swiftBlogs[blogIndex]
         }
     }

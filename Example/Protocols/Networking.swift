@@ -80,7 +80,7 @@ func getQuestList(from: String, completion: @escaping (Array<Quest>) -> Void) {
                 let scanner = Scanner(string: questId.stringValue)
                 var value: Int32 = 0
                 if scanner.scanInt32(&value) {
-                    result.append(Quest(name: nil, tokenName: nil, hint: nil, numTokens: nil, id: value))
+//                    result.append(Quest(name: nil, tokenName: nil, hint: nil, numTokens: nil, id: value))
                 }
             });
         } else {
@@ -98,8 +98,9 @@ func getQuest(from: String, questId: Int32, completion: @escaping (Quest?) -> Vo
         if (response != JSON.null) {
             let questValues = response["queryResponse"].arrayValue
             //Order: name, hint, merkleRoot, creatorAddress, tokenName, numTokens
-            let quest = Quest(name: questValues[0].stringValue, tokenName: questValues[4].stringValue, hint: questValues[1].stringValue, numTokens: questValues[5].int32Value, id: questId)
-            completion(quest)
+//            let quest = Quest(name: questValues[0].stringValue, tokenName: questValues[4].stringValue, hint: questValues[1].stringValue, numTokens: questValues[5].int32Value, id: questId)
+//            completion(quest)
+            completion(nil)
         } else {
             completion(nil)
         }

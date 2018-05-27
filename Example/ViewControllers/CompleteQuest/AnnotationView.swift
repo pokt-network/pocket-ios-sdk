@@ -61,7 +61,7 @@ class AnnotationView: ARAnnotationView {
             distanceLabel?.text = String(format: "%.2f km", annotation.distanceFromUser / 1000)
             
             // Scene for 3d object
-            let myView = SCNView(frame: CGRect(x: 10, y: 30, width: 200, height: 200), options: nil)
+            let myView = SCNView(frame: CGRect(x: 10, y: 30, width: 180, height: 180), options: nil)
             
             myView.scene = SCNScene.init(named: "banana.dae")
             myView.allowsCameraControl = true
@@ -72,7 +72,7 @@ class AnnotationView: ARAnnotationView {
             sceneView = myView
             
             // Submit button
-            let button = UIButton(frame: CGRect(x: self.frame.width - 20, y: self.frame.height - 20, width: 80, height: 80))
+            let button = UIButton(frame: CGRect(x: 10, y: self.frame.height, width: self.frame.width - 10, height: 35))
             
             button.setTitle("Submit", for: .normal)
             button.layer.cornerRadius = 10
@@ -92,6 +92,8 @@ class AnnotationView: ARAnnotationView {
         super.layoutSubviews()
         titleLabel?.frame = CGRect(x: 10, y: 0, width: self.frame.size.width, height: 30)
         distanceLabel?.frame = CGRect(x: 10, y: 30, width: self.frame.size.width, height: 20)
+        sceneView?.frame = CGRect(x: 10, y: 30, width: 180, height: 180)
+        submitButton?.frame = CGRect(x: 10, y: self.frame.height, width: self.frame.width - 10, height: 35)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

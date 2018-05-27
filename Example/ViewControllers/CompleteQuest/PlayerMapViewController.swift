@@ -19,15 +19,17 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Map settings
         mapView.showsUserLocation = true
         mapView.showsCompass = true
-
+        
+        // Location manager setup
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestAlwaysAuthorization()
-
+        
+        // Checks is location services are enabled to start updating location
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
             locationManager.requestWhenInUseAuthorization()
@@ -51,6 +53,7 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // Location update
         if locations.count > 0 {
             let location = locations.last!
             
@@ -60,8 +63,10 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
             if location.horizontalAccuracy < 100 {
                 
                 manager.stopUpdatingLocation()
+                // span: is how much it should zoom into the user location
                 let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
                 let region = MKCoordinateRegion(center: location.coordinate, span: span)
+                // updates map with current user location
                 mapView.region = region
 
             }else{
@@ -73,35 +78,43 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
     }
 
     @IBAction func completeQuest(_ sender: Any) {
+        // AR init
         arViewController = ARViewController()
-
+        // AR Setup
         arViewController.dataSource = self
         arViewController.maxVisibleAnnotations = 30
         arViewController.headingSmoothingFactor = 0.05
         
         // TODO: Annotation should be added after verifying user is in 10 meters around the quest location.
+        // following data is for testing
         let annotation = ARAnnotation()
         annotation.title = "Banano quest"
-       
         annotation.location = CLLocation.init(latitude: -34.586101, longitude: -58.432100)
+        // end of testing data
+        
+        // AR options, debugging options should be used only for testing
         arViewController.addDebugUi()
         arViewController.uiOptions.debugEnabled = true
         arViewController.maxDistance = 10
-        arViewController.setAnnotations([annotation])
         
+        // We add the annotations that for Banano quest is 1 at a time
+        arViewController.setAnnotations([annotation])
+        // ARvc presentation
         self.present(arViewController, animated: true, completion: nil)
     }
     
     func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        // View for the annotation setup
         let annotationView = AnnotationView()
         annotationView.annotation = viewForAnnotation
         annotationView.delegate = self
-        annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        annotationView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
         
         return annotationView
     }
     
     func didTouch(annotationView: AnnotationView) {
+        // TODO: Add any wanted action to happen when annotation is tapped
         print("Tapped view for POI: \(annotationView.titleLabel?.text ?? "empty value")")
     }
     

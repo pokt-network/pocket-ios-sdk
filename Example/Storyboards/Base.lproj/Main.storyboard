@@ -14,10 +14,23 @@
         <scene sceneID="Rc5-9V-3ae">
             <objects>
                 <viewController id="D6h-Z7-dA8" customClass="WelcomeViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="Zc2-ly-9Ps">
+                    <view key="view" contentMode="scaleToFill" id="Zc2-ly-9Ps">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghX-3S-hRg">
+                                <rect key="frame" x="16" y="578" width="343" height="69"/>
+                                <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="oeE-BC-T7j"/>
+                                </constraints>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="St9-00-dXZ" kind="show" id="9le-w6-ztd"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ESE-JR-erx">
                                 <rect key="frame" x="52.5" y="97" width="271.5" height="66.5"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="53"/>
@@ -30,22 +43,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghX-3S-hRg">
-                                <rect key="frame" x="16" y="578" width="343" height="69"/>
-                                <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="oeE-BC-T7j"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
-                                <state key="normal" title="PLAY">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="VKJ-1M-xVE" kind="show" id="IUB-qU-zh8"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.9841768327286784" green="1" blue="0.11186731920699589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.98528867959976196" green="0.99991124868392944" blue="0.10917452722787857" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ESE-JR-erx" firstAttribute="top" secondItem="go2-8H-eFX" secondAttribute="top" constant="77" id="Azw-qT-pgF"/>
                             <constraint firstItem="6OA-DM-9tx" firstAttribute="centerY" secondItem="Zc2-ly-9Ps" secondAttribute="centerY" id="Fsy-UB-U8K"/>
@@ -191,32 +191,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-xc-ZTh">
+                            <button opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIh-xc-ZTh">
                                 <rect key="frame" x="82" y="138" width="210" height="90"/>
+                                <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="CCv-2k-JNu"/>
                                     <constraint firstAttribute="height" constant="90" id="c4M-hI-4sY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Create Quest"/>
+                                <state key="normal" title="Create Quest">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="createQuestPressed:" destination="St9-00-dXZ" eventType="touchUpInside" id="F5a-qG-j8u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjZ-SG-Ubr">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EjZ-SG-Ubr">
                                 <rect key="frame" x="82" y="406" width="210" height="90"/>
+                                <color key="backgroundColor" red="0.47199274610000003" green="0.57225752860000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="JTN-vd-VbZ"/>
                                     <constraint firstAttribute="width" constant="210" id="qZd-ib-PBI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Complete Quest"/>
+                                <state key="normal" title="Complete Quest">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="completeQuestPressed:" destination="St9-00-dXZ" eventType="touchUpInside" id="rUC-ro-Zt1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.9841768327" green="1" blue="0.1118673192" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hIh-xc-ZTh" firstAttribute="centerX" secondItem="Rbl-jD-VmP" secondAttribute="centerX" id="PfB-2h-oEG"/>
                             <constraint firstItem="EjZ-SG-Ubr" firstAttribute="centerX" secondItem="Rbl-jD-VmP" secondAttribute="centerX" id="TgB-kg-A0h"/>
@@ -387,4 +391,7 @@
             <point key="canvasLocation" x="1647" y="116"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9le-w6-ztd"/>
+    </inferredMetricsTieBreakers>
 </document>

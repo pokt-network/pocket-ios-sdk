@@ -32,6 +32,7 @@
 		C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2328E20B31BE7005EB924 /* AccountViewController.swift */; };
 		C5A2BDB920BA6E840019EB74 /* CreateQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2BDB720BA6E830019EB74 /* CreateQuestViewController.swift */; };
 		C5A2BDBA20BA6E840019EB74 /* ChooseCoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2BDB820BA6E830019EB74 /* ChooseCoordinatesViewController.swift */; };
+		C5A2BDBF20BA70680019EB74 /* ChooseQuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A2BDBE20BA70680019EB74 /* ChooseQuestTableViewCell.swift */; };
 		C5A6DE8D20B9A0AC00CEF45D /* CreateQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */; };
 		C5A6DE8F20B9A0B700CEF45D /* CompleteQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */; };
 		C5B1CBB820B9EC6D00DDF03A /* banana.dae in Resources */ = {isa = PBXBuildFile; fileRef = C5B1CBB720B9EC6D00DDF03A /* banana.dae */; };
@@ -87,6 +88,7 @@
 		C5A2328E20B31BE7005EB924 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		C5A2BDB720BA6E830019EB74 /* CreateQuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestViewController.swift; sourceTree = "<group>"; };
 		C5A2BDB820BA6E830019EB74 /* ChooseCoordinatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCoordinatesViewController.swift; sourceTree = "<group>"; };
+		C5A2BDBE20BA70680019EB74 /* ChooseQuestTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseQuestTableViewCell.swift; sourceTree = "<group>"; };
 		C5A6DE8C20B9A0AC00CEF45D /* CreateQuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateQuest.storyboard; sourceTree = "<group>"; };
 		C5A6DE8E20B9A0B700CEF45D /* CompleteQuest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompleteQuest.storyboard; sourceTree = "<group>"; };
 		C5B1CBB720B9EC6D00DDF03A /* banana.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = banana.dae; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		C5A2BDBB20BA6ED50019EB74 /* UITableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				C5A2BDBE20BA70680019EB74 /* ChooseQuestTableViewCell.swift */,
 			);
 			path = UITableViewCells;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */,
 				C5E6625A20B59E24002B2E0A /* Network.swift in Sources */,
 				C5A2BDBA20BA6E840019EB74 /* ChooseCoordinatesViewController.swift in Sources */,
+				C5A2BDBF20BA70680019EB74 /* ChooseQuestTableViewCell.swift in Sources */,
 				C53DA44A20B9C396000F3FAD /* ARConfiguration.swift in Sources */,
 				633423A720BA4AD8004B2D5A /* Keystore.swift in Sources */,
 				C5A2328F20B31BE7005EB924 /* AccountViewController.swift in Sources */,

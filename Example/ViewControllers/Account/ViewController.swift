@@ -9,6 +9,7 @@
 import UIKit
 import web3swift
 import Geth
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -21,97 +22,27 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(EthAccountCoordinator.default.account?.getAddress().getHex())
-
+        let configuration = EthAccountConfiguration(namespace: "wallet", password: nil)
+        let (keystore, _) = EthAccountCoordinator.default.launch(configuration)
         
-        let fileManager = FileManager.default
-        let documentsURL = fileManager.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        do {
-            let fileURLs = try fileManager.contentsOfDirectory(at: documentsURL, includingPropertiesForKeys: nil)
-            // process files
-            print(fileURLs)
-        } catch {
-            print("Error while enumerating files \(documentsURL.path): \(error.localizedDescription)")
+        let jsonKey = "{\"version\":3,\"id\":\"af185f3f-e8f3-463f-ad47-1cdcf94086d9\",\"address\":\"e955199873abd97a921f8b57d27809d57bff6329\",\"Crypto\":{\"ciphertext\":\"476ac878ffdb92c5f969c65cba5574ea13ea73045603011770056711d17464ff\",\"cipherparams\":{\"iv\":\"a23b34daeb9f8ba4951e06cdaf2e8f6e\"},\"cipher\":\"aes-128-ctr\",\"kdf\":\"scrypt\",\"kdfparams\":{\"dklen\":32,\"salt\":\"fa26f38cce0e29215bbef32fdc803b28509475f021a3d7a7170ec9d8c34e3d87\",\"n\":8192,\"r\":8,\"p\":1},\"mac\":\"63fe5b45438aa04318984cb816744296aca9b5a7b3621d91b46e89045c065f56\"}}"
+        let currentPassphrase = "123456789"
+        let gethAccount = EthAccountCoordinator.default.importPrivateKey(jsonKey, passphrase: currentPassphrase, newPassphrase: currentPassphrase)
+        if gethAccount != nil {
+            presentAccountViewController()
+        }else{
+            print("Failed to import account")
         }
-        //print(datadir + "/keystore")
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    @IBAction func createAccountAction(_ sender: Any) {
-        let configuration = EthAccountConfiguration(namespace: "wallet", password: passphraseTextField.text)
-        
-//        if passphraseTextField.text?.count ?? 0 == 0 {
-//            print("No passphrase, returning")
-//            return
-//        }
-        
-        
-        let datadir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-
-        let ks = GethNewKeyStore(datadir + "/keystore", GethLightScryptN, GethLightScryptP);
-
-        
-        let (_, account): (GethKeyStore?,GethAccount?) = EthAccountCoordinator.default.launch(configuration)
-        
-        //let ks = GethNewKeyStore("/path/to/keystore", GethLightScryptN, GethLightScryptP);
-        
-        
-//        print(ks?.getAccounts())
-//
-//        print(keyStore?.getAccounts())
-        print(EthAccountCoordinator.default.account?.getAddress().getHex())
-        if account != nil {
-            presentAccountViewController()
-        } else {
-            print("Error creating account.")
-        }
-        
-    }
-    @IBAction func importWalletAction(_ sender: Any) {
-        let jsonKey = privateKeyTextView.text
-        let currentPassphrase = currentPassphraseTextField.text
-        let newPassphrase = newPassphraseTextField.text
-        if isImportWalletInputsValid() {
-            let privateKey = EthAccountCoordinator.default.importPrivateKey(jsonKey!, passphrase: currentPassphrase!, newPassphrase: newPassphrase!)
-            if privateKey != nil {
-                presentAccountViewController()
-            }else{
-                print("Failed to import account")
-            }
-        }
-        
-    }
-    
-    func isImportWalletInputsValid() -> Bool {
-        var bool = true
-        
-        if (privateKeyTextView.text ?? "").isEmpty {
-            bool = false
-        }
-        
-        if (currentPassphraseTextField.text ?? "").isEmpty {
-            bool = false
-        }
-        
-        if (newPassphraseTextField.text ?? "").isEmpty {
-            bool = false
-        }
-        
-        return bool
-    }
-    
-    
     
     func presentAccountViewController() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainViewController = storyboard.instantiateViewController(withIdentifier: "ChooseVC")
-        
-        self.present(mainViewController, animated: true, completion: nil)
+        present(mainViewController, animated: true, completion: nil)
     }
 
 }

@@ -28,6 +28,7 @@ class AnnotationView: ARAnnotationView {
     }
     
     func loadUI() {
+        // We remove all elements from the superview
         titleLabel?.removeFromSuperview()
         distanceLabel?.removeFromSuperview()
         sceneView?.removeFromSuperview()
@@ -61,7 +62,7 @@ class AnnotationView: ARAnnotationView {
             distanceLabel?.text = String(format: "%.2f km", annotation.distanceFromUser / 1000)
             
             // Scene for 3d object
-            let myView = SCNView(frame: CGRect(x: 10, y: 30, width: 180, height: 180), options: nil)
+            let myView = SCNView(frame: CGRect(x: 10, y: 45, width: 180, height: 180), options: nil)
             
             myView.scene = SCNScene.init(named: "banana.dae")
             myView.allowsCameraControl = true
@@ -72,12 +73,12 @@ class AnnotationView: ARAnnotationView {
             sceneView = myView
             
             // Submit button
-            let button = UIButton(frame: CGRect(x: 10, y: self.frame.height, width: self.frame.width - 10, height: 35))
+            let button = UIButton(frame: CGRect(x: 0, y: self.frame.height + 10, width: self.frame.width, height: 35))
             
             button.setTitle("Submit", for: .normal)
             button.layer.cornerRadius = 10
             button.addTarget(self, action: #selector(self.pressButton(_:)), for: .touchUpInside)
-            button.backgroundColor = UIColor.blue
+            button.backgroundColor = UIColor.init(red: 0, green: 0, blue: 1, alpha: 0.55)
             
             self.addSubview(button)
             submitButton = button
@@ -92,8 +93,8 @@ class AnnotationView: ARAnnotationView {
         super.layoutSubviews()
         titleLabel?.frame = CGRect(x: 10, y: 0, width: self.frame.size.width, height: 30)
         distanceLabel?.frame = CGRect(x: 10, y: 30, width: self.frame.size.width, height: 20)
-        sceneView?.frame = CGRect(x: 10, y: 30, width: 180, height: 180)
-        submitButton?.frame = CGRect(x: 10, y: self.frame.height, width: self.frame.width - 10, height: 35)
+        sceneView?.frame = CGRect(x: 10, y: 45, width: 180, height: 180)
+        submitButton?.frame = CGRect(x: 0, y: self.frame.height + 10, width: self.frame.width, height: 35)
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -13,6 +13,7 @@
 		6334239E20B9B4AC004B2D5A /* CreateQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239D20B9B4AC004B2D5A /* CreateQuestViewController.swift */; };
 		633423A020B9C228004B2D5A /* ChooseCoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */; };
 		633423A220B9CFCB004B2D5A /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A120B9CFCB004B2D5A /* Quest.swift */; };
+		633423A420B9EC6E004B2D5A /* ChooseQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */; };
 		8EA0AC4F20AB204F006EE2D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4720AB204F006EE2D8 /* LaunchScreen.storyboard */; };
 		8EA0AC5020AB204F006EE2D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4920AB204F006EE2D8 /* Main.storyboard */; };
 		8EA0AC5120AB204F006EE2D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA0AC4C20AB204F006EE2D8 /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		6334239D20B9B4AC004B2D5A /* CreateQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateQuestViewController.swift; path = ViewControllers/Account/CreateQuestViewController.swift; sourceTree = SOURCE_ROOT; };
 		6334239F20B9C228004B2D5A /* ChooseCoordinatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChooseCoordinatesViewController.swift; path = ViewControllers/Account/ChooseCoordinatesViewController.swift; sourceTree = SOURCE_ROOT; };
 		633423A120B9CFCB004B2D5A /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseQuestViewController.swift; sourceTree = "<group>"; };
 		8E953D2F205F3A380059105D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D43205F3A380059105D /* ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E953D49205F3A380059105D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -123,6 +125,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		633423A520B9EF95004B2D5A /* UITableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITableViewCells;
+			sourceTree = "<group>";
+		};
 		7BB3FB51B68B152C52B76B4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +144,7 @@
 		8E953D26205F3A380059105D = {
 			isa = PBXGroup;
 			children = (
+				633423A520B9EF95004B2D5A /* UITableViewCells */,
 				C53DA43920B9C396000F3FAD /* HDAugmentedReality */,
 				C5E6625420B59E23002B2E0A /* Models */,
 				C5E6625820B59E23002B2E0A /* Protocols */,
@@ -259,6 +269,7 @@
 			children = (
 				C5D9F2D220B9A418001B8509 /* PlayerMapViewController.swift */,
 				C5F5011820B9D184005330DF /* AnnotationView.swift */,
+				633423A320B9EC6E004B2D5A /* ChooseQuestViewController.swift */,
 			);
 			path = CompleteQuest;
 			sourceTree = "<group>";
@@ -305,6 +316,7 @@
 				8E953D2C205F3A380059105D /* Frameworks */,
 				8E953D2D205F3A380059105D /* Resources */,
 				449E6B6673056385940AD4C5 /* [CP] Embed Pods Frameworks */,
+				137C7A04210E2B7B490F8355 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -401,6 +413,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		137C7A04210E2B7B490F8355 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		449E6B6673056385940AD4C5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,10 +443,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -481,6 +517,7 @@
 				C5F5011920B9D184005330DF /* AnnotationView.swift in Sources */,
 				C53DA44B20B9C396000F3FAD /* ARViewController.swift in Sources */,
 				C53DA44820B9C396000F3FAD /* ARTrackingManager.swift in Sources */,
+				633423A420B9EC6E004B2D5A /* ChooseQuestViewController.swift in Sources */,
 				C5E6625B20B59E24002B2E0A /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

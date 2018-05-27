@@ -91,6 +91,8 @@ open class EthAccountCoordinator {
         let finalPath = datadir + "/" + "\(pathInfix)" + "keystore"
         let keystore = GethNewKeyStore(finalPath, GethLightScryptN, GethLightScryptP)  // GethStandardScryptN, GethStandardScryptP, GethLightScryptN, GethLightScryptP or number
         _gethContext = GethNewContext()
+        //UserDefaults.standard.set(keystore, forKey: "keystore")
+        
         return keystore
     }
     

@@ -17,6 +17,7 @@ target 'Example' do
     pod 'GooglePlaces'
     pod 'GooglePlacePicker'
     pod 'GoogleMaps'
+    pod 'SwiftyJSON'
 
     # Test Target
     target 'ExampleTests' do

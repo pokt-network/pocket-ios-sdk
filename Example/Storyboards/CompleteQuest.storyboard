@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VsE-gz-Nky">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="76o-ii-xej">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,6 +25,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8OF-XN-Kqx" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1796" y="123"/>
+        </scene>
+        <!--Choose Quest View Controller-->
+        <scene sceneID="kic-we-R4Y">
+            <objects>
+                <viewController storyboardIdentifier="ChooseQuestVC" id="76o-ii-xej" customClass="ChooseQuestViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Byz-Fj-3Ce">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d5P-Yb-j8z">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Hok-Af-E9I">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hok-Af-E9I" id="lYa-V8-cJu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="76o-ii-xej" id="dtk-6l-hKP"/>
+                                    <outlet property="delegate" destination="76o-ii-xej" id="ac9-8D-Ti1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d5P-Yb-j8z" firstAttribute="top" secondItem="rFa-Tw-d3A" secondAttribute="top" id="0Pe-y7-koh"/>
+                            <constraint firstItem="rFa-Tw-d3A" firstAttribute="trailing" secondItem="d5P-Yb-j8z" secondAttribute="trailing" id="88R-fQ-TT3"/>
+                            <constraint firstItem="rFa-Tw-d3A" firstAttribute="bottom" secondItem="d5P-Yb-j8z" secondAttribute="bottom" id="lZ0-lX-eIH"/>
+                            <constraint firstItem="d5P-Yb-j8z" firstAttribute="leading" secondItem="rFa-Tw-d3A" secondAttribute="leading" id="zjN-Ff-W2t"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rFa-Tw-d3A"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="d5P-Yb-j8z" id="x54-of-Pkv"/>
+                        <segue destination="VsE-gz-Nky" kind="show" identifier="ShowQuestSegue" id="d9o-X6-32M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4X-hg-AVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="133"/>
         </scene>
         <!--Player Map View Controller-->
         <scene sceneID="8wA-ck-Mut">

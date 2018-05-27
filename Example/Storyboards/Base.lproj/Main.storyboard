@@ -154,20 +154,35 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Complete Quest"/>
+                                <connections>
+                                    <action selector="completeQuestPressed:" destination="St9-00-dXZ" eventType="touchUpInside" id="rUC-ro-Zt1"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9jN-vI-GVD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="583"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9jN-vI-GVD" firstAttribute="trailing" secondItem="Rbl-jD-VmP" secondAttribute="trailing" id="KK4-BT-jF7"/>
                             <constraint firstItem="hIh-xc-ZTh" firstAttribute="centerX" secondItem="Rbl-jD-VmP" secondAttribute="centerX" id="PfB-2h-oEG"/>
                             <constraint firstItem="EjZ-SG-Ubr" firstAttribute="centerX" secondItem="Rbl-jD-VmP" secondAttribute="centerX" id="TgB-kg-A0h"/>
+                            <constraint firstItem="9jN-vI-GVD" firstAttribute="leading" secondItem="Rbl-jD-VmP" secondAttribute="leading" id="WMj-tE-j8T"/>
                             <constraint firstItem="Rbl-jD-VmP" firstAttribute="bottom" secondItem="EjZ-SG-Ubr" secondAttribute="bottom" constant="171" id="X3d-AJ-J3R"/>
                             <constraint firstItem="hIh-xc-ZTh" firstAttribute="top" secondItem="Rbl-jD-VmP" secondAttribute="top" constant="118" id="lfn-rF-ACK"/>
+                            <constraint firstItem="Rbl-jD-VmP" firstAttribute="bottom" secondItem="9jN-vI-GVD" secondAttribute="bottom" constant="20" id="sr2-yN-gRP"/>
+                            <constraint firstItem="9jN-vI-GVD" firstAttribute="top" secondItem="Rbl-jD-VmP" secondAttribute="top" id="ybj-BT-J6Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rbl-jD-VmP"/>
                     </view>
                     <connections>
                         <outlet property="completeButton" destination="EjZ-SG-Ubr" id="YdT-u3-oUo"/>
                         <outlet property="createButton" destination="hIh-xc-ZTh" id="gS7-Zw-fDo"/>
+                        <outlet property="textView" destination="9jN-vI-GVD" id="oiZ-Fn-Ty9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzM-L6-woh" userLabel="First Responder" sceneMemberID="firstResponder"/>

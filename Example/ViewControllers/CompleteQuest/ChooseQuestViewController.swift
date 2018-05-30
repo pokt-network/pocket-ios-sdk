@@ -15,7 +15,8 @@ class ChooseQuestViewController: UIViewController, UITableViewDelegate, UITableV
     var currentIndexPath: IndexPath?
     let rawQuests: [[String: String]] = [
         ["name": "Hackerhouse", "tokenName": "CryptoHackers", "hint": "The Lowest a hacker can go", "numTokens": "10", "id": "10001", "latitude": "-34.586015", "longitude": "-58.432309"],
-        ["name": "Go back", "tokenName": "CryptoHackers", "hint": "Can't go any further, go back", "numTokens": "7", "id": "10002", "latitude": "-34.585719", "longitude": "-58.432419"]
+        ["name": "Go back", "tokenName": "CryptoHackers", "hint": "Can't go any further, go back", "numTokens": "7", "id": "10002", "latitude": "-34.585719", "longitude": "-58.432419"],
+        ["name": "Banano Quest", "tokenName": "CryptoHackers", "hint": "Eat a Banano", "numTokens": "20", "id": "10003", "latitude": "-34.585719", "longitude": "-58.432419"]
     ]
     
     var quests = [Quest]()

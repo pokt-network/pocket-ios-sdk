@@ -91,7 +91,7 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
         // following data is for testing
         let questLocation = CLLocation(latitude: (activeQuest?.latitude)!, longitude: (activeQuest?.longitude)!)
         let distance = questLocation.distance(from: currentUserLocation!)
-        if distance <= 20 {
+        if distance <= 200 {
             let annotation = ARAnnotation()
             annotation.title = activeQuest?.name
             annotation.location = questLocation
@@ -99,7 +99,7 @@ class PlayerMapViewController: UIViewController, CLLocationManagerDelegate, ARDa
             // AR options, debugging options should be used only for testing
 //            arViewController.addDebugUi()
             arViewController.uiOptions.debugEnabled = false
-            arViewController.maxDistance = 20
+            arViewController.maxDistance = 200
             
             // We add the annotations that for Banano quest is 1 at a time
             arViewController.setAnnotations([annotation])

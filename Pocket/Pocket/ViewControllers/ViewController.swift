@@ -1,25 +1,19 @@
 //
-//  WelcomeViewController.swift
-//  Example
+//  ViewController.swift
+//  Pocket
 //
-//  Created by Michael O'Rourke on 5/27/18.
+//  Created by Pabel Nunez Landestoy on 6/1/18.
 //  Copyright © 2018 Pocket Network. All rights reserved.
 //
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class ViewController: UIViewController {
 
-    @IBOutlet weak var playButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        //playButton.backgroundColor = .clear
-        playButton.layer.cornerRadius = 5
-        playButton.layer.borderWidth = 1
-//        playButton.layer.borderColor = UIColor.black.cgColor
     }
 
     override func didReceiveMemoryWarning() {

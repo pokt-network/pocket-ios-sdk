@@ -8,45 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		65F6EC52EDF27B82566BBD99 /* Pods_PocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CCDC11FEAB39C6CB33B110 /* Pods_PocketTests.framework */; };
+		71C41426A00DDF91D0C45A37 /* Pods_Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4A5138210C6EE4322A6060 /* Pods_Pocket.framework */; };
 		786C26002AA40564840B0F2E /* Pods_PocketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB0FE20274E3117351FBF3 /* Pods_PocketUITests.framework */; };
-		C52B9BF120C1B70B00859E81 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C52B9BF020C1B70B00859E81 /* Podfile */; };
 		C539AF9820C1B161001CDC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AF9720C1B161001CDC09 /* AppDelegate.swift */; };
 		C539AFAD20C1B162001CDC09 /* PocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFAC20C1B162001CDC09 /* PocketTests.swift */; };
 		C539AFB820C1B162001CDC09 /* PocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFB720C1B162001CDC09 /* PocketUITests.swift */; };
-		C539B00220C1B2F0001CDC09 /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFD320C1B2F0001CDC09 /* ARAnnotation.swift */; };
-		C539B00320C1B2F0001CDC09 /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFD420C1B2F0001CDC09 /* ARTrackingManager.swift */; };
-		C539B00420C1B2F0001CDC09 /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFD520C1B2F0001CDC09 /* ARAnnotationView.swift */; };
-		C539B00520C1B2F0001CDC09 /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFD620C1B2F0001CDC09 /* ARConfiguration.swift */; };
-		C539B00620C1B2F0001CDC09 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFD720C1B2F0001CDC09 /* ARViewController.swift */; };
-		C539B00720C1B2F0001CDC09 /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFD920C1B2F0001CDC09 /* DebugMapViewController.swift */; };
-		C539B00820C1B2F0001CDC09 /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C539AFDB20C1B2F0001CDC09 /* hdar_close@3x.png */; };
-		C539B00920C1B2F0001CDC09 /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C539AFDC20C1B2F0001CDC09 /* hdar_close@2x.png */; };
-		C539B00A20C1B2F0001CDC09 /* ARBananaScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = C539AFDD20C1B2F0001CDC09 /* ARBananaScene.scn */; };
-		C539B00B20C1B2F0001CDC09 /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C539AFDE20C1B2F0001CDC09 /* DebugMapViewController.xib */; };
-		C539B00C20C1B2F0001CDC09 /* banana.dae in Resources */ = {isa = PBXBuildFile; fileRef = C539AFDF20C1B2F0001CDC09 /* banana.dae */; };
-		C539B00D20C1B2F0001CDC09 /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = C539AFE020C1B2F0001CDC09 /* hdar_close.png */; };
-		C539B00E20C1B2F0001CDC09 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE220C1B2F0001CDC09 /* Quest.swift */; };
-		C539B00F20C1B2F0001CDC09 /* Keystore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE320C1B2F0001CDC09 /* Keystore.swift */; };
 		C539B01020C1B2F0001CDC09 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE420C1B2F0001CDC09 /* Network.swift */; };
 		C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE520C1B2F0001CDC09 /* Transaction.swift */; };
 		C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE620C1B2F0001CDC09 /* Wallet.swift */; };
 		C539B01320C1B2F0001CDC09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539AFE820C1B2F0001CDC09 /* Assets.xcassets */; };
-		C539B01420C1B2F0001CDC09 /* PlayerMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFEB20C1B2F0001CDC09 /* PlayerMapViewController.swift */; };
-		C539B01520C1B2F0001CDC09 /* ChooseQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFEC20C1B2F0001CDC09 /* ChooseQuestViewController.swift */; };
-		C539B01620C1B2F0001CDC09 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFED20C1B2F0001CDC09 /* AnnotationView.swift */; };
-		C539B01720C1B2F0001CDC09 /* CreateQuestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFEF20C1B2F0001CDC09 /* CreateQuestViewController.swift */; };
-		C539B01820C1B2F0001CDC09 /* ChooseCoordinatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF020C1B2F0001CDC09 /* ChooseCoordinatesViewController.swift */; };
-		C539B01920C1B2F0001CDC09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF220C1B2F0001CDC09 /* ViewController.swift */; };
-		C539B01A20C1B2F0001CDC09 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF320C1B2F0001CDC09 /* WelcomeViewController.swift */; };
-		C539B01B20C1B2F0001CDC09 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF420C1B2F0001CDC09 /* ChooseViewController.swift */; };
-		C539B01C20C1B2F0001CDC09 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF520C1B2F0001CDC09 /* AccountViewController.swift */; };
-		C539B01D20C1B2F0001CDC09 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF720C1B2F0001CDC09 /* Networking.swift */; };
 		C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */; };
-		C539B01F20C1B2F0001CDC09 /* ChooseQuestTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFFA20C1B2F0001CDC09 /* ChooseQuestTableViewCell.swift */; };
-		C539B02020C1B2F0001CDC09 /* CompleteQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539AFFC20C1B2F0001CDC09 /* CompleteQuest.storyboard */; };
-		C539B02120C1B2F0001CDC09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539AFFD20C1B2F0001CDC09 /* LaunchScreen.storyboard */; };
 		C539B02220C1B2F0001CDC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539AFFF20C1B2F0001CDC09 /* Main.storyboard */; };
-		C539B02320C1B2F0001CDC09 /* CreateQuest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539B00120C1B2F0001CDC09 /* CreateQuest.storyboard */; };
+		C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,7 +48,6 @@
 		63F9416FA0497F709B6F9379 /* Pods-PocketUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketUITests/Pods-PocketUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C710B87F6A77C66121E6E46 /* Pods-Pocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.debug.xcconfig"; sourceTree = "<group>"; };
 		C230409A0BE741438C7BFB52 /* Pods-PocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C52B9BF020C1B70B00859E81 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C539AF9420C1B161001CDC09 /* Pocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539AF9720C1B161001CDC09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C539AFA320C1B162001CDC09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,40 +57,13 @@
 		C539AFB320C1B162001CDC09 /* PocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539AFB720C1B162001CDC09 /* PocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketUITests.swift; sourceTree = "<group>"; };
 		C539AFB920C1B162001CDC09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C539AFD320C1B2F0001CDC09 /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
-		C539AFD420C1B2F0001CDC09 /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
-		C539AFD520C1B2F0001CDC09 /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
-		C539AFD620C1B2F0001CDC09 /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
-		C539AFD720C1B2F0001CDC09 /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		C539AFD920C1B2F0001CDC09 /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
-		C539AFDB20C1B2F0001CDC09 /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
-		C539AFDC20C1B2F0001CDC09 /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
-		C539AFDD20C1B2F0001CDC09 /* ARBananaScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ARBananaScene.scn; sourceTree = "<group>"; };
-		C539AFDE20C1B2F0001CDC09 /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
-		C539AFDF20C1B2F0001CDC09 /* banana.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = banana.dae; sourceTree = "<group>"; };
-		C539AFE020C1B2F0001CDC09 /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
-		C539AFE220C1B2F0001CDC09 /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
-		C539AFE320C1B2F0001CDC09 /* Keystore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keystore.swift; sourceTree = "<group>"; };
 		C539AFE420C1B2F0001CDC09 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C539AFE520C1B2F0001CDC09 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		C539AFE620C1B2F0001CDC09 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		C539AFE820C1B2F0001CDC09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C539AFEB20C1B2F0001CDC09 /* PlayerMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerMapViewController.swift; sourceTree = "<group>"; };
-		C539AFEC20C1B2F0001CDC09 /* ChooseQuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseQuestViewController.swift; sourceTree = "<group>"; };
-		C539AFED20C1B2F0001CDC09 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		C539AFEF20C1B2F0001CDC09 /* CreateQuestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateQuestViewController.swift; sourceTree = "<group>"; };
-		C539AFF020C1B2F0001CDC09 /* ChooseCoordinatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCoordinatesViewController.swift; sourceTree = "<group>"; };
-		C539AFF220C1B2F0001CDC09 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C539AFF320C1B2F0001CDC09 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		C539AFF420C1B2F0001CDC09 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
-		C539AFF520C1B2F0001CDC09 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		C539AFF720C1B2F0001CDC09 /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketProtocol.swift; sourceTree = "<group>"; };
-		C539AFFA20C1B2F0001CDC09 /* ChooseQuestTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseQuestTableViewCell.swift; sourceTree = "<group>"; };
-		C539AFFC20C1B2F0001CDC09 /* CompleteQuest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompleteQuest.storyboard; sourceTree = "<group>"; };
-		C539AFFE20C1B2F0001CDC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C539B00020C1B2F0001CDC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C539B00120C1B2F0001CDC09 /* CreateQuest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateQuest.storyboard; sourceTree = "<group>"; };
+		C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C41426A00DDF91D0C45A37 /* Pods_Pocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +125,6 @@
 				C539AFAB20C1B162001CDC09 /* PocketTests */,
 				C539AFB620C1B162001CDC09 /* PocketUITests */,
 				C539AF9520C1B161001CDC09 /* Products */,
-				C52B9BF020C1B70B00859E81 /* Podfile */,
 				7581B8E8AA6DD1989F3E5C56 /* Pods */,
 				3C7BBF3BBD564FFA37617C53 /* Frameworks */,
 			);
@@ -199,12 +144,10 @@
 			isa = PBXGroup;
 			children = (
 				C539B02420C1B317001CDC09 /* AppDelegate */,
-				C539AFD120C1B2F0001CDC09 /* HDAugmentedReality */,
 				C539AFE120C1B2F0001CDC09 /* Models */,
 				C539AFF620C1B2F0001CDC09 /* Protocols */,
 				C539AFE720C1B2F0001CDC09 /* Resources */,
 				C539AFFB20C1B2F0001CDC09 /* Storyboards */,
-				C539AFF920C1B2F0001CDC09 /* UITableViewCells */,
 				C539AFE920C1B2F0001CDC09 /* ViewControllers */,
 				C539AFA320C1B162001CDC09 /* Info.plist */,
 			);
@@ -229,54 +172,9 @@
 			path = PocketUITests;
 			sourceTree = "<group>";
 		};
-		C539AFD120C1B2F0001CDC09 /* HDAugmentedReality */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFD220C1B2F0001CDC09 /* Classes */,
-				C539AFDA20C1B2F0001CDC09 /* Resources */,
-			);
-			path = HDAugmentedReality;
-			sourceTree = "<group>";
-		};
-		C539AFD220C1B2F0001CDC09 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFD320C1B2F0001CDC09 /* ARAnnotation.swift */,
-				C539AFD420C1B2F0001CDC09 /* ARTrackingManager.swift */,
-				C539AFD520C1B2F0001CDC09 /* ARAnnotationView.swift */,
-				C539AFD620C1B2F0001CDC09 /* ARConfiguration.swift */,
-				C539AFD720C1B2F0001CDC09 /* ARViewController.swift */,
-				C539AFD820C1B2F0001CDC09 /* Debug */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		C539AFD820C1B2F0001CDC09 /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFD920C1B2F0001CDC09 /* DebugMapViewController.swift */,
-			);
-			path = Debug;
-			sourceTree = "<group>";
-		};
-		C539AFDA20C1B2F0001CDC09 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFDB20C1B2F0001CDC09 /* hdar_close@3x.png */,
-				C539AFDC20C1B2F0001CDC09 /* hdar_close@2x.png */,
-				C539AFDD20C1B2F0001CDC09 /* ARBananaScene.scn */,
-				C539AFDE20C1B2F0001CDC09 /* DebugMapViewController.xib */,
-				C539AFDF20C1B2F0001CDC09 /* banana.dae */,
-				C539AFE020C1B2F0001CDC09 /* hdar_close.png */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		C539AFE120C1B2F0001CDC09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C539AFE220C1B2F0001CDC09 /* Quest.swift */,
-				C539AFE320C1B2F0001CDC09 /* Keystore.swift */,
 				C539AFE420C1B2F0001CDC09 /* Network.swift */,
 				C539AFE520C1B2F0001CDC09 /* Transaction.swift */,
 				C539AFE620C1B2F0001CDC09 /* Wallet.swift */,
@@ -295,67 +193,23 @@
 		C539AFE920C1B2F0001CDC09 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C539AFEA20C1B2F0001CDC09 /* CompleteQuest */,
-				C539AFEE20C1B2F0001CDC09 /* CreateQuest */,
-				C539AFF120C1B2F0001CDC09 /* Account */,
+				C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		C539AFEA20C1B2F0001CDC09 /* CompleteQuest */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFEB20C1B2F0001CDC09 /* PlayerMapViewController.swift */,
-				C539AFEC20C1B2F0001CDC09 /* ChooseQuestViewController.swift */,
-				C539AFED20C1B2F0001CDC09 /* AnnotationView.swift */,
-			);
-			path = CompleteQuest;
-			sourceTree = "<group>";
-		};
-		C539AFEE20C1B2F0001CDC09 /* CreateQuest */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFEF20C1B2F0001CDC09 /* CreateQuestViewController.swift */,
-				C539AFF020C1B2F0001CDC09 /* ChooseCoordinatesViewController.swift */,
-			);
-			path = CreateQuest;
-			sourceTree = "<group>";
-		};
-		C539AFF120C1B2F0001CDC09 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFF220C1B2F0001CDC09 /* ViewController.swift */,
-				C539AFF320C1B2F0001CDC09 /* WelcomeViewController.swift */,
-				C539AFF420C1B2F0001CDC09 /* ChooseViewController.swift */,
-				C539AFF520C1B2F0001CDC09 /* AccountViewController.swift */,
-			);
-			path = Account;
 			sourceTree = "<group>";
 		};
 		C539AFF620C1B2F0001CDC09 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C539AFF720C1B2F0001CDC09 /* Networking.swift */,
 				C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		C539AFF920C1B2F0001CDC09 /* UITableViewCells */ = {
-			isa = PBXGroup;
-			children = (
-				C539AFFA20C1B2F0001CDC09 /* ChooseQuestTableViewCell.swift */,
-			);
-			path = UITableViewCells;
-			sourceTree = "<group>";
-		};
 		C539AFFB20C1B2F0001CDC09 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				C539AFFC20C1B2F0001CDC09 /* CompleteQuest.storyboard */,
-				C539AFFD20C1B2F0001CDC09 /* LaunchScreen.storyboard */,
 				C539AFFF20C1B2F0001CDC09 /* Main.storyboard */,
-				C539B00120C1B2F0001CDC09 /* CreateQuest.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -476,18 +330,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C539B02020C1B2F0001CDC09 /* CompleteQuest.storyboard in Resources */,
-				C539B00D20C1B2F0001CDC09 /* hdar_close.png in Resources */,
 				C539B01320C1B2F0001CDC09 /* Assets.xcassets in Resources */,
-				C539B00C20C1B2F0001CDC09 /* banana.dae in Resources */,
 				C539B02220C1B2F0001CDC09 /* Main.storyboard in Resources */,
-				C539B00B20C1B2F0001CDC09 /* DebugMapViewController.xib in Resources */,
-				C52B9BF120C1B70B00859E81 /* Podfile in Resources */,
-				C539B02320C1B2F0001CDC09 /* CreateQuest.storyboard in Resources */,
-				C539B00820C1B2F0001CDC09 /* hdar_close@3x.png in Resources */,
-				C539B02120C1B2F0001CDC09 /* LaunchScreen.storyboard in Resources */,
-				C539B00920C1B2F0001CDC09 /* hdar_close@2x.png in Resources */,
-				C539B00A20C1B2F0001CDC09 /* ARBananaScene.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,30 +433,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */,
 				C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */,
 				C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */,
-				C539B01D20C1B2F0001CDC09 /* Networking.swift in Sources */,
-				C539B01820C1B2F0001CDC09 /* ChooseCoordinatesViewController.swift in Sources */,
-				C539B01C20C1B2F0001CDC09 /* AccountViewController.swift in Sources */,
 				C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */,
 				C539B01020C1B2F0001CDC09 /* Network.swift in Sources */,
-				C539B00E20C1B2F0001CDC09 /* Quest.swift in Sources */,
-				C539B00320C1B2F0001CDC09 /* ARTrackingManager.swift in Sources */,
-				C539B00720C1B2F0001CDC09 /* DebugMapViewController.swift in Sources */,
 				C539AF9820C1B161001CDC09 /* AppDelegate.swift in Sources */,
-				C539B01620C1B2F0001CDC09 /* AnnotationView.swift in Sources */,
-				C539B00420C1B2F0001CDC09 /* ARAnnotationView.swift in Sources */,
-				C539B00620C1B2F0001CDC09 /* ARViewController.swift in Sources */,
-				C539B01420C1B2F0001CDC09 /* PlayerMapViewController.swift in Sources */,
-				C539B01F20C1B2F0001CDC09 /* ChooseQuestTableViewCell.swift in Sources */,
-				C539B01920C1B2F0001CDC09 /* ViewController.swift in Sources */,
-				C539B01B20C1B2F0001CDC09 /* ChooseViewController.swift in Sources */,
-				C539B00F20C1B2F0001CDC09 /* Keystore.swift in Sources */,
-				C539B00520C1B2F0001CDC09 /* ARConfiguration.swift in Sources */,
-				C539B01520C1B2F0001CDC09 /* ChooseQuestViewController.swift in Sources */,
-				C539B00220C1B2F0001CDC09 /* ARAnnotation.swift in Sources */,
-				C539B01720C1B2F0001CDC09 /* CreateQuestViewController.swift in Sources */,
-				C539B01A20C1B2F0001CDC09 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,14 +474,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C539AFFD20C1B2F0001CDC09 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C539AFFE20C1B2F0001CDC09 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		C539AFFF20C1B2F0001CDC09 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

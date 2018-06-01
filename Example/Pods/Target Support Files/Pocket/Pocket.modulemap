@@ -1,6 +1,0 @@
-framework module Pocket {
-  umbrella header "Pocket-umbrella.h"
-
-  export *
-  module * { export * }
-}

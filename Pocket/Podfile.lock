@@ -1,0 +1,43 @@
+PODS:
+  - CryptoSwift (0.9.0)
+  - Geth (1.8.8)
+  - SwiftyJSON (4.1.0)
+  - web3swift (0.0.9):
+    - CryptoSwift
+    - Geth
+
+DEPENDENCIES:
+  - CryptoSwift (from `https://github.com/krzyzanowskim/CryptoSwift`, branch `develop`)
+  - SwiftyJSON
+  - web3swift (from `https://github.com/MercuryProtocol/web3.swift.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Geth
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  CryptoSwift:
+    :branch: develop
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+  web3swift:
+    :branch: master
+    :git: https://github.com/MercuryProtocol/web3.swift.git
+
+CHECKOUT OPTIONS:
+  CryptoSwift:
+    :commit: cf47ff2f7a8bfc97e3faa3bb65461627169de662
+    :git: https://github.com/krzyzanowskim/CryptoSwift
+  web3swift:
+    :commit: fe0c3047cc9f808774c6172afe3cb126715adf49
+    :git: https://github.com/MercuryProtocol/web3.swift.git
+
+SPEC CHECKSUMS:
+  CryptoSwift: ba0dcdfcb2f5307ae8ef55a2d4ad394d2c3cf80f
+  Geth: 483ea44b5f930b72320218290b939ba8e2389aaf
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  web3swift: 9cf4ccef0c7f7e9f9abb3bc5867789b928800af6
+
+PODFILE CHECKSUM: 69df11eeae3b0b50f2b7861a124ba98268e64cbd
+
+COCOAPODS: 1.5.3

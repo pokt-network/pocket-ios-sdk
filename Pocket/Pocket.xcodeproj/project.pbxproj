@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		108D111620C71E4600043D94 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108D111520C71E4600043D94 /* Pocket.swift */; };
+		108D111820C7211E00043D94 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108D111720C7211E00043D94 /* TransactionResponse.swift */; };
 		65F6EC52EDF27B82566BBD99 /* Pods_PocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CCDC11FEAB39C6CB33B110 /* Pods_PocketTests.framework */; };
 		71C41426A00DDF91D0C45A37 /* Pods_Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4A5138210C6EE4322A6060 /* Pods_Pocket.framework */; };
 		786C26002AA40564840B0F2E /* Pods_PocketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB0FE20274E3117351FBF3 /* Pods_PocketUITests.framework */; };
@@ -44,6 +46,8 @@
 /* Begin PBXFileReference section */
 		00CCE8796E17526AD6B0F889 /* Pods-PocketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketUITests/Pods-PocketUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.release.xcconfig"; sourceTree = "<group>"; };
+		108D111520C71E4600043D94 /* Pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
+		108D111720C7211E00043D94 /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		16CCDC11FEAB39C6CB33B110 /* Pods_PocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4A5138210C6EE4322A6060 /* Pods_Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CB0FE20274E3117351FBF3 /* Pods_PocketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +158,7 @@
 				C539AFFB20C1B2F0001CDC09 /* Storyboards */,
 				C539AFE920C1B2F0001CDC09 /* ViewControllers */,
 				C539AFA320C1B162001CDC09 /* Info.plist */,
+				108D111520C71E4600043D94 /* Pocket.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -180,10 +185,11 @@
 			isa = PBXGroup;
 			children = (
 				C539AFE420C1B2F0001CDC09 /* Network.swift */,
-				C539AFE520C1B2F0001CDC09 /* Transaction.swift */,
 				C539AFE620C1B2F0001CDC09 /* Wallet.swift */,
 				C5488A5620C6CE9600732F8D /* Query.swift */,
 				C5488A5820C6CEA600732F8D /* QueryResponse.swift */,
+				C539AFE520C1B2F0001CDC09 /* Transaction.swift */,
+				108D111720C7211E00043D94 /* TransactionResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -444,7 +450,9 @@
 				C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */,
 				C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */,
 				C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */,
+				108D111820C7211E00043D94 /* TransactionResponse.swift in Sources */,
 				C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */,
+				108D111620C71E4600043D94 /* Pocket.swift in Sources */,
 				C539B01020C1B2F0001CDC09 /* Network.swift in Sources */,
 				C539AF9820C1B161001CDC09 /* AppDelegate.swift in Sources */,
 			);

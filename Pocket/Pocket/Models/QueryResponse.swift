@@ -9,7 +9,7 @@
 import Foundation
 
 public struct QueryResponse {
-    public var queryObj = Query()
+    public var query = Query()
     public var result: Dictionary<AnyHashable, Any>?
     public var decoded = false
     public var error = false

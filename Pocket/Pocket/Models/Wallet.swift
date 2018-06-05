@@ -10,7 +10,7 @@ import Foundation
 
 public struct Wallet {
     public var address = ""
-    public var privateKey = ""
+    //public var privateKey = ""
     public var network: Network?
     
     /**
@@ -29,10 +29,10 @@ public struct Wallet {
 
      - Returns: A Wallet type object
      */
-    public func createWallet(withPassphrase passphrase: String, network: Network) -> Wallet {
-        return Wallet(address: "", privateKey: "", network: Network(tokenID: ""))
-    }
-    
+//    public func createWallet(withPassphrase passphrase: String, network: Network) -> Wallet {
+//        return Wallet(address: "", privateKey: "", network: Network(tokenID: ""))
+//    }
+//
     /**
      Imports a wallet using a private key.
 
@@ -51,7 +51,7 @@ public struct Wallet {
 
      - Returns: A Wallet type object
      */
-    public func importWallet(withKey key: String, address: String, network: Network) -> Wallet {
-        return Wallet(address: "", privateKey: "", network: Network(tokenID: ""))
-    }
+//    public func importWallet(withKey key: String, address: String, network: Network) -> Wallet {
+//        return Wallet(address: "", privateKey: "", network: Network(tokenID: ""))
+//    }
 }

@@ -19,6 +19,8 @@
 		C539B01320C1B2F0001CDC09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539AFE820C1B2F0001CDC09 /* Assets.xcassets */; };
 		C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */; };
 		C539B02220C1B2F0001CDC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539AFFF20C1B2F0001CDC09 /* Main.storyboard */; };
+		C5488A5720C6CE9600732F8D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5488A5620C6CE9600732F8D /* Query.swift */; };
+		C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5488A5820C6CEA600732F8D /* QueryResponse.swift */; };
 		C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		C539AFE820C1B2F0001CDC09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketProtocol.swift; sourceTree = "<group>"; };
 		C539B00020C1B2F0001CDC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5488A5620C6CE9600732F8D /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		C5488A5820C6CEA600732F8D /* QueryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
 		C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +182,8 @@
 				C539AFE420C1B2F0001CDC09 /* Network.swift */,
 				C539AFE520C1B2F0001CDC09 /* Transaction.swift */,
 				C539AFE620C1B2F0001CDC09 /* Wallet.swift */,
+				C5488A5620C6CE9600732F8D /* Query.swift */,
+				C5488A5820C6CEA600732F8D /* QueryResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -434,7 +440,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */,
+				C5488A5720C6CE9600732F8D /* Query.swift in Sources */,
 				C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */,
+				C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */,
 				C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */,
 				C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */,
 				C539B01020C1B2F0001CDC09 /* Network.swift in Sources */,

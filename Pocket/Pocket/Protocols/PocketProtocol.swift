@@ -8,10 +8,15 @@
 
 import Foundation
 
-public protocol Pocket {
+public typealias CompletionHandler = (_:Pocket) -> Void
+
+public protocol Pocket: AnyObject {
     func createWallet(passphrase: String) -> Wallet
     func importWallet(walletKey: String, address: String) -> Wallet
     func createTransaction(nonce: String, recipient: String, value: String, data: Dictionary<AnyHashable, Any>) -> Transaction
     func signTransaction(transaction: Transaction) -> Transaction
     func sendTransaction(signedTransaction: Transaction)
+    static func initPocket(completionHandler: CompletionHandler)
 }
+
+

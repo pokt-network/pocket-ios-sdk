@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias SubmitTransactionHandler = (_:TransactionResponse) -> Void
+public typealias TransactionHandler = (_:TransactionResponse) -> Void
 public typealias ExecuteQueryHandler = (_:QueryResponse) -> Void
 
 class Pocket {
@@ -27,10 +27,18 @@ class Pocket {
         self.pocketNodeURL = pocketNodeURL
     }
     
-    func sendTransaction(tx: Transaction, handler: SubmitTransactionHandler) {
+    func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
+        let data = NSKeyedArchiver.archivedData(withRootObject: tx.tx_metadata)
+        let url = URL.init(string: "")
+        let configuration = URLSessionConfiguration.ephemeral
+        let manager = PocketRequestManager.init(configuration: configuration, url: url!)
         // 1.- Send transaction to the pocket node
-        // 2.- Create transactionresponse object with response data
-        // 3.- Call handler with transactionresponse
+        manager.sendRequest(data: data) { (json) in
+            // 2.- Create transactionresponse object with response data
+            let transactionResponse = TransactionResponse.init(json: json)
+            // 3.- Call handler with transactionresponse
+            handler(transactionResponse)
+        }
     }
     
     func executeQuery(query: Query, handler: ExecuteQueryHandler) {

@@ -8,11 +8,10 @@
 
 import Foundation
 
-public typealias CompletionHandler = (_:PocketProtocol) -> Void
-public typealias QueryHandler = (_:QueryResponse) -> Void
+public typealias PocketInitHandler = (_:PocketProtocol) -> Void
 
 public protocol PocketProtocol: AnyObject {
-    static func initPocket(completionHandler: CompletionHandler)
+    static func initPocket(completionHandler: PocketInitHandler)
     func createWallet(passphrase: String) -> Wallet
     func importWallet(walletKey: String, address: String) -> Wallet
     func createTransaction(nonce: String, recipient: String, value: String, data: Dictionary<AnyHashable, Any>) -> Transaction

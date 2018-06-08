@@ -23,6 +23,8 @@
 		C539B02220C1B2F0001CDC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539AFFF20C1B2F0001CDC09 /* Main.storyboard */; };
 		C5488A5720C6CE9600732F8D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5488A5620C6CE9600732F8D /* Query.swift */; };
 		C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5488A5820C6CEA600732F8D /* QueryResponse.swift */; };
+		C5A92B1420C9779700965240 /* PocketRequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1320C9779700965240 /* PocketRequestManagerProtocol.swift */; };
+		C5A92B1720C97D2F00965240 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */; };
 		C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,8 @@
 		C539B00020C1B2F0001CDC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5488A5620C6CE9600732F8D /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		C5488A5820C6CEA600732F8D /* QueryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
+		C5A92B1320C9779700965240 /* PocketRequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketRequestManagerProtocol.swift; sourceTree = "<group>"; };
+		C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
 		C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +163,7 @@
 				C539AFE920C1B2F0001CDC09 /* ViewControllers */,
 				C539AFA320C1B162001CDC09 /* Info.plist */,
 				108D111520C71E4600043D94 /* Pocket.swift */,
+				C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */,
+				C5A92B1320C9779700965240 /* PocketRequestManagerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -371,12 +377,10 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Pocket/Pods-Pocket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,9 +456,11 @@
 				C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */,
 				108D111820C7211E00043D94 /* TransactionResponse.swift in Sources */,
 				C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */,
+				C5A92B1420C9779700965240 /* PocketRequestManagerProtocol.swift in Sources */,
 				108D111620C71E4600043D94 /* Pocket.swift in Sources */,
 				C539B01020C1B2F0001CDC09 /* Network.swift in Sources */,
 				C539AF9820C1B161001CDC09 /* AppDelegate.swift in Sources */,
+				C5A92B1720C97D2F00965240 /* PocketRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				INFOPLIST_FILE = Pocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -639,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				INFOPLIST_FILE = Pocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

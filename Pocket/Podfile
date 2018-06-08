@@ -6,8 +6,8 @@ target 'Pocket' do
   use_frameworks!
 
   # Pods for Pocket
-    pod 'web3swift', :git => 'https://github.com/MercuryProtocol/web3.swift.git', :branch => 'master'
-    pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "develop"
+#    pod 'web3swift', :git => 'https://github.com/MercuryProtocol/web3.swift.git', :branch => 'master'
+#    pod 'CryptoSwift', :git => "https://github.com/krzyzanowskim/CryptoSwift", :branch => "develop"
     pod 'SwiftyJSON'
 
   target 'PocketTests' do

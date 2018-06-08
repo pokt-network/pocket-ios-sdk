@@ -7,10 +7,14 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-public struct Transaction {
+public class Transaction: PocketRequestProtocol {
     public var network: Network?
     public var serialized_tx = ""
     public var tx_metadata = Dictionary<AnyHashable, Any>()
 
+    public func toJSON() -> JSON {
+        return JSON.init(self)
+    }
 }

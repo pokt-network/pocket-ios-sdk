@@ -19,7 +19,6 @@ public class TransactionResponse {
     public var error_msg = ""
     
     init(json: JSON) {
-        
         guard let responseObject = json.dictionaryObject else {
             return
         }
@@ -45,6 +44,5 @@ public class TransactionResponse {
         if responseObject["error_msg"] != nil{
             error_msg = String(describing: responseObject["error_msg"])
         }
-
     }
 }

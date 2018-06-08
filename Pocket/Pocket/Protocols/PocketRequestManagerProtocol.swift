@@ -9,9 +9,8 @@
 import Foundation
 import SwiftyJSON
 
-public typealias SendRequestHandler = (_:JSON) -> Void
+public typealias SendRequestHandler = (_: JSON, _: Error?) -> Void
 
 public protocol PocketRequestManagerProtocol: AnyObject {
-    func sendRequest(data: Data, CompletionHandler: @escaping SendRequestHandler)
-    func toJSON(data: Data) -> JSON
+    func sendRequest(request: PocketRequestProtocol, completionHandler: @escaping SendRequestHandler)
 }

@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-public struct Query {
+public class Query: PocketRequestProtocol {
     public var network = ""
     public var query = Dictionary<AnyHashable, Any>()
     public var decoder = Dictionary<AnyHashable, Any>()
+    
+    public func toJSON() -> JSON {
+        return JSON.init(self)
+    }
 }

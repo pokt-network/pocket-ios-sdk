@@ -7,43 +7,51 @@
 //
 
 import Foundation
+import SwiftyJSON
 
-public typealias TransactionHandler = (_:TransactionResponse) -> Void
-public typealias ExecuteQueryHandler = (_:QueryResponse) -> Void
+public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Void
+public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
 
 class Pocket {
-    
+    var requestManager:PocketRequestManager?
     static var pocketInstance:Pocket?
     var pocketNodeURL:URL?
     
     class func getInstance(pocketNodeURL: URL) -> Pocket {
         if(pocketInstance == nil) {
-            pocketInstance = Pocket(pocketNodeURL: pocketNodeURL)
+            let configuration = URLSessionConfiguration.ephemeral
+            let requestManager = PocketRequestManager.init(configuration: configuration, url: pocketNodeURL)
+            pocketInstance = Pocket(pocketNodeURL: pocketNodeURL, requestManager: requestManager)
         }
         return pocketInstance!
     }
     
-    init(pocketNodeURL: URL){
+    init(pocketNodeURL: URL, requestManager: PocketRequestManager){
         self.pocketNodeURL = pocketNodeURL
+        self.requestManager = requestManager
     }
     
     func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
-        let data = NSKeyedArchiver.archivedData(withRootObject: tx.tx_metadata)
-        let url = URL.init(string: "")
-        let configuration = URLSessionConfiguration.ephemeral
-        let manager = PocketRequestManager.init(configuration: configuration, url: url!)
-        // 1.- Send transaction to the pocket node
-        manager.sendRequest(data: data) { (json) in
-            // 2.- Create transactionresponse object with response data
-            let transactionResponse = TransactionResponse.init(json: json)
-            // 3.- Call handler with transactionresponse
-            handler(transactionResponse)
+        requestManager!.sendRequest(request: tx) { (json, error) in
+            var response: TransactionResponse?
+            
+            if json != JSON.null {
+                response = TransactionResponse.init(json: json)
+            }
+    
+            handler(response, error)
         }
     }
     
-    func executeQuery(query: Query, handler: ExecuteQueryHandler) {
-        // 1.- Send query to the pocket node
-        // 2.- Create queryresponse object with response data
-        // 3.- Call handler with queryresponse
+    func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
+        requestManager!.sendRequest(request: query) { (json, error) in
+            var response: QueryResponse?
+            
+            if json != JSON.null {
+                response = QueryResponse.init(json: json)
+            }
+            
+            handler(response, error)
+        }
     }
 }

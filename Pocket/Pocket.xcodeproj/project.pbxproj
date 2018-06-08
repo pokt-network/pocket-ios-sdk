@@ -25,6 +25,7 @@
 		C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5488A5820C6CEA600732F8D /* QueryResponse.swift */; };
 		C5A92B1420C9779700965240 /* PocketRequestManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1320C9779700965240 /* PocketRequestManagerProtocol.swift */; };
 		C5A92B1720C97D2F00965240 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */; };
+		C5A92B1920CADF5600965240 /* PocketRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1820CADF5600965240 /* PocketRequestProtocol.swift */; };
 		C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,7 @@
 		C5488A5820C6CEA600732F8D /* QueryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
 		C5A92B1320C9779700965240 /* PocketRequestManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketRequestManagerProtocol.swift; sourceTree = "<group>"; };
 		C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
+		C5A92B1820CADF5600965240 /* PocketRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketRequestProtocol.swift; sourceTree = "<group>"; };
 		C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -220,6 +222,7 @@
 			children = (
 				C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */,
 				C5A92B1320C9779700965240 /* PocketRequestManagerProtocol.swift */,
+				C5A92B1820CADF5600965240 /* PocketRequestProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */,
 				108D111820C7211E00043D94 /* TransactionResponse.swift in Sources */,
 				C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */,
+				C5A92B1920CADF5600965240 /* PocketRequestProtocol.swift in Sources */,
 				C5A92B1420C9779700965240 /* PocketRequestManagerProtocol.swift in Sources */,
 				108D111620C71E4600043D94 /* Pocket.swift in Sources */,
 				C539B01020C1B2F0001CDC09 /* Network.swift in Sources */,

@@ -7,42 +7,57 @@
 //
 
 import Foundation
-import SwiftyJSON
 
-public class TransactionResponse {
-    public var network: Network?
-    public var serialized_tx = ""
-    public var tx_metadata = Dictionary<AnyHashable, Any>()
-    public var hash = ""
-    public var metadata = Dictionary<AnyHashable, Any>()
-    public var error = false
-    public var error_msg = ""
+public class TransactionResponse: Codable {
     
-    init(json: JSON) {
-        guard let responseObject = json.dictionaryObject else {
-            return
-        }
+    enum CodingKeys : String, CodingKey {
+        case network
+        case serializedTx = "serialized_tx"
+        case txMetadata = "tx_metadata"
+        case hash
+        case metadata
+        case error
+        case errorMsg = "error_msg"
+    }
+    
+    public var network = ""
+    public var serializedTx = ""
+    public var txMetadata: [AnyHashable: Any]?
+    public var hash = ""
+    public var metadata: [AnyHashable: Any]?
+    public var error = false
+    public var errorMsg = ""
+
+    public required init(from decodable: Decoder) throws {
+        let values = try decodable.container(keyedBy: CodingKeys.self)
         
-        if responseObject["network"] != nil{
-            network?.tokenID = String(describing: responseObject["network"])
-        }
-        if responseObject["serialized_tx"] != nil{
-            serialized_tx = String(describing: responseObject["serialized_tx"])
-        }
-        if responseObject["tx_metadata"] != nil{
-            tx_metadata = responseObject["tx_metadata"] as! Dictionary<AnyHashable, Any>
-        }
-        if responseObject["hash"] != nil{
-            hash = String(describing: responseObject["hash"])
-        }
-        if responseObject["metadata"] != nil{
-            metadata = responseObject["metadata"] as! Dictionary<AnyHashable, Any>
-        }
-        if responseObject["error"] != nil{
-            error = Bool.init(String(describing: responseObject["error"]))!
-        }
-        if responseObject["error_msg"] != nil{
-            error_msg = String(describing: responseObject["error_msg"])
+        network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
+        serializedTx = try values.decodeIfPresent(String.self, forKey: .serializedTx) ?? ""
+        
+        let stringTxMetadata = try values.decodeIfPresent(String.self, forKey: .txMetadata) ?? ""
+        txMetadata = try jsonStringToDictionary(string: stringTxMetadata)
+        
+        hash = try values.decodeIfPresent(String.self, forKey: .hash) ?? ""
+        
+        let stringMetadata = try values.decodeIfPresent(String.self, forKey: .metadata) ?? ""
+        metadata = try jsonStringToDictionary(string: stringMetadata)
+        
+        error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
+        errorMsg = try values.decodeIfPresent(String.self, forKey: .errorMsg) ?? ""
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        do {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(serializedTx, forKey: .serializedTx)
+            try container.encode(dictionaryToJsonString(dict: txMetadata), forKey: .txMetadata)
+            try container.encode(hash, forKey: .hash)
+            try container.encode(dictionaryToJsonString(dict: metadata), forKey: .metadata)
+            try container.encode(error, forKey: .error)
+            try container.encode(errorMsg, forKey: .errorMsg)
+        } catch {
+            print(error)
         }
     }
+    
 }

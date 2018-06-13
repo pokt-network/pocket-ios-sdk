@@ -7,42 +7,54 @@
 //
 
 import Foundation
-import SwiftyJSON
 
-public class QueryResponse {
-    public var query = Query()
-    public var result: Dictionary<AnyHashable, Any>?
-    public var decoder: Dictionary<AnyHashable, Any>?
+public class QueryResponse: Codable {
+    
+    enum CodingKeys : String, CodingKey {
+        case data = "query"
+        case result
+        case decoder
+        case decoded
+        case error
+        case errorMsg = "error_msg"
+    }
+    
+    public var data: [AnyHashable: Any]?
+    public var result: [AnyHashable: Any]?
+    public var decoder: [AnyHashable: Any]?
     public var decoded = false
     public var error = false
-    public var error_msg = ""
+    public var errorMsg = ""
     
-    init(json: JSON) {
-        guard let responseObject = json.dictionaryObject else {
-            return
-        }
+    public required init(from decodable: Decoder) throws {
+        let values = try decodable.container(keyedBy: CodingKeys.self)
         
-        if responseObject["query"] != nil{
-            query = Query.init()
-            query.query = responseObject["query"] as! Dictionary<AnyHashable, Any>
-        }
-        if responseObject["network"] != nil{
-            query.network = String(describing: responseObject["network"])
-        }
-        if responseObject["decoder"] != nil{
-            decoder = responseObject["decoder"] as? Dictionary<AnyHashable, Any>
-        }
-        if responseObject["result"] != nil{
-            result = responseObject["result"] as? Dictionary<AnyHashable, Any>
-        }
-        if responseObject["decoded"] != nil{
-            decoded = Bool.init(String(describing: responseObject["decoded"]))!
-        }
-        if responseObject["error"] != nil{
-            error = Bool.init(String(describing: responseObject["error"]))!
-        }
-        if responseObject["error_msg"] != nil{
-            error_msg = String(describing: responseObject["error_msg"])
+        let stringData = try values.decodeIfPresent(String.self, forKey: .data) ?? ""
+        result = try jsonStringToDictionary(string: stringData)
+        
+        let stringResult = try values.decodeIfPresent(String.self, forKey: .result) ?? ""
+        result = try jsonStringToDictionary(string: stringResult)
+        
+        let stringDecoder = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
+        decoder = try jsonStringToDictionary(string: stringDecoder)
+        
+        decoded = try values.decodeIfPresent(Bool.self, forKey: .decoded) ?? false
+        error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
+        errorMsg = try values.decodeIfPresent(String.self, forKey: .errorMsg) ?? ""
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        do {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(dictionaryToJsonString(dict: data), forKey: .data)
+            try container.encode(dictionaryToJsonString(dict: result), forKey: .result)
+            try container.encode(dictionaryToJsonString(dict: decoder), forKey: .decoder)
+            try container.encode(decoded, forKey: .decoded)
+            try container.encode(error, forKey: .error)
+            try container.encode(errorMsg, forKey: .errorMsg)
+        } catch {
+            print(error)
         }
     }
+
 }

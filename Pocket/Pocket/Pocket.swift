@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Void
 public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
@@ -32,23 +31,36 @@ class Pocket {
     }
     
     func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
-        requestManager!.sendRequest(request: tx) { (json, error) in
+        requestManager!.sendRequest(request: tx as! Encoder) { (json, error) in
             var response: TransactionResponse?
             
-            if json != JSON.null {
-                response = TransactionResponse.init(json: json)
+            if json != nil {
+                // Init transaction response with codable
+//                do {
+//                    response = try TransactionResponse.init(from: json)
+//                }
+//                catch {
+//                    throw print(error)
+//                }
             }
     
             handler(response, error)
         }
     }
     
-    func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
-        requestManager!.sendRequest(request: query) { (json, error) in
+    func executeQuery(query: [AnyHashable: Any], handler: @escaping ExecuteQueryHandler) {
+        requestManager!.sendRequest(request: query as! Encoder) { (json, error) in
             var response: QueryResponse?
             
-            if json != JSON.null {
-                response = QueryResponse.init(json: json)
+            if json != nil {
+                //Query.init(from: json)
+                // Init query response with codable
+//                do {
+//                    response = try QueryResponse(from: json)
+//                }
+//                catch {
+//                    throw print(error)
+//                }
             }
             
             handler(response, error)

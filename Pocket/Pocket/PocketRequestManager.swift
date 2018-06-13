@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 public class PocketRequestManager: NSObject, PocketRequestManagerProtocol {
     
@@ -21,10 +20,10 @@ public class PocketRequestManager: NSObject, PocketRequestManagerProtocol {
         self.url = url
     }
 
-    public func sendRequest(request: PocketRequestProtocol, completionHandler: @escaping SendRequestHandler) {
-        let task = self.session?.dataTask(with: self.url!) { (data, urlResponse, error) in
-            let json = try? JSON.init(data: data!)
-            completionHandler(json!, error!)
+    public func sendRequest(request: Encoder, completionHandler: @escaping SendRequestHandler) {
+        let task = self.session?.dataTask(with: self.url!) { (decoder, urlResponse, error) in
+            //let json = try? JSON.init(data: data!)
+            //completionHandler(decoder!, error!)
         }
         task?.resume()
     }

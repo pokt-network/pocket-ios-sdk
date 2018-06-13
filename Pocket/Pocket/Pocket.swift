@@ -11,7 +11,7 @@ import Foundation
 public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Void
 public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
 
-class Pocket {
+struct Pocket {
     
     // Definitions
     private typealias ExecuteRequestHandler<T: Decodable> = (_: T?, _:Error?) -> Void
@@ -23,7 +23,7 @@ class Pocket {
     let pocketNodeTxURL:URL
     let pocketNodeQueryURL:URL
     
-    class func getInstance(pocketNodeURL: URL) -> Pocket {
+    static func getInstance(pocketNodeURL: URL) -> Pocket {
         if(pocketInstance == nil) {
             let configuration = URLSessionConfiguration.ephemeral
             let requestManager = PocketRequestManager.init(configuration: configuration, url: pocketNodeURL)

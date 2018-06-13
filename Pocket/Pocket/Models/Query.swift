@@ -22,13 +22,22 @@ public class Query: Codable {
     
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
+        
+        network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
+        
+        let stringDecoder = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
+        decoder = try jsonStringToDictionary(string: stringDecoder)
+        
+        let stringData = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
+        decoder = try jsonStringToDictionary(string: stringData)
     }
     
     public func encode(to encoder: Encoder) throws {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
-            //try container.encode(serializedTx, forKey: .serializedTx)
-            //try container.encode(dictionaryToJsonString(dict: txMetadata), forKey: .txMetadata)
+            try container.encode(network, forKey: .network)
+            try container.encode(dictionaryToJsonString(dict: data), forKey: .data)
+            try container.encode(dictionaryToJsonString(dict: decoder), forKey: .decoder)
         } catch {
             print(error)
         }

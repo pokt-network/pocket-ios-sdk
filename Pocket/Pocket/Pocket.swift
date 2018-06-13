@@ -11,7 +11,7 @@ import Foundation
 public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Void
 public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
 
-struct Pocket {
+public struct Pocket {
     
     // Definitions
     private typealias ExecuteRequestHandler<T: Decodable> = (_: T?, _:Error?) -> Void

@@ -1,5 +1,5 @@
 //
-//  PocketProtocol.swift
+//  PocketPlugin.swift
 //  Pocket
 //
 //  Created by Pabel Nunez Landestoy on 4/24/18.

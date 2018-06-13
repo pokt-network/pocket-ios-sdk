@@ -10,7 +10,7 @@ import Foundation
 
 public typealias SendRequestHandler = (_: Data?, _: Error?) -> Void
 
-public class PocketRequestManager {
+public struct PocketRequestManager {
 
     public var session: URLSession?
     public var configuration: URLSessionConfiguration?

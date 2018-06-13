@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		108D111620C71E4600043D94 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108D111520C71E4600043D94 /* Pocket.swift */; };
+		108D111820C7211E00043D94 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108D111720C7211E00043D94 /* TransactionResponse.swift */; };
+		10BF316720D1732100ADB5F4 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BF316620D1732100ADB5F4 /* Query.swift */; };
 		65F6EC52EDF27B82566BBD99 /* Pods_PocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CCDC11FEAB39C6CB33B110 /* Pods_PocketTests.framework */; };
 		71C41426A00DDF91D0C45A37 /* Pods_Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4A5138210C6EE4322A6060 /* Pods_Pocket.framework */; };
 		786C26002AA40564840B0F2E /* Pods_PocketUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43CB0FE20274E3117351FBF3 /* Pods_PocketUITests.framework */; };
 		C539AF9820C1B161001CDC09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AF9720C1B161001CDC09 /* AppDelegate.swift */; };
 		C539AFAD20C1B162001CDC09 /* PocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFAC20C1B162001CDC09 /* PocketTests.swift */; };
 		C539AFB820C1B162001CDC09 /* PocketUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFB720C1B162001CDC09 /* PocketUITests.swift */; };
-		C539B01020C1B2F0001CDC09 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE420C1B2F0001CDC09 /* Network.swift */; };
 		C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE520C1B2F0001CDC09 /* Transaction.swift */; };
 		C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFE620C1B2F0001CDC09 /* Wallet.swift */; };
 		C539B01320C1B2F0001CDC09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C539AFE820C1B2F0001CDC09 /* Assets.xcassets */; };
-		C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */; };
+		C539B01E20C1B2F0001CDC09 /* PocketPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539AFF820C1B2F0001CDC09 /* PocketPlugin.swift */; };
 		C539B02220C1B2F0001CDC09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C539AFFF20C1B2F0001CDC09 /* Main.storyboard */; };
+		C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5488A5820C6CEA600732F8D /* QueryResponse.swift */; };
+		C5A92B1720C97D2F00965240 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */; };
+		C5A92B1D20D08EDE00965240 /* ModelsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A92B1C20D08EDE00965240 /* ModelsUtils.swift */; };
 		C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +47,9 @@
 /* Begin PBXFileReference section */
 		00CCE8796E17526AD6B0F889 /* Pods-PocketUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketUITests/Pods-PocketUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.release.xcconfig"; sourceTree = "<group>"; };
+		108D111520C71E4600043D94 /* Pocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
+		108D111720C7211E00043D94 /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
+		10BF316620D1732100ADB5F4 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		16CCDC11FEAB39C6CB33B110 /* Pods_PocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F4A5138210C6EE4322A6060 /* Pods_Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43CB0FE20274E3117351FBF3 /* Pods_PocketUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,12 +65,14 @@
 		C539AFB320C1B162001CDC09 /* PocketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539AFB720C1B162001CDC09 /* PocketUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketUITests.swift; sourceTree = "<group>"; };
 		C539AFB920C1B162001CDC09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C539AFE420C1B2F0001CDC09 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		C539AFE520C1B2F0001CDC09 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		C539AFE620C1B2F0001CDC09 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		C539AFE820C1B2F0001CDC09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketProtocol.swift; sourceTree = "<group>"; };
+		C539AFF820C1B2F0001CDC09 /* PocketPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketPlugin.swift; sourceTree = "<group>"; };
 		C539B00020C1B2F0001CDC09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C5488A5820C6CEA600732F8D /* QueryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
+		C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
+		C5A92B1C20D08EDE00965240 /* ModelsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsUtils.swift; sourceTree = "<group>"; };
 		C5D3544A20C1C9BD00AD5C9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +160,8 @@
 				C539AFFB20C1B2F0001CDC09 /* Storyboards */,
 				C539AFE920C1B2F0001CDC09 /* ViewControllers */,
 				C539AFA320C1B162001CDC09 /* Info.plist */,
+				108D111520C71E4600043D94 /* Pocket.swift */,
+				C5A92B1620C97D2F00965240 /* PocketRequestManager.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -175,9 +187,12 @@
 		C539AFE120C1B2F0001CDC09 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C539AFE420C1B2F0001CDC09 /* Network.swift */,
-				C539AFE520C1B2F0001CDC09 /* Transaction.swift */,
 				C539AFE620C1B2F0001CDC09 /* Wallet.swift */,
+				10BF316620D1732100ADB5F4 /* Query.swift */,
+				C5488A5820C6CEA600732F8D /* QueryResponse.swift */,
+				C539AFE520C1B2F0001CDC09 /* Transaction.swift */,
+				108D111720C7211E00043D94 /* TransactionResponse.swift */,
+				C5A92B1C20D08EDE00965240 /* ModelsUtils.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,7 +216,7 @@
 		C539AFF620C1B2F0001CDC09 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C539AFF820C1B2F0001CDC09 /* PocketProtocol.swift */,
+				C539AFF820C1B2F0001CDC09 /* PocketPlugin.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -233,7 +248,6 @@
 				C539AF9020C1B161001CDC09 /* Sources */,
 				C539AF9120C1B161001CDC09 /* Frameworks */,
 				C539AF9220C1B161001CDC09 /* Resources */,
-				49FB8964D8AC9A828B9AA318 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -352,26 +366,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		49FB8964D8AC9A828B9AA318 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Pocket/Pods-Pocket-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pocket/Pods-Pocket-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		8A8F3FF3504C3DA4B6FDD823 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -434,11 +428,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5D3544B20C1C9BD00AD5C9D /* ViewController.swift in Sources */,
-				C539B01E20C1B2F0001CDC09 /* PocketProtocol.swift in Sources */,
+				C5A92B1D20D08EDE00965240 /* ModelsUtils.swift in Sources */,
+				C539B01E20C1B2F0001CDC09 /* PocketPlugin.swift in Sources */,
+				C5488A5920C6CEA600732F8D /* QueryResponse.swift in Sources */,
 				C539B01220C1B2F0001CDC09 /* Wallet.swift in Sources */,
+				10BF316720D1732100ADB5F4 /* Query.swift in Sources */,
+				108D111820C7211E00043D94 /* TransactionResponse.swift in Sources */,
 				C539B01120C1B2F0001CDC09 /* Transaction.swift in Sources */,
-				C539B01020C1B2F0001CDC09 /* Network.swift in Sources */,
+				108D111620C71E4600043D94 /* Pocket.swift in Sources */,
 				C539AF9820C1B161001CDC09 /* AppDelegate.swift in Sources */,
+				C5A92B1720C97D2F00965240 /* PocketRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,6 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				INFOPLIST_FILE = Pocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,6 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 379F9842K2;
 				INFOPLIST_FILE = Pocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

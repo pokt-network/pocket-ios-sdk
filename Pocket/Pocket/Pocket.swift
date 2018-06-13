@@ -12,9 +12,16 @@ public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Vo
 public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
 
 class Pocket {
-    var requestManager:PocketRequestManager?
+    
+    // Definitions
+    private typealias ExecuteRequestHandler<T: Decodable> = (_: T?, _:Error?) -> Void
+    
+    // State
+    var requestManager:PocketRequestManager
     static var pocketInstance:Pocket?
-    var pocketNodeURL:URL?
+    let pocketNodeURL:URL
+    let pocketNodeTxURL:URL
+    let pocketNodeQueryURL:URL
     
     class func getInstance(pocketNodeURL: URL) -> Pocket {
         if(pocketInstance == nil) {
@@ -28,42 +35,38 @@ class Pocket {
     init(pocketNodeURL: URL, requestManager: PocketRequestManager){
         self.pocketNodeURL = pocketNodeURL
         self.requestManager = requestManager
+        self.pocketNodeTxURL = pocketNodeURL.appendingPathComponent("/transactions", isDirectory: false)
+        self.pocketNodeQueryURL = pocketNodeURL.appendingPathComponent("/queries", isDirectory: false)
     }
     
-    func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
-        requestManager!.sendRequest(request: tx as! Encoder) { (json, error) in
-            var response: TransactionResponse?
-            
-            if json != nil {
-                // Init transaction response with codable
-//                do {
-//                    response = try TransactionResponse.init(from: json)
-//                }
-//                catch {
-//                    throw print(error)
-//                }
+    // Executes a request and generically decodes it depending on the decodableType
+    private func executeRequest<T: Decodable>(request: Codable, decodableType: T.Type, handler: @escaping ExecuteRequestHandler<T>) {
+        
+        requestManager.sendRequest(url: self.pocketNodeTxURL, request: request) { (rawResponse, error) in
+            guard error == nil else {
+                handler(nil, error);
+                return;
             }
-    
-            handler(response, error)
+
+            guard let responseData = rawResponse else {
+                handler(nil, nil)
+                return;
+            }
+
+            do {
+                let response = try JSONDecoder().decode(decodableType, from: responseData)
+                handler(response, nil)
+            } catch {
+                handler(nil, nil);
+            }
         }
     }
     
-    func executeQuery(query: [AnyHashable: Any], handler: @escaping ExecuteQueryHandler) {
-        requestManager!.sendRequest(request: query as! Encoder) { (json, error) in
-            var response: QueryResponse?
-            
-            if json != nil {
-                //Query.init(from: json)
-                // Init query response with codable
-//                do {
-//                    response = try QueryResponse(from: json)
-//                }
-//                catch {
-//                    throw print(error)
-//                }
-            }
-            
-            handler(response, error)
-        }
+    public func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
+        executeRequest(request: tx, decodableType: TransactionResponse.self, handler: handler);
+    }
+    
+    public func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
+        executeRequest(request: query, decodableType: QueryResponse.self, handler: handler);
     }
 }

@@ -8,8 +8,10 @@
 
 import Foundation
 
-public class PocketRequestManager: NSObject, PocketRequestManagerProtocol {
-    
+public typealias SendRequestHandler = (_: Data?, _: Error?) -> Void
+
+public class PocketRequestManager {
+
     public var session: URLSession?
     public var configuration: URLSessionConfiguration?
     public var url: URL?
@@ -19,13 +21,21 @@ public class PocketRequestManager: NSObject, PocketRequestManagerProtocol {
         self.session = URLSession(configuration: self.configuration!, delegate: nil, delegateQueue: OperationQueue.main)
         self.url = url
     }
-
-    public func sendRequest(request: Encoder, completionHandler: @escaping SendRequestHandler) {
-        let task = self.session?.dataTask(with: self.url!) { (decoder, urlResponse, error) in
-            //let json = try? JSON.init(data: data!)
-            //completionHandler(decoder!, error!)
-        }
-        task?.resume()
-    }
     
+    public func sendRequest(url: URL, request: Encodable, completionHandler: @escaping SendRequestHandler) {
+        let requestData = try? JSONSerialization.data(withJSONObject: request)
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = requestData
+        
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completionHandler(nil, error);
+                return
+            }
+            completionHandler(data, nil)
+        }
+        
+        task.resume()
+    }
 }

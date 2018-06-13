@@ -11,6 +11,7 @@ import Foundation
 public class QueryResponse: Codable {
     
     enum CodingKeys : String, CodingKey {
+        case network
         case data = "query"
         case result
         case decoder
@@ -19,9 +20,12 @@ public class QueryResponse: Codable {
         case errorMsg = "error_msg"
     }
     
+    // Request
+    public var network = ""
     public var data: [AnyHashable: Any]?
-    public var result: [AnyHashable: Any]?
     public var decoder: [AnyHashable: Any]?
+    // Response
+    public var result: [AnyHashable: Any]?
     public var decoded = false
     public var error = false
     public var errorMsg = ""

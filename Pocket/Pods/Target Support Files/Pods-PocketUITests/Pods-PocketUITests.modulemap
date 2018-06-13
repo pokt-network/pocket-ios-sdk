@@ -1,6 +1,0 @@
-framework module Pods_PocketUITests {
-  umbrella header "Pods-PocketUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

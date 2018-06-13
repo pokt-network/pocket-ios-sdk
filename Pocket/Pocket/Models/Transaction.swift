@@ -20,6 +20,10 @@ public class Transaction: Codable {
     public var serializedTx = ""
     public var txMetadata: [AnyHashable: Any]?
     
+    public init() {
+        
+    }
+    
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
         

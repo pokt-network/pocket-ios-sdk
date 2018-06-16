@@ -10,6 +10,7 @@ import Foundation
 
 public struct Wallet {
     public var address = ""
-    //public var privateKey = ""
+    public var privateKey = ""
     public var network = ""
+    public var data:[AnyHashable : Any]? = [AnyHashable : Any]()
 }

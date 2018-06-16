@@ -8,7 +8,7 @@
 
 import Foundation
 
-public enum PockePluginError: Error {
+public enum PocketPluginError: Error {
     case transactionCreationError(String)
     case queryCreationError(String)
     case walletCreationError(String)

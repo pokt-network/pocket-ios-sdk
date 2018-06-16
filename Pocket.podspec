@@ -23,5 +23,5 @@ Pod::Spec.new do |s|
   s.cocoapods_version = '>= 1.4.0'
 
   # Deployment Targets
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.4'
 end

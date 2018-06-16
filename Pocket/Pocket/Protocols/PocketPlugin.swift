@@ -8,10 +8,17 @@
 
 import Foundation
 
+public enum PockePluginError: Error {
+    case transactionCreationError(String)
+    case queryCreationError(String)
+    case walletCreationError(String)
+    case walletImportError(String)
+}
+
 public protocol PocketPlugin {
-    static func createWallet(passphrase: String) -> Wallet
-    static func importWallet(privateKey: String, publicKey: String, data: [AnyHashable: Any]) -> Wallet
-    static func createTransaction(wallet: Wallet, data: [AnyHashable: Any]) -> Transaction
-    static func createQuery(data: [AnyHashable: Any], decoder: [AnyHashable: Any]?) -> Query
+    static func createWallet(privateKey: String, data: [AnyHashable : Any]?) throws -> Wallet
+    static func importWallet(privateKey: String, address: String?, data: [AnyHashable : Any]?) throws -> Wallet
+    static func createTransaction(wallet: Wallet, params: [AnyHashable : Any]) throws -> Transaction
+    static func createQuery(params: [AnyHashable : Any], decoder: [AnyHashable : Any]?) throws -> Query
 }
 

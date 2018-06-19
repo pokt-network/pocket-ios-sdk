@@ -12,13 +12,13 @@ Pod::Spec.new do |s|
   s.version   = '0.0.1'
   s.license   = { :type => 'MIT' }
   s.homepage  = 'https://github.com/pokt-network/pocket-ios-sdk'
-  s.authors   = { 'Arthur Ariel Sabintsev' => 'arthur@sabintsev.com' }
+  s.authors   = { 'Luis C. de Leon' => 'luis@pokt.network' }
   s.summary   = 'An iOS SDK to connect to the Pocket Network.'
 
   # Settings
   s.source            = { :git => 'https://github.com/pokt-network/pocket-ios-sdk.git', :tag => s.version.to_s }
-  s.source_files      = 'Pocket/**/*.{swift}'
-  s.exclude_files     = 'docs/*'
+  s.source_files      = 'Pocket/Pocket/**/*.{swift}'
+  s.exclude_files     = 'Pocket/PocketTests/**/*.{swift}'
   s.swift_version     = '4.0'
   s.cocoapods_version = '>= 1.4.0'
 

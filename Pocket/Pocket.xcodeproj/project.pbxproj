@@ -18,7 +18,6 @@
 		10CFAED020D87BA100230740 /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAECA20D87BA100230740 /* QueryResponse.swift */; };
 		10CFAED120D87BA100230740 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAECB20D87BA100230740 /* Wallet.swift */; };
 		10CFAED420D87BC100230740 /* PocketPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAED320D87BC100230740 /* PocketPlugin.swift */; };
-		C52FFD9C20DA9E4000D163FC /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52FFD9B20DA9E4000D163FC /* WalletManager.swift */; };
 		DDF571472F3D18FDC88ACA84 /* Pods_Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014352A602E002BDA0EB25CC /* Pods_Pocket.framework */; };
 		EEB45603EDF35F8A67AED818 /* Pods_PocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */; };
 /* End PBXBuildFile section */
@@ -52,7 +51,6 @@
 		7C710B87F6A77C66121E6E46 /* Pods-Pocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.debug.xcconfig"; sourceTree = "<group>"; };
 		C230409A0BE741438C7BFB52 /* Pods-PocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C52FFD9B20DA9E4000D163FC /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,7 +82,6 @@
 				10CFAEC520D87B8300230740 /* Models */,
 				10CFAEC220D87B7400230740 /* Pocket.swift */,
 				10CFAEC120D87B7400230740 /* PocketRequestManager.swift */,
-				C52FFD9B20DA9E4000D163FC /* WalletManager.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -329,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52FFD9C20DA9E4000D163FC /* WalletManager.swift in Sources */,
 				10CFAED120D87BA100230740 /* Wallet.swift in Sources */,
 				10CFAED020D87BA100230740 /* QueryResponse.swift in Sources */,
 				10CFAECE20D87BA100230740 /* Query.swift in Sources */,

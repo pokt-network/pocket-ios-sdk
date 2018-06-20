@@ -18,6 +18,9 @@
 		10CFAED020D87BA100230740 /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAECA20D87BA100230740 /* QueryResponse.swift */; };
 		10CFAED120D87BA100230740 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAECB20D87BA100230740 /* Wallet.swift */; };
 		10CFAED420D87BC100230740 /* PocketPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAED320D87BC100230740 /* PocketPlugin.swift */; };
+		C52FFD9C20DA9E4000D163FC /* WalletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52FFD9B20DA9E4000D163FC /* WalletManager.swift */; };
+		DDF571472F3D18FDC88ACA84 /* Pods_Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014352A602E002BDA0EB25CC /* Pods_Pocket.framework */; };
+		EEB45603EDF35F8A67AED818 /* Pods_PocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014352A602E002BDA0EB25CC /* Pods_Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.release.xcconfig"; sourceTree = "<group>"; };
 		10CFAEA020D8785C00230740 /* Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CFAEA820D8785C00230740 /* PocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,8 @@
 		10CFAED320D87BC100230740 /* PocketPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketPlugin.swift; sourceTree = "<group>"; };
 		7C710B87F6A77C66121E6E46 /* Pods-Pocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.debug.xcconfig"; sourceTree = "<group>"; };
 		C230409A0BE741438C7BFB52 /* Pods-PocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C52FFD9B20DA9E4000D163FC /* WalletManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletManager.swift; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF571472F3D18FDC88ACA84 /* Pods_Pocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10CFAEA920D8785C00230740 /* Pocket.framework in Frameworks */,
+				EEB45603EDF35F8A67AED818 /* Pods_PocketTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +84,7 @@
 				10CFAEC520D87B8300230740 /* Models */,
 				10CFAEC220D87B7400230740 /* Pocket.swift */,
 				10CFAEC120D87B7400230740 /* PocketRequestManager.swift */,
+				C52FFD9B20DA9E4000D163FC /* WalletManager.swift */,
 			);
 			path = Pocket;
 			sourceTree = "<group>";
@@ -113,6 +122,8 @@
 		3C7BBF3BBD564FFA37617C53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				014352A602E002BDA0EB25CC /* Pods_Pocket.framework */,
+				C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,6 +199,7 @@
 				10CFAEA420D8785C00230740 /* Sources */,
 				10CFAEA520D8785C00230740 /* Frameworks */,
 				10CFAEA620D8785C00230740 /* Resources */,
+				32A169A733D33229025968F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,6 +268,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32A169A733D33229025968F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		83A6C44DF7C1207B9CCA43DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52FFD9C20DA9E4000D163FC /* WalletManager.swift in Sources */,
 				10CFAED120D87BA100230740 /* Wallet.swift in Sources */,
 				10CFAED020D87BA100230740 /* QueryResponse.swift in Sources */,
 				10CFAECE20D87BA100230740 /* Query.swift in Sources */,
@@ -344,7 +375,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Pocket/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +406,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = Pocket/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +430,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PocketTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,7 +452,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PocketTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

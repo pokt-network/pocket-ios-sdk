@@ -1,3 +1,22 @@
-PODFILE CHECKSUM: cab4abf0aef087e0f801745c96a2865c047e2c89
+PODS:
+  - SwiftKeychainWrapper (3.1.0)
+
+DEPENDENCIES:
+  - "SwiftKeychainWrapper (from `git@github.com:jrendel/SwiftKeychainWrapper.git`, branch `develop`)"
+
+EXTERNAL SOURCES:
+  SwiftKeychainWrapper:
+    :branch: develop
+    :git: "git@github.com:jrendel/SwiftKeychainWrapper.git"
+
+CHECKOUT OPTIONS:
+  SwiftKeychainWrapper:
+    :commit: 77f73c354d695d976bcf1437fc9fbcea981aa2b4
+    :git: "git@github.com:jrendel/SwiftKeychainWrapper.git"
+
+SPEC CHECKSUMS:
+  SwiftKeychainWrapper: fe63ac0e19acd227aa031043de5a8f88a3ff23da
+
+PODFILE CHECKSUM: 92bdec6c9060c5a4277789b2aa8e7af95dcc307e
 
 COCOAPODS: 1.5.3

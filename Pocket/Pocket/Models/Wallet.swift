@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftKeychainWrapper
+import RNCryptor
 
 public enum WalletPersistenceError: Error {
     case invalidWallet
@@ -37,9 +38,13 @@ public struct Wallet {
     }
     
     // Persistence public interface
-    public func save() throws -> Bool {
+    public func save(passphrase: String) throws -> Bool {
         if isValid() {
-            return  KeychainWrapper.standard.set(try toJSONString(), forKey: recordKey())
+            guard let jsonData = try toJSONString().data(using: .utf8) else {
+                throw WalletPersistenceError.invalidWallet
+            }
+            let ciphertext = RNCryptor.encrypt(data: jsonData, withPassword: passphrase)
+            return  KeychainWrapper.standard.set(ciphertext, forKey: recordKey())
         } else {
             throw WalletPersistenceError.invalidWallet
         }
@@ -49,21 +54,21 @@ public struct Wallet {
         return KeychainWrapper.standard.removeObject(forKey: recordKey())
     }
     
-    public static func retrieveWallets() throws -> [Wallet] {
-        var wallets = [Wallet]()
-        let allRecords = KeychainWrapper.standard.allKeys()
-        
-        for record in allRecords {
-            let wallet = try Wallet(jsonString: record)
-            wallets.append(wallet)
-        }
-        
-        return wallets
+    public static func retrieveWalletRecordKeys() -> [String] {
+        return Array(KeychainWrapper.standard.allKeys())
     }
     
-    public static func retrieveWallet(network: String, address: String) throws -> Wallet{
-        let walletJSONString: String? = KeychainWrapper.standard.string(forKey: Wallet.recordKey(network: network, address: address))
-        let wallet = try Wallet(jsonString: walletJSONString ?? "")
+    public static func retrieveWallet(network: String, address: String, passphrase: String) throws -> Wallet{
+        guard let encryptedWalletString:String = KeychainWrapper.standard.string(forKey: Wallet.recordKey(network: network, address: address)) else {
+            throw WalletPersistenceError.walletSerializationError
+        }
+        guard let encryptedWalletData = encryptedWalletString.data(using: .utf8) else {
+            throw WalletPersistenceError.walletSerializationError
+        }
+        guard let decryptedWalletJSON = String.init(data: try RNCryptor.decrypt(data: encryptedWalletData, withPassword: passphrase), encoding: .utf8) else {
+            throw WalletPersistenceError.walletSerializationError
+        }
+        let wallet = try Wallet(jsonString: decryptedWalletJSON)
         return wallet
     }
     

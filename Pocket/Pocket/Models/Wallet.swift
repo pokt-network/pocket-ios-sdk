@@ -9,30 +9,24 @@
 import Foundation
 import SwiftKeychainWrapper
 
+public enum WalletPersistenceError: Error {
+    case invalidWallet
+    case walletSerializationError
+}
+
 public struct Wallet {
     public var address = ""
     public var privateKey = ""
     public var network = ""
     public var data:[AnyHashable : Any]? = [AnyHashable : Any]()
 
-    public init(jsonString: String) {
-        var dict = [AnyHashable: Any]()
-        
-        do {
-            dict = try jsonStringToDictionary(string: jsonString) ?? [AnyHashable: Any]()
-        } catch {
-            print("Failed to convert jsonString to AnyHashable:Any")
-        }
-        
+    //Public interface
+    public init(jsonString: String) throws {
+        var dict = try jsonStringToDictionary(string: jsonString) ?? [AnyHashable: Any]()
         address = dict["address"] as? String ?? ""
         privateKey = dict["privateKey"] as? String ?? ""
         network = dict["network"] as? String ?? ""
-        
-        do {
-            try data = jsonStringToDictionary(string: dict["data"] as? String ?? "")
-        } catch {
-            print("Failed to convert JSON data to Anyhashable:Any")
-        }
+        data = try jsonStringToDictionary(string: dict["data"] as? String ?? "")
     }
     
     public init(address: String, privateKey: String, network: String, data: [AnyHashable : Any]?) {
@@ -42,42 +36,60 @@ public struct Wallet {
         self.data = data
     }
     
-    public func save() -> Bool {
-        let walletString = toJSONString()
-        let addressWithNetwork = network+address
-        let saveStatus: Bool = KeychainWrapper.standard.set(walletString, forKey: addressWithNetwork)
+    // Persistence public interface
+    public func save() throws -> Bool {
+        if isValid() {
+            return  KeychainWrapper.standard.set(try toJSONString(), forKey: recordKey())
+        } else {
+            throw WalletPersistenceError.invalidWallet
+        }
+    }
+    
+    public func delete() throws -> Bool {
+        return KeychainWrapper.standard.removeObject(forKey: recordKey())
+    }
+    
+    public static func retrieveWallets() throws -> [Wallet] {
+        var wallets = [Wallet]()
+        let allRecords = KeychainWrapper.standard.allKeys()
         
-        return saveStatus
+        for record in allRecords {
+            let wallet = try Wallet(jsonString: record)
+            wallets.append(wallet)
+        }
+        
+        return wallets
     }
     
-    public func delete() -> Bool {
-        let removeStatus: Bool = KeychainWrapper.standard.removeObject(forKey: address)
-
-        return removeStatus
+    public static func retrieveWallet(network: String, address: String) throws -> Wallet{
+        let walletJSONString: String? = KeychainWrapper.standard.string(forKey: Wallet.recordKey(network: network, address: address))
+        let wallet = try Wallet(jsonString: walletJSONString ?? "")
+        return wallet
     }
     
-    private func toJSONString() -> String {
+    // Private functions
+    private func isValid() -> Bool {
+        return !network.isEmpty && !address.isEmpty && !privateKey.isEmpty
+    }
+    
+    private func recordKey() -> String {
+        return Wallet.recordKey(network: network, address: address)
+    }
+    
+    private static func recordKey(network: String, address: String) -> String {
+        return network + "/" + address
+    }
+    
+    private func toJSONString() throws -> String {
         var object = [AnyHashable: Any]()
-        var jsonString = ""
-        
         object["address"] = address
         object["privateKey"] = privateKey
         object["network"] = network
-        
-        do {
-            object["data"] = try dictionaryToJsonString(dict: data)
-
-        } catch  {
-            print("Failed to convert Anyhashable:Any to JSON String")
+        object["data"] = try dictionaryToJsonString(dict: data)
+        guard let result = try dictionaryToJsonString(dict: object) else {
+            throw WalletPersistenceError.walletSerializationError
         }
         
-        do {
-            jsonString = try dictionaryToJsonString(dict: object) ?? ""
-            
-        } catch  {
-            print("Failed to convert JSON String to Anyhashable:Any")
-        }
-        
-        return jsonString
+        return result
     }
 }

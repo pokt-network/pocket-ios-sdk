@@ -24,4 +24,8 @@ Pod::Spec.new do |s|
 
   # Deployment Targets
   s.ios.deployment_target = '11.4'
+
+  # Framework dependencies
+  s.dependency 'SwiftKeychainWrapper'
+  s.dependency 'RNCryptor', '~> 5.0'
 end

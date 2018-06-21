@@ -1,3 +1,29 @@
-PODFILE CHECKSUM: cab4abf0aef087e0f801745c96a2865c047e2c89
+PODS:
+  - RNCryptor (5.0.3)
+  - SwiftKeychainWrapper (3.1.0)
+
+DEPENDENCIES:
+  - RNCryptor (~> 5.0)
+  - "SwiftKeychainWrapper (from `git@github.com:jrendel/SwiftKeychainWrapper.git`, branch `develop`)"
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RNCryptor
+
+EXTERNAL SOURCES:
+  SwiftKeychainWrapper:
+    :branch: develop
+    :git: "git@github.com:jrendel/SwiftKeychainWrapper.git"
+
+CHECKOUT OPTIONS:
+  SwiftKeychainWrapper:
+    :commit: 77f73c354d695d976bcf1437fc9fbcea981aa2b4
+    :git: "git@github.com:jrendel/SwiftKeychainWrapper.git"
+
+SPEC CHECKSUMS:
+  RNCryptor: c93d19029dcf7ff160aca0f24d6c9e7b0d82f664
+  SwiftKeychainWrapper: fe63ac0e19acd227aa031043de5a8f88a3ff23da
+
+PODFILE CHECKSUM: b66296751aea8d2a9b5dc9e2f7799ad815f406a4
 
 COCOAPODS: 1.5.3

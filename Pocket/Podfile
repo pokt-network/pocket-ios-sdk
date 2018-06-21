@@ -3,7 +3,7 @@ platform :ios, '11.4'
 
 target 'Pocket' do
   use_frameworks!
-  pod 'SwiftKeychainWrapper', :git => 'git@github.com:jrendel/SwiftKeychainWrapper.git', :branch => 'develop'
+  pod 'SwiftKeychainWrapper', :git => 'git@github.com:jrendel/SwiftKeychainWrapper.git', :branch => 'develop', :commit => '77f73c354d695d976bcf1437fc9fbcea981aa2b4'
   pod 'RNCryptor', '~> 5.0'
 
   target 'PocketTests' do

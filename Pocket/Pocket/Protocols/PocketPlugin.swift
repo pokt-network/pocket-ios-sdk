@@ -16,7 +16,7 @@ public enum PocketPluginError: Error {
 }
 
 public protocol PocketPlugin {
-    static func createWallet(privateKey: String, data: [AnyHashable : Any]?) throws -> Wallet
+    static func createWallet(data: [AnyHashable : Any]?) throws -> Wallet
     static func importWallet(privateKey: String, address: String?, data: [AnyHashable : Any]?) throws -> Wallet
     static func createTransaction(wallet: Wallet, params: [AnyHashable : Any]) throws -> Transaction
     static func createQuery(params: [AnyHashable : Any], decoder: [AnyHashable : Any]?) throws -> Query

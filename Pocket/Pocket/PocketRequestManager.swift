@@ -22,20 +22,17 @@ public struct PocketRequestManager {
         self.url = url
     }
     
-    public func sendRequest<T: Encodable>(withURL url: URL, forModel model: T, completionHandler: @escaping SendRequestHandler) {
+    public func sendRequest<Model: Encodable>(withURL url: URL, forModel model: Model, completionHandler: @escaping SendRequestHandler) {
         let requestData = try? JSONEncoder().encode(model)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = requestData
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
-                completionHandler(nil, error);
-                return
+                return completionHandler(nil, error)
             }
             completionHandler(data, nil)
-        }
-        
-        task.resume()
+        }.resume()
     }
 }

@@ -11,7 +11,7 @@
 		10CFAEC020D87B2D00230740 /* PocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEBF20D87B2D00230740 /* PocketTests.swift */; };
 		10CFAEC320D87B7400230740 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC120D87B7400230740 /* PocketRequestManager.swift */; };
 		10CFAEC420D87B7400230740 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC220D87B7400230740 /* Pocket.swift */; };
-		10CFAECC20D87BA100230740 /* ModelsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC620D87BA100230740 /* ModelsUtils.swift */; };
+		10CFAECC20D87BA100230740 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC620D87BA100230740 /* Utility.swift */; };
 		10CFAECD20D87BA100230740 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC720D87BA100230740 /* TransactionResponse.swift */; };
 		10CFAECE20D87BA100230740 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC820D87BA100230740 /* Query.swift */; };
 		10CFAECF20D87BA100230740 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC920D87BA100230740 /* Transaction.swift */; };
@@ -41,7 +41,7 @@
 		10CFAEBF20D87B2D00230740 /* PocketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketTests.swift; sourceTree = "<group>"; };
 		10CFAEC120D87B7400230740 /* PocketRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
 		10CFAEC220D87B7400230740 /* Pocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
-		10CFAEC620D87BA100230740 /* ModelsUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelsUtils.swift; sourceTree = "<group>"; };
+		10CFAEC620D87BA100230740 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		10CFAEC720D87BA100230740 /* TransactionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		10CFAEC820D87BA100230740 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		10CFAEC920D87BA100230740 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -98,11 +98,11 @@
 		10CFAEC520D87B8300230740 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10CFAEC620D87BA100230740 /* ModelsUtils.swift */,
 				10CFAEC820D87BA100230740 /* Query.swift */,
 				10CFAECA20D87BA100230740 /* QueryResponse.swift */,
 				10CFAEC920D87BA100230740 /* Transaction.swift */,
 				10CFAEC720D87BA100230740 /* TransactionResponse.swift */,
+				10CFAEC620D87BA100230740 /* Utility.swift */,
 				10CFAECB20D87BA100230740 /* Wallet.swift */,
 			);
 			path = Models;
@@ -368,7 +368,7 @@
 				10CFAECD20D87BA100230740 /* TransactionResponse.swift in Sources */,
 				10CFAED420D87BC100230740 /* PocketPlugin.swift in Sources */,
 				10CFAEC420D87B7400230740 /* Pocket.swift in Sources */,
-				10CFAECC20D87BA100230740 /* ModelsUtils.swift in Sources */,
+				10CFAECC20D87BA100230740 /* Utility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

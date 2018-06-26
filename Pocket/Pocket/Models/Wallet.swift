@@ -19,15 +19,14 @@ public struct Wallet {
     public var address = ""
     public var privateKey = ""
     public var network = ""
-    public var data:[AnyHashable : Any]? = [AnyHashable : Any]()
+    public var data: [AnyHashable: Any]? = [AnyHashable: Any]()
 
-    //Public interface
     public init(jsonString: String) throws {
-        var dict = try jsonStringToDictionary(string: jsonString) ?? [AnyHashable: Any]()
+        var dict = try Utility.jsonStringToDictionary(string: jsonString) ?? [AnyHashable: Any]()
         address = dict["address"] as? String ?? ""
         privateKey = dict["privateKey"] as? String ?? ""
         network = dict["network"] as? String ?? ""
-        data = try jsonStringToDictionary(string: dict["data"] as? String ?? "")
+        data = try Utility.jsonStringToDictionary(string: dict["data"] as? String ?? "")
     }
     
     public init(address: String, privateKey: String, network: String, data: [AnyHashable : Any]?) {
@@ -90,8 +89,8 @@ public struct Wallet {
         object["address"] = address
         object["privateKey"] = privateKey
         object["network"] = network
-        object["data"] = try dictionaryToJsonString(dict: data)
-        guard let result = try dictionaryToJsonString(dict: object) else {
+        object["data"] = try Utility.dictionaryToJsonString(dict: data)
+        guard let result = try Utility.dictionaryToJsonString(dict: object) else {
             throw WalletPersistenceError.walletSerializationError
         }
         

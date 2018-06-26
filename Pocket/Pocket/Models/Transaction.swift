@@ -27,14 +27,14 @@ public class Transaction: Codable {
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
         
         let stringTxMetadata = try values.decodeIfPresent(String.self, forKey: .tranactionMetadata) ?? ""
-        transactionMetadata = try jsonStringToDictionary(string: stringTxMetadata)
+        transactionMetadata = try Utility.jsonStringToDictionary(string: stringTxMetadata)
     }
     
     public func encode(to encoder: Encoder) throws {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(serializedTransaction, forKey: .serializedTransaction)
-            try container.encode(dictionaryToJsonString(dict: transactionMetadata), forKey: .tranactionMetadata)
+            try container.encode(Utility.dictionaryToJsonString(dict: transactionMetadata), forKey: .tranactionMetadata)
         } catch {
             print(error)
         }

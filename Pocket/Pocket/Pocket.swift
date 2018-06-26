@@ -13,10 +13,10 @@ public typealias ExecuteQueryHandler = (QueryResponse?, Error?) -> Void
 
 public struct Pocket {
 
-    public static var pocketInstance: Pocket?
+    private var requestManager: PocketRequestManager
+    private var pocketNodeURL: URL
 
-    var requestManager: PocketRequestManager
-    var pocketNodeURL: URL
+    public static var pocketInstance: Pocket?
 
     public static func getInstance(forURL url: URL) -> Pocket {
         guard let pocketInstance = pocketInstance else {
@@ -56,7 +56,7 @@ private extension Pocket {
                                                                forModel model: Model,
                                                                ofType type: Response.Type,
                                                                handler: @escaping ExecuteRequestHandler<Response>) {
-        requestManager.sendRequest(withURL: url, forModel: model) { (response, error) in
+        requestManager.sendRequest(withURL: url, forModel: model) { response, error in
             guard error == nil else {
                 return handler(nil, error)
             }

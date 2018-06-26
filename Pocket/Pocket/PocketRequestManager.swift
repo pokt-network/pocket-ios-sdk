@@ -22,8 +22,8 @@ public struct PocketRequestManager {
         self.url = url
     }
     
-    public func sendRequest(url: URL, request: Encodable, completionHandler: @escaping SendRequestHandler) {
-        let requestData = try? JSONSerialization.data(withJSONObject: request)
+    public func sendRequest(withURL url: URL, forModel model: Encodable, completionHandler: @escaping SendRequestHandler) {
+        let requestData = try? JSONSerialization.data(withJSONObject: model)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = requestData

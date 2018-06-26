@@ -12,61 +12,64 @@ public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Vo
 public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
 
 public struct Pocket {
-    
-    // Definitions
-    private typealias ExecuteRequestHandler<T: Decodable> = (_: T?, _:Error?) -> Void
-    
-    // State
-    var requestManager:PocketRequestManager
-    static var pocketInstance:Pocket?
-    let pocketNodeURL:URL
-    let pocketNodeTxURL:URL
-    let pocketNodeQueryURL:URL
-    
-    static func getInstance(pocketNodeURL: URL) -> Pocket {
-        if(pocketInstance == nil) {
+
+    public static var pocketInstance: Pocket?
+
+    var requestManager: PocketRequestManager
+    var pocketNodeURL: URL
+
+    public static func getInstance(forURL url: URL) -> Pocket {
+        guard let pocketInstance = pocketInstance else {
             let configuration = URLSessionConfiguration.ephemeral
-            let requestManager = PocketRequestManager.init(configuration: configuration, url: pocketNodeURL)
-            pocketInstance = Pocket(pocketNodeURL: pocketNodeURL, requestManager: requestManager)
+            let requestManager = PocketRequestManager(configuration: configuration, url: url)
+            return Pocket(pocketNodeURL: url, requestManager: requestManager)
         }
-        return pocketInstance!
+
+        return pocketInstance
     }
-    
-    init(pocketNodeURL: URL, requestManager: PocketRequestManager){
+
+    public init(pocketNodeURL: URL, requestManager: PocketRequestManager) {
         self.pocketNodeURL = pocketNodeURL
         self.requestManager = requestManager
-        self.pocketNodeTxURL = pocketNodeURL.appendingPathComponent("/transactions", isDirectory: false)
-        self.pocketNodeQueryURL = pocketNodeURL.appendingPathComponent("/queries", isDirectory: false)
+    }
+
+    public func sendTransaction(transaction: Transaction, handler: @escaping TransactionHandler) {
+        executeRequest(withURL: pocketNodeURL.appendingPathComponent("/transactions", isDirectory: false),
+                       forModel: transaction,
+                       ofType: TransactionResponse.self,
+                       handler: handler)
     }
     
+    public func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
+        executeRequest(withURL: pocketNodeURL.appendingPathComponent("/queries", isDirectory: false),
+                       forModel: query,
+                       ofType: QueryResponse.self,
+                       handler: handler)
+    }
+}
+
+private extension Pocket {
+    typealias ExecuteRequestHandler<T: Decodable> = (T?, Error?) -> Void
+
     // Executes a request and generically decodes it depending on the decodableType
-    private func executeRequest<T: Decodable>(request: Codable, decodableType: T.Type, handler: @escaping ExecuteRequestHandler<T>) {
-        
-        requestManager.sendRequest(url: self.pocketNodeTxURL, request: request) { (rawResponse, error) in
+    func executeRequest<T: Decodable>(withURL url: URL, forModel model: Codable, ofType type: T.Type, handler: @escaping ExecuteRequestHandler<T>) {
+        requestManager.sendRequest(withURL: url, forModel: model) { (rawResponse, error) in
             guard error == nil else {
-                handler(nil, error);
+                handler(nil, error)
                 return;
             }
 
             guard let responseData = rawResponse else {
                 handler(nil, nil)
-                return;
+                return
             }
 
             do {
-                let response = try JSONDecoder().decode(decodableType, from: responseData)
+                let response = try JSONDecoder().decode(type, from: responseData)
                 handler(response, nil)
             } catch {
-                handler(nil, nil);
+                handler(nil, nil)
             }
         }
-    }
-    
-    public func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
-        executeRequest(request: tx, decodableType: TransactionResponse.self, handler: handler);
-    }
-    
-    public func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
-        executeRequest(request: query, decodableType: QueryResponse.self, handler: handler);
     }
 }

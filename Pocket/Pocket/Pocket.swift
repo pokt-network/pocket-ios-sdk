@@ -8,8 +8,8 @@
 
 import Foundation
 
-public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Void
-public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
+public typealias TransactionHandler = (TransactionResponse?, Error?) -> Void
+public typealias ExecuteQueryHandler = (QueryResponse?, Error?) -> Void
 
 public struct Pocket {
 
@@ -49,23 +49,24 @@ public struct Pocket {
 }
 
 private extension Pocket {
-    typealias ExecuteRequestHandler<T: Decodable> = (T?, Error?) -> Void
+    typealias ExecuteRequestHandler<Response: Decodable> = (Response?, Error?) -> Void
 
     // Executes a request and generically decodes it depending on the decodableType
-    func executeRequest<T: Decodable>(withURL url: URL, forModel model: Codable, ofType type: T.Type, handler: @escaping ExecuteRequestHandler<T>) {
-        requestManager.sendRequest(withURL: url, forModel: model) { (rawResponse, error) in
+    func executeRequest<Model: Encodable, Response: Decodable>(withURL url: URL,
+                                                               forModel model: Model,
+                                                               ofType type: Response.Type,
+                                                               handler: @escaping ExecuteRequestHandler<Response>) {
+        requestManager.sendRequest(withURL: url, forModel: model) { (response, error) in
             guard error == nil else {
-                handler(nil, error)
-                return;
+                return handler(nil, error)
             }
 
-            guard let responseData = rawResponse else {
-                handler(nil, nil)
-                return
+            guard let response = response else {
+                return handler(nil, nil)
             }
 
             do {
-                let response = try JSONDecoder().decode(type, from: responseData)
+                let response = try JSONDecoder().decode(type, from: response)
                 handler(response, nil)
             } catch {
                 handler(nil, nil)

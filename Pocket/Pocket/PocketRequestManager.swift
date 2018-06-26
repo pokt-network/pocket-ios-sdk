@@ -12,18 +12,18 @@ public typealias SendRequestHandler = (_: Data?, _: Error?) -> Void
 
 public struct PocketRequestManager {
 
-    public var session: URLSession?
-    public var configuration: URLSessionConfiguration?
-    public var url: URL?
+    var session: URLSession?
+    var configuration: URLSessionConfiguration?
+    var url: URL?
     
-    init(configuration: URLSessionConfiguration, url: URL) {
+    public init(configuration: URLSessionConfiguration, url: URL) {
         self.configuration = configuration
         self.session = URLSession(configuration: self.configuration!, delegate: nil, delegateQueue: OperationQueue.main)
         self.url = url
     }
     
-    public func sendRequest(withURL url: URL, forModel model: Encodable, completionHandler: @escaping SendRequestHandler) {
-        let requestData = try? JSONSerialization.data(withJSONObject: model)
+    public func sendRequest<T: Encodable>(withURL url: URL, forModel model: T, completionHandler: @escaping SendRequestHandler) {
+        let requestData = try? JSONEncoder().encode(model)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.httpBody = requestData

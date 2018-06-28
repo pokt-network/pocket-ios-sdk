@@ -13,35 +13,34 @@ public typealias ExecuteQueryHandler = (QueryResponse?, Error?) -> Void
 
 public struct Pocket {
 
-    private var requestManager: PocketRequestManager
-    private var pocketNodeURL: URL
+    // Singleton
+    public static let shared = Pocket()
 
-    public static var pocketInstance: Pocket?
+    // Dependency Injected Configuration
+    public var configuration: Configuration?
 
-    public static func getInstance(forURL url: URL) -> Pocket {
-        guard let pocketInstance = pocketInstance else {
-            let configuration = URLSessionConfiguration.ephemeral
-            let requestManager = PocketRequestManager(configuration: configuration, url: url)
-            return Pocket(pocketNodeURL: url, requestManager: requestManager)
-        }
-
-        return pocketInstance
-    }
-
-    public init(pocketNodeURL: URL, requestManager: PocketRequestManager) {
-        self.pocketNodeURL = pocketNodeURL
-        self.requestManager = requestManager
+    /// Initializer
+    public init() {
+        // Empty for now
     }
 
     public func sendTransaction(transaction: Transaction, handler: @escaping TransactionHandler) {
-        executeRequest(withURL: pocketNodeURL.appendingPathComponent("/transactions", isDirectory: false),
+        guard let url = configuration?.nodeURL else {
+            return // Handle Error
+        }
+
+        executeRequest(withURL: url.appendingPathComponent("/transactions", isDirectory: false),
                        forModel: transaction,
                        ofType: TransactionResponse.self,
                        handler: handler)
     }
     
     public func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
-        executeRequest(withURL: pocketNodeURL.appendingPathComponent("/queries", isDirectory: false),
+        guard let url = configuration?.nodeURL else {
+            return // Handle Error
+        }
+
+        executeRequest(withURL: url.appendingPathComponent("/queries", isDirectory: false),
                        forModel: query,
                        ofType: QueryResponse.self,
                        handler: handler)
@@ -56,7 +55,7 @@ private extension Pocket {
                                                                forModel model: Model,
                                                                ofType type: Response.Type,
                                                                handler: @escaping ExecuteRequestHandler<Response>) {
-        requestManager.sendRequest(withURL: url, forModel: model) { response, error in
+        PocketRequestManager.sendRequest(withURL: url, forModel: model) { response, error in
             guard error == nil else {
                 return handler(nil, error)
             }

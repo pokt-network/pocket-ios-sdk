@@ -26,8 +26,8 @@ public class Transaction: Codable {
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
         
-        let stringTxMetadata = try values.decodeIfPresent(String.self, forKey: .tranactionMetadata) ?? ""
-        transactionMetadata = try Utility.jsonStringToDictionary(string: stringTxMetadata)
+        let parsedTransactionMetadata = try values.decodeIfPresent(String.self, forKey: .tranactionMetadata) ?? ""
+        transactionMetadata = try Utility.jsonStringToDictionary(string: parsedTransactionMetadata)
     }
     
     public func encode(to encoder: Encoder) throws {

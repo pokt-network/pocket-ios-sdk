@@ -34,8 +34,8 @@ public class TransactionResponse: Codable {
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
         
-        let stringTxMetadata = try values.decodeIfPresent(String.self, forKey: .transactionMetadata) ?? ""
-        transactionMetadata = try Utility.jsonStringToDictionary(string: stringTxMetadata)
+        let parsedTransactionMetadata = try values.decodeIfPresent(String.self, forKey: .transactionMetadata) ?? ""
+        transactionMetadata = try Utility.jsonStringToDictionary(string: parsedTransactionMetadata)
         
         hash = try values.decodeIfPresent(String.self, forKey: .hash) ?? ""
         

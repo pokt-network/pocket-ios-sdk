@@ -23,9 +23,9 @@ public struct Utility {
     }
 
     public static func dictionaryToJsonString(dict: [AnyHashable: Any]?) throws -> String? {
-        let data = try JSONSerialization.data(withJSONObject: dict ?? [AnyHashable: Any](), options: .sortedKeys)
+        let object = dict ?? [AnyHashable: Any]()
+        let data = try JSONSerialization.data(withJSONObject: object, options: .sortedKeys)
         return String(data: data, encoding: .utf8)
     }
-
 
 }

@@ -10,35 +10,31 @@ import Foundation
 
 public class Transaction: Codable {
     
-    enum CodingKeys : String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case network
-        case serializedTx = "serialized_tx"
-        case txMetadata = "tx_metadata"
+        case serializedTransaction = "serialized_tx"
+        case tranactionMetadata = "tx_metadata"
     }
     
     public var network = ""
-    public var serializedTx = ""
-    public var txMetadata: [AnyHashable: Any]?
-    
-    public init() {
-        
-    }
+    public var serializedTransaction = ""
+    public var transactionMetadata: [AnyHashable: Any]?
     
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
         
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
-        serializedTx = try values.decodeIfPresent(String.self, forKey: .serializedTx) ?? ""
+        serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
         
-        let stringTxMetadata = try values.decodeIfPresent(String.self, forKey: .txMetadata) ?? ""
-        txMetadata = try jsonStringToDictionary(string: stringTxMetadata)
+        let parsedTransactionMetadata = try values.decodeIfPresent(String.self, forKey: .tranactionMetadata) ?? ""
+        transactionMetadata = try Utility.jsonStringToDictionary(string: parsedTransactionMetadata)
     }
     
     public func encode(to encoder: Encoder) throws {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(serializedTx, forKey: .serializedTx)
-            try container.encode(dictionaryToJsonString(dict: txMetadata), forKey: .txMetadata)
+            try container.encode(serializedTransaction, forKey: .serializedTransaction)
+            try container.encode(Utility.dictionaryToJsonString(dict: transactionMetadata), forKey: .tranactionMetadata)
         } catch {
             print(error)
         }

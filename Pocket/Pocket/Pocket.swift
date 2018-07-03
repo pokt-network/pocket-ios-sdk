@@ -8,65 +8,68 @@
 
 import Foundation
 
-public typealias TransactionHandler = (_: TransactionResponse?, _: Error?) -> Void
-public typealias ExecuteQueryHandler = (_: QueryResponse?, _:Error?) -> Void
+public typealias TransactionHandler = (TransactionResponse?, Error?) -> Void
+public typealias ExecuteQueryHandler = (QueryResponse?, Error?) -> Void
 
 public struct Pocket {
-    
-    // Definitions
-    private typealias ExecuteRequestHandler<T: Decodable> = (_: T?, _:Error?) -> Void
-    
-    // State
-    var requestManager:PocketRequestManager
-    static var pocketInstance:Pocket?
-    let pocketNodeURL:URL
-    let pocketNodeTxURL:URL
-    let pocketNodeQueryURL:URL
-    
-    static func getInstance(pocketNodeURL: URL) -> Pocket {
-        if(pocketInstance == nil) {
-            let configuration = URLSessionConfiguration.ephemeral
-            let requestManager = PocketRequestManager.init(configuration: configuration, url: pocketNodeURL)
-            pocketInstance = Pocket(pocketNodeURL: pocketNodeURL, requestManager: requestManager)
-        }
-        return pocketInstance!
-    }
-    
-    init(pocketNodeURL: URL, requestManager: PocketRequestManager){
-        self.pocketNodeURL = pocketNodeURL
-        self.requestManager = requestManager
-        self.pocketNodeTxURL = pocketNodeURL.appendingPathComponent("/transactions", isDirectory: false)
-        self.pocketNodeQueryURL = pocketNodeURL.appendingPathComponent("/queries", isDirectory: false)
-    }
-    
-    // Executes a request and generically decodes it depending on the decodableType
-    private func executeRequest<T: Decodable>(request: Codable, decodableType: T.Type, handler: @escaping ExecuteRequestHandler<T>) {
-        
-        requestManager.sendRequest(url: self.pocketNodeTxURL, request: request) { (rawResponse, error) in
-            guard error == nil else {
-                handler(nil, error);
-                return;
-            }
 
-            guard let responseData = rawResponse else {
-                handler(nil, nil)
-                return;
-            }
+    // Singleton
+    public static let shared = Pocket()
 
-            do {
-                let response = try JSONDecoder().decode(decodableType, from: responseData)
-                handler(response, nil)
-            } catch {
-                handler(nil, nil);
-            }
-        }
+    // Dependency Injected Configuration
+    public var configuration: Configuration?
+
+    /// Initializer
+    public init() {
+        // Empty for now
     }
-    
-    public func sendTransaction(tx: Transaction, handler: @escaping TransactionHandler) {
-        executeRequest(request: tx, decodableType: TransactionResponse.self, handler: handler);
+
+    public func sendTransaction(transaction: Transaction, handler: @escaping TransactionHandler) {
+        guard let url = configuration?.nodeURL else {
+            return // Handle Error
+        }
+
+        executeRequest(withURL: url.appendingPathComponent("/transactions", isDirectory: false),
+                       forModel: transaction,
+                       ofType: TransactionResponse.self,
+                       handler: handler)
     }
     
     public func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
-        executeRequest(request: query, decodableType: QueryResponse.self, handler: handler);
+        guard let url = configuration?.nodeURL else {
+            return // Handle Error
+        }
+
+        executeRequest(withURL: url.appendingPathComponent("/queries", isDirectory: false),
+                       forModel: query,
+                       ofType: QueryResponse.self,
+                       handler: handler)
+    }
+}
+
+private extension Pocket {
+    typealias ExecuteRequestHandler<Response: Decodable> = (Response?, Error?) -> Void
+
+    // Executes a request and generically decodes it depending on the decodableType
+    func executeRequest<Model: Encodable, Response: Decodable>(withURL url: URL,
+                                                               forModel model: Model,
+                                                               ofType type: Response.Type,
+                                                               handler: @escaping ExecuteRequestHandler<Response>) {
+        PocketRequestManager.sendRequest(withURL: url, forModel: model) { response, error in
+            guard error == nil else {
+                return handler(nil, error)
+            }
+
+            guard let response = response else {
+                return handler(nil, nil)
+            }
+
+            do {
+                let response = try JSONDecoder().decode(type, from: response)
+                handler(response, nil)
+            } catch {
+                handler(nil, nil)
+            }
+        }
     }
 }

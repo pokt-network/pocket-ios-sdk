@@ -8,9 +8,9 @@
 
 import Foundation
 
-public class Query: Codable {
+public final class Query: Codable {
     
-    enum CodingKeys : String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case network
         case data = "query"
         case decoder
@@ -30,18 +30,18 @@ public class Query: Codable {
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
         
         let stringDecoder = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
-        decoder = try jsonStringToDictionary(string: stringDecoder)
+        decoder = try Utility.jsonStringToDictionary(string: stringDecoder)
         
         let stringData = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
-        decoder = try jsonStringToDictionary(string: stringData)
+        decoder = try Utility.jsonStringToDictionary(string: stringData)
     }
     
     public func encode(to encoder: Encoder) throws {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(network, forKey: .network)
-            try container.encode(dictionaryToJsonString(dict: data), forKey: .data)
-            try container.encode(dictionaryToJsonString(dict: decoder), forKey: .decoder)
+            try container.encode(Utility.dictionaryToJsonString(dict: data), forKey: .data)
+            try container.encode(Utility.dictionaryToJsonString(dict: decoder), forKey: .decoder)
         } catch {
             print(error)
         }

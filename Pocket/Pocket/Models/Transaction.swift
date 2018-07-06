@@ -20,6 +20,12 @@ public class Transaction: Codable {
     public var serializedTransaction = ""
     public var transactionMetadata: [AnyHashable: Any]?
     
+    public init(obj: [AnyHashable: Any]!){
+        network = obj["network"] as? String ?? ""
+        serializedTransaction = obj["serialized_tx"] as? String ?? ""
+        transactionMetadata = obj["tx_metadata"] as? [AnyHashable: Any] ?? [AnyHashable: Any]()
+    }
+    
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
         

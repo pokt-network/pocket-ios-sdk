@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   # Meta
   s.name      = 'Pocket'
-  s.version   = '0.0.1'
+  s.version   = '0.0.2'
   s.license   = { :type => 'MIT' }
   s.homepage  = 'https://github.com/pokt-network/pocket-ios-sdk'
   s.authors   = { 'Luis C. de Leon' => 'luis@pokt.network' }
@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
 
   # Settings
   s.source            = { :git => 'https://github.com/pokt-network/pocket-ios-sdk.git', :tag => s.version.to_s }
-  s.source_files      = 'Pocket/Pocket/**/*.{swift}'
-  s.exclude_files     = 'Pocket/PocketTests/**/*.{swift}'
+  s.source_files      = 'Sources/**/*.{swift}'
+  s.exclude_files     = 'Example/**/*.{swift}'
   s.swift_version     = '4.0'
   s.cocoapods_version = '>= 1.4.0'
 

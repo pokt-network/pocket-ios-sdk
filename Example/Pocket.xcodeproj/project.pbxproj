@@ -7,123 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10CFAEA920D8785C00230740 /* Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10CFAEA020D8785C00230740 /* Pocket.framework */; };
-		10CFAEC020D87B2D00230740 /* PocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEBF20D87B2D00230740 /* PocketTests.swift */; };
-		10CFAEC320D87B7400230740 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC120D87B7400230740 /* PocketRequestManager.swift */; };
-		10CFAEC420D87B7400230740 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC220D87B7400230740 /* Pocket.swift */; };
-		10CFAECC20D87BA100230740 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC620D87BA100230740 /* Utility.swift */; };
-		10CFAECD20D87BA100230740 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC720D87BA100230740 /* TransactionResponse.swift */; };
-		10CFAECE20D87BA100230740 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC820D87BA100230740 /* Query.swift */; };
-		10CFAECF20D87BA100230740 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAEC920D87BA100230740 /* Transaction.swift */; };
-		10CFAED020D87BA100230740 /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAECA20D87BA100230740 /* QueryResponse.swift */; };
-		10CFAED120D87BA100230740 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAECB20D87BA100230740 /* Wallet.swift */; };
-		10CFAED420D87BC100230740 /* PocketPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CFAED320D87BC100230740 /* PocketPlugin.swift */; };
-		8E159C2920E31DBC00209FCD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E159C2820E31DBC00209FCD /* Configuration.swift */; };
-		DDF571472F3D18FDC88ACA84 /* Pods_Pocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 014352A602E002BDA0EB25CC /* Pods_Pocket.framework */; };
+		8B96DAE5613598609EBA8BB4 /* Pods_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14BD9628083386C46868DDF7 /* Pods_Tests.framework */; };
+		8EFD0BAE20F2F8760005AD26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD0BAD20F2F8760005AD26 /* AppDelegate.swift */; };
+		8EFD0BB020F2F8760005AD26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD0BAF20F2F8760005AD26 /* ViewController.swift */; };
+		8EFD0BB320F2F8760005AD26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD0BB120F2F8760005AD26 /* Main.storyboard */; };
+		8EFD0BB520F2F8780005AD26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD0BB420F2F8780005AD26 /* Assets.xcassets */; };
+		8EFD0BB820F2F8780005AD26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD0BB620F2F8780005AD26 /* LaunchScreen.storyboard */; };
+		A6A68C8ED34AC8C9CE3B8706 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB6E0C3C85BF42559BBEBDA6 /* Pods_Example.framework */; };
 		EEB45603EDF35F8A67AED818 /* Pods_PocketTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		10CFAEAA20D8785C00230740 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C539AF8C20C1B161001CDC09 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 10CFAE9F20D8785C00230740;
-			remoteInfo = Pocket;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		014352A602E002BDA0EB25CC /* Pods_Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.release.xcconfig"; sourceTree = "<group>"; };
-		10CFAEA020D8785C00230740 /* Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		10CFAEA820D8785C00230740 /* PocketTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10CFAEAF20D8785C00230740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10CFAEBF20D87B2D00230740 /* PocketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketTests.swift; sourceTree = "<group>"; };
-		10CFAEC120D87B7400230740 /* PocketRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
-		10CFAEC220D87B7400230740 /* Pocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
-		10CFAEC620D87BA100230740 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
-		10CFAEC720D87BA100230740 /* TransactionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
-		10CFAEC820D87BA100230740 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		10CFAEC920D87BA100230740 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		10CFAECA20D87BA100230740 /* QueryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
-		10CFAECB20D87BA100230740 /* Wallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
-		10CFAED320D87BC100230740 /* PocketPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketPlugin.swift; sourceTree = "<group>"; };
+		10CFAEA820D8785C00230740 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14BD9628083386C46868DDF7 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		388FA53F6A659C74639BC34E /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		76CEF9E4782331317CAB8430 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7C710B87F6A77C66121E6E46 /* Pods-Pocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.debug.xcconfig"; sourceTree = "<group>"; };
-		8E159C2820E31DBC00209FCD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		8EFD0BAB20F2F8760005AD26 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFD0BAD20F2F8760005AD26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8EFD0BAF20F2F8760005AD26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8EFD0BB220F2F8760005AD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8EFD0BB420F2F8780005AD26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8EFD0BB720F2F8780005AD26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8EFD0BB920F2F8780005AD26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A053BEA7A019840924C7EA /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C230409A0BE741438C7BFB52 /* Pods-PocketTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7B85D18DC92A86C55509E25 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket/Pods-Pocket.release.xcconfig"; sourceTree = "<group>"; };
+		FB6E0C3C85BF42559BBEBDA6 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		10CFAE9C20D8785C00230740 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DDF571472F3D18FDC88ACA84 /* Pods_Pocket.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		10CFAEA520D8785C00230740 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10CFAEA920D8785C00230740 /* Pocket.framework in Frameworks */,
 				EEB45603EDF35F8A67AED818 /* Pods_PocketTests.framework in Frameworks */,
+				8B96DAE5613598609EBA8BB4 /* Pods_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EFD0BA820F2F8760005AD26 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6A68C8ED34AC8C9CE3B8706 /* Pods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10CFAEA120D8785C00230740 /* Pocket */ = {
-			isa = PBXGroup;
-			children = (
-				10CFAEC220D87B7400230740 /* Pocket.swift */,
-				10CFAEC120D87B7400230740 /* PocketRequestManager.swift */,
-				10CFAED220D87BB000230740 /* Protocols */,
-				10CFAEC520D87B8300230740 /* Models */,
-			);
-			path = Pocket;
-			sourceTree = "<group>";
-		};
-		10CFAEAC20D8785C00230740 /* PocketTests */ = {
-			isa = PBXGroup;
-			children = (
-				10CFAEBF20D87B2D00230740 /* PocketTests.swift */,
-				10CFAEAF20D8785C00230740 /* Info.plist */,
-			);
-			path = PocketTests;
-			sourceTree = "<group>";
-		};
-		10CFAEC520D87B8300230740 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				10CFAEC820D87BA100230740 /* Query.swift */,
-				10CFAECA20D87BA100230740 /* QueryResponse.swift */,
-				10CFAEC920D87BA100230740 /* Transaction.swift */,
-				10CFAEC720D87BA100230740 /* TransactionResponse.swift */,
-				10CFAEC620D87BA100230740 /* Utility.swift */,
-				10CFAECB20D87BA100230740 /* Wallet.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		10CFAED220D87BB000230740 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				10CFAED320D87BC100230740 /* PocketPlugin.swift */,
-				8E159C2820E31DBC00209FCD /* Configuration.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		3C7BBF3BBD564FFA37617C53 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				014352A602E002BDA0EB25CC /* Pods_Pocket.framework */,
 				C46F33596C0CCF5D45AE192A /* Pods_PocketTests.framework */,
+				FB6E0C3C85BF42559BBEBDA6 /* Pods_Example.framework */,
+				14BD9628083386C46868DDF7 /* Pods_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,15 +79,31 @@
 				DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */,
 				C230409A0BE741438C7BFB52 /* Pods-PocketTests.debug.xcconfig */,
 				0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */,
+				98A053BEA7A019840924C7EA /* Pods-Example.debug.xcconfig */,
+				C7B85D18DC92A86C55509E25 /* Pods-Example.release.xcconfig */,
+				388FA53F6A659C74639BC34E /* Pods-Tests.debug.xcconfig */,
+				76CEF9E4782331317CAB8430 /* Pods-Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8EFD0BAC20F2F8760005AD26 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				8EFD0BAD20F2F8760005AD26 /* AppDelegate.swift */,
+				8EFD0BAF20F2F8760005AD26 /* ViewController.swift */,
+				8EFD0BB120F2F8760005AD26 /* Main.storyboard */,
+				8EFD0BB420F2F8780005AD26 /* Assets.xcassets */,
+				8EFD0BB620F2F8780005AD26 /* LaunchScreen.storyboard */,
+				8EFD0BB920F2F8780005AD26 /* Info.plist */,
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		C539AF8B20C1B161001CDC09 = {
 			isa = PBXGroup;
 			children = (
-				10CFAEA120D8785C00230740 /* Pocket */,
-				10CFAEAC20D8785C00230740 /* PocketTests */,
+				8EFD0BAC20F2F8760005AD26 /* Example */,
 				C539AF9520C1B161001CDC09 /* Products */,
 				7581B8E8AA6DD1989F3E5C56 /* Pods */,
 				3C7BBF3BBD564FFA37617C53 /* Frameworks */,
@@ -153,48 +113,18 @@
 		C539AF9520C1B161001CDC09 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				10CFAEA020D8785C00230740 /* Pocket.framework */,
-				10CFAEA820D8785C00230740 /* PocketTests.xctest */,
+				10CFAEA820D8785C00230740 /* Tests.xctest */,
+				8EFD0BAB20F2F8760005AD26 /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		10CFAE9D20D8785C00230740 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		10CFAE9F20D8785C00230740 /* Pocket */ = {
+		10CFAEA720D8785C00230740 /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 10CFAEB120D8785C00230740 /* Build configuration list for PBXNativeTarget "Pocket" */;
-			buildPhases = (
-				83A6C44DF7C1207B9CCA43DA /* [CP] Check Pods Manifest.lock */,
-				10CFAE9B20D8785C00230740 /* Sources */,
-				10CFAE9C20D8785C00230740 /* Frameworks */,
-				10CFAE9D20D8785C00230740 /* Headers */,
-				10CFAE9E20D8785C00230740 /* Resources */,
-				0573816D4EE0AEF9938407E1 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Pocket;
-			productName = Pocket;
-			productReference = 10CFAEA020D8785C00230740 /* Pocket.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		10CFAEA720D8785C00230740 /* PocketTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 10CFAEB420D8785C00230740 /* Build configuration list for PBXNativeTarget "PocketTests" */;
+			buildConfigurationList = 10CFAEB420D8785C00230740 /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
 				BB1C659A524708E42B81968A /* [CP] Check Pods Manifest.lock */,
 				10CFAEA420D8785C00230740 /* Sources */,
@@ -206,12 +136,31 @@
 			buildRules = (
 			);
 			dependencies = (
-				10CFAEAB20D8785C00230740 /* PBXTargetDependency */,
 			);
-			name = PocketTests;
+			name = Tests;
 			productName = PocketTests;
-			productReference = 10CFAEA820D8785C00230740 /* PocketTests.xctest */;
+			productReference = 10CFAEA820D8785C00230740 /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8EFD0BAA20F2F8760005AD26 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EFD0BBA20F2F8780005AD26 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				0A6063ED8E2462069EC441D9 /* [CP] Check Pods Manifest.lock */,
+				8EFD0BA720F2F8760005AD26 /* Sources */,
+				8EFD0BA820F2F8760005AD26 /* Frameworks */,
+				8EFD0BA920F2F8760005AD26 /* Resources */,
+				51C9C06723F27F6D39CC1BB2 /* [CP] Embed Pods Frameworks */,
+				C7272C4ED1076DF2AD70ADF3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Example;
+			productName = Example;
+			productReference = 8EFD0BAB20F2F8760005AD26 /* Example.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -223,13 +172,12 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Pocket Network";
 				TargetAttributes = {
-					10CFAE9F20D8785C00230740 = {
-						CreatedOnToolsVersion = 9.4;
-						LastSwiftMigration = 0940;
-					};
 					10CFAEA720D8785C00230740 = {
 						CreatedOnToolsVersion = 9.4;
 						LastSwiftMigration = 0940;
+					};
+					8EFD0BAA20F2F8760005AD26 = {
+						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
@@ -246,20 +194,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				10CFAE9F20D8785C00230740 /* Pocket */,
-				10CFAEA720D8785C00230740 /* PocketTests */,
+				8EFD0BAA20F2F8760005AD26 /* Example */,
+				10CFAEA720D8785C00230740 /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		10CFAE9E20D8785C00230740 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		10CFAEA620D8785C00230740 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,22 +208,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8EFD0BA920F2F8760005AD26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFD0BB820F2F8780005AD26 /* LaunchScreen.storyboard in Resources */,
+				8EFD0BB520F2F8780005AD26 /* Assets.xcassets in Resources */,
+				8EFD0BB320F2F8760005AD26 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0573816D4EE0AEF9938407E1 /* [CP] Copy Pods Resources */ = {
+		0A6063ED8E2462069EC441D9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pocket/Pods-Pocket-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		32A169A733D33229025968F3 /* [CP] Embed Pods Frameworks */ = {
@@ -302,25 +256,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		83A6C44DF7C1207B9CCA43DA /* [CP] Check Pods Manifest.lock */ = {
+		51C9C06723F27F6D39CC1BB2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pocket/Pocket.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Pocket-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		925030700C7BFE7D226F1149 /* [CP] Copy Pods Resources */ = {
@@ -335,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB1C659A524708E42B81968A /* [CP] Check Pods Manifest.lock */ = {
@@ -349,118 +307,73 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7272C4ED1076DF2AD70ADF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		10CFAE9B20D8785C00230740 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				10CFAED120D87BA100230740 /* Wallet.swift in Sources */,
-				10CFAED020D87BA100230740 /* QueryResponse.swift in Sources */,
-				10CFAECE20D87BA100230740 /* Query.swift in Sources */,
-				10CFAEC320D87B7400230740 /* PocketRequestManager.swift in Sources */,
-				10CFAECF20D87BA100230740 /* Transaction.swift in Sources */,
-				10CFAECD20D87BA100230740 /* TransactionResponse.swift in Sources */,
-				8E159C2920E31DBC00209FCD /* Configuration.swift in Sources */,
-				10CFAED420D87BC100230740 /* PocketPlugin.swift in Sources */,
-				10CFAEC420D87B7400230740 /* Pocket.swift in Sources */,
-				10CFAECC20D87BA100230740 /* Utility.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		10CFAEA420D8785C00230740 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10CFAEC020D87B2D00230740 /* PocketTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EFD0BA720F2F8760005AD26 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFD0BB020F2F8760005AD26 /* ViewController.swift in Sources */,
+				8EFD0BAE20F2F8760005AD26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		10CFAEAB20D8785C00230740 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 10CFAE9F20D8785C00230740 /* Pocket */;
-			targetProxy = 10CFAEAA20D8785C00230740 /* PBXContainerItemProxy */;
+/* Begin PBXVariantGroup section */
+		8EFD0BB120F2F8760005AD26 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EFD0BB220F2F8760005AD26 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
 		};
-/* End PBXTargetDependency section */
+		8EFD0BB620F2F8780005AD26 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8EFD0BB720F2F8780005AD26 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		10CFAEB220D8785C00230740 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C710B87F6A77C66121E6E46 /* Pods-Pocket.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Pocket/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = network.pokt.Pocket;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		10CFAEB320D8785C00230740 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDEB9FEAEA22C7476EF216A4 /* Pods-Pocket.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Pocket/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = network.pokt.Pocket;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		10CFAEB520D8785C00230740 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C230409A0BE741438C7BFB52 /* Pods-PocketTests.debug.xcconfig */;
+			baseConfigurationReference = 388FA53F6A659C74639BC34E /* Pods-Tests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PocketTests/Info.plist;
@@ -480,9 +393,8 @@
 		};
 		10CFAEB620D8785C00230740 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */;
+			baseConfigurationReference = 76CEF9E4782331317CAB8430 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PocketTests/Info.plist;
@@ -493,6 +405,44 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = network.pokt.PocketTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8EFD0BBB20F2F8780005AD26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A053BEA7A019840924C7EA /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = network.pokt.Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8EFD0BBC20F2F8780005AD26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7B85D18DC92A86C55509E25 /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Example/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = network.pokt.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,20 +566,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		10CFAEB120D8785C00230740 /* Build configuration list for PBXNativeTarget "Pocket" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				10CFAEB220D8785C00230740 /* Debug */,
-				10CFAEB320D8785C00230740 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		10CFAEB420D8785C00230740 /* Build configuration list for PBXNativeTarget "PocketTests" */ = {
+		10CFAEB420D8785C00230740 /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				10CFAEB520D8785C00230740 /* Debug */,
 				10CFAEB620D8785C00230740 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EFD0BBA20F2F8780005AD26 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EFD0BBB20F2F8780005AD26 /* Debug */,
+				8EFD0BBC20F2F8780005AD26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

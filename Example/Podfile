@@ -1,12 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '11.4'
 
-target 'Pocket' do
+target 'Example' do
   use_frameworks!
+  pod 'Pocket', :path => '..'
   pod 'SwiftKeychainWrapper', :git => 'git@github.com:jrendel/SwiftKeychainWrapper.git', :branch => 'develop', :commit => '77f73c354d695d976bcf1437fc9fbcea981aa2b4'
   pod 'RNCryptor', '~> 5.0'
 
-  target 'PocketTests' do
+  target 'Tests' do
     inherit! :search_paths
     # Pods for testing
   end

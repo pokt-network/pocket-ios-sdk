@@ -11,7 +11,7 @@ import Foundation
 public typealias TransactionHandler = (TransactionResponse?, Error?) -> Void
 public typealias ExecuteQueryHandler = (QueryResponse?, Error?) -> Void
 
-public struct Pocket {
+public class Pocket {
 
     // Singleton
     public static let shared = Pocket()
@@ -22,6 +22,11 @@ public struct Pocket {
     /// Initializer
     public init() {
         // Empty for now
+    }
+    
+    // Configuration setup
+    public func setConfiguration(config: Configuration){
+        self.configuration = config
     }
 
     public func sendTransaction(transaction: Transaction, handler: @escaping TransactionHandler) {

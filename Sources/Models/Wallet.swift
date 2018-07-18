@@ -58,10 +58,7 @@ public struct Wallet {
     }
     
     public static func retrieveWallet(network: String, address: String, passphrase: String) throws -> Wallet{
-        guard let encryptedWalletString:String = KeychainWrapper.standard.string(forKey: Wallet.recordKey(network: network, address: address)) else {
-            throw WalletPersistenceError.walletSerializationError
-        }
-        guard let encryptedWalletData = encryptedWalletString.data(using: .utf8) else {
+        guard let encryptedWalletData = KeychainWrapper.standard.data(forKey: Wallet.recordKey(network: network, address: address)) else {
             throw WalletPersistenceError.walletSerializationError
         }
         guard let decryptedWalletJSON = String.init(data: try RNCryptor.decrypt(data: encryptedWalletData, withPassword: passphrase), encoding: .utf8) else {

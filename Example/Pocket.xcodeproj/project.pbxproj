@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104031112106CE520091B5FE /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104031102106CE520091B5FE /* JSON.swift */; };
 		104A549E20FFC94A00BB9168 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104A549220FFC94A00BB9168 /* Pocket.swift */; };
 		104A549F20FFC94A00BB9168 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104A549320FFC94A00BB9168 /* PocketRequestManager.swift */; };
 		104A54A020FFC94A00BB9168 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104A549520FFC94A00BB9168 /* Query.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		014352A602E002BDA0EB25CC /* Pods_Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8BBDC58CCAA909575E6BA2 /* Pods-PocketTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests.release.xcconfig"; sourceTree = "<group>"; };
+		104031102106CE520091B5FE /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		104A549220FFC94A00BB9168 /* Pocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
 		104A549320FFC94A00BB9168 /* PocketRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
 		104A549520FFC94A00BB9168 /* Query.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				104A549820FFC94A00BB9168 /* Transaction.swift */,
 				104A549920FFC94A00BB9168 /* Utility.swift */,
 				104A549A20FFC94A00BB9168 /* Wallet.swift */,
+				104031102106CE520091B5FE /* JSON.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,8 +196,6 @@
 				10CFAEA420D8785C00230740 /* Sources */,
 				10CFAEA520D8785C00230740 /* Frameworks */,
 				10CFAEA620D8785C00230740 /* Resources */,
-				32A169A733D33229025968F3 /* [CP] Embed Pods Frameworks */,
-				925030700C7BFE7D226F1149 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,7 +215,6 @@
 				8EFD0BA820F2F8760005AD26 /* Frameworks */,
 				8EFD0BA920F2F8760005AD26 /* Resources */,
 				51C9C06723F27F6D39CC1BB2 /* [CP] Embed Pods Frameworks */,
-				C7272C4ED1076DF2AD70ADF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,26 +302,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		32A169A733D33229025968F3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PocketTests/Pods-PocketTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		51C9C06723F27F6D39CC1BB2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,21 +324,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		925030700C7BFE7D226F1149 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tests/Pods-Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BB1C659A524708E42B81968A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,21 +342,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C7272C4ED1076DF2AD70ADF3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -407,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				104A54A620FFC94A00BB9168 /* PocketPlugin.swift in Sources */,
+				104031112106CE520091B5FE /* JSON.swift in Sources */,
 				104A54A520FFC94A00BB9168 /* Wallet.swift in Sources */,
 				104A54A220FFC94A00BB9168 /* QueryResponse.swift in Sources */,
 				104A54A020FFC94A00BB9168 /* Query.swift in Sources */,

@@ -7,155 +7,156 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00575CEA960ACFBC29637E5EA699B858 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F8D1E1F9D6C30F9C9274611FB612004 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		01589E40C10FEC4E94568076C4AE6AB7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
 		0339DC9128B5E9C030D31B0E34F690C5 /* Pods-Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E50F1EB96C18AFC549A7567079429D6 /* Pods-Example-dummy.m */; };
-		0D7A7848846AAF3DBF129BB221E75B81 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780EFAC5B98EE5CC69DA70307AF9224D /* Utility.swift */; };
+		142C3DF4E81DB5BB701C1B89E7B35D20 /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EAA12C8DCD766F7C89CAD8500D46F /* RNCryptor.swift */; };
 		183659E9BE67A0C63A4688B7C07954FC /* Pods-Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1280A3A8AFC9C59462B9C18D8ACC1F1B /* Pods-Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		31B89E13F12A32D01AEB75912983858D /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8A219C640589AA29313B815CDD47A /* Query.swift */; };
-		3B9FCB6838BBA9757E189C53424C3EC3 /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E369FDEA8F98BA53E8BD1F16766DF3 /* QueryResponse.swift */; };
-		3F3D1AEEA4FEFB83D6EAEC38493F8427 /* PocketPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD14B585EBC5F055051C844FE405E83 /* PocketPlugin.swift */; };
-		4140294D2CBBD8EA4E81C31BDD31B6B8 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53D348452DBD72D2074E01E8591153 /* KeychainItemAccessibility.swift */; };
+		21777ABE128CFD6E2CCC0D9BB724D369 /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3165E6F668038B225238C71BF746247A /* Pocket.swift */; };
+		27061C76FBD3FDEA4BCB75FCC390D1D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
+		2DD781A72536AF727FB5869EC6367150 /* Pocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A105A9C760CBBF862CEB97D524E6BDDC /* Pocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		313D5A740779761AD077AA9BC2209F89 /* RNCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = AE13E8A6D8A801A19DFE4645C5EDC06E /* RNCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		366C131AB8E5F29934B56F7CEBC237E0 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 64573137DF01A343CACD5673DAF3B795 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C43A50D0D91D896CDD988B8C01FBB92 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
+		4AC60C929ECC08CFBF5649F5671B0E02 /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCE31F466E0C60BA42E1B6FDF22FA64 /* RNCryptor.framework */; };
 		4DE75EC70909BB0218AE1444BFDAEBB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
-		4F412152C138B74390C9C5A339377E67 /* RNCryptor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9A97DE627AA5C1393DF2E49ABA1 /* RNCryptor-dummy.m */; };
-		5DDF18A5B5A4DFDD722FE799D72DD114 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
-		640CDABF525DD7195D52B3A6B733C00E /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FB28D8B3DACE9C3290A144D552F08 /* SwiftKeychainWrapper.framework */; };
-		645F6915F63F2127AF4C24FC0307C2CB /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F32F8B615E47CD65B558CE28FB779 /* SwiftKeychainWrapper-dummy.m */; };
-		6AAA577A835BA0172F22574918F4E56C /* Pocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD34A06B50C7F83477138D107A66732 /* Pocket.swift */; };
-		7B98638B69FAA8E33E7C15A7C27FB1F1 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 64573137DF01A343CACD5673DAF3B795 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92C52DBC16A6813AF7767D2E5FC4528D /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFF6798FC7C7B57929111822B142BE4 /* PocketRequestManager.swift */; };
-		99F2FAF1E621FF6FD1B0DDB8B5386C6B /* Pocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 021277BAB297237430ECCDA7C4E87EA8 /* Pocket-dummy.m */; };
-		9B0FF28AC7F19292A3A38710C9C04E51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
-		9C122C29CE76B1A1566B4A16CDA83013 /* RNCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90EAA12C8DCD766F7C89CAD8500D46F /* RNCryptor.swift */; };
-		A6BBF23A057A7FAAA843636F9629582B /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF08EB92814BBF3F5ED3B6741AA76C4 /* Wallet.swift */; };
-		ABF369B4E90E0C58FCEBE713A7FDFA85 /* RNCryptor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 896CCD062CA66475A7F47258DDBF4E3F /* RNCryptor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B21A57A01724CB9C725161D3561B7169 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E16661CDC452D15EBBA58C7323ADB3 /* Transaction.swift */; };
-		B6379B18457A01EDE72CB0E4A7FE56FC /* RNCryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = AE13E8A6D8A801A19DFE4645C5EDC06E /* RNCryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BEEFCBC792659CEFDB69F2615A93EF70 /* RNCryptor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCE31F466E0C60BA42E1B6FDF22FA64 /* RNCryptor.framework */; };
-		C063AE0EF2079E29DCD4224F16D60FB0 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224410074B6B90A79FC6365E88D3C75 /* Pods-Tests-dummy.m */; };
-		C32348B4628276C4A23992E7D1F3ABBA /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D656D73C4E0E4FBA97AC0F498DF9C99 /* TransactionResponse.swift */; };
-		C4D2FADD203760ADE2AF5B3C9EE32053 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341CEF23542393B4401D32D30B419598 /* KeychainWrapper.swift */; };
-		D0933B84928619CE1B8DFCAD486F3AD1 /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E73F4AAFAEFABDF7CB14B7484F2B0AE1 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D74395901DDA8F5943DB00E02CCADF9D /* Pocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A5D12001209162A3C53E43DD22608D95 /* Pocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED7042F0E1617C751614299202AB0BD3 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1039D3386C70167E25E95A30776FB6 /* Configuration.swift */; };
-		FECD87D6ED3512D5326C361D14F304B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
+		4E50A43C747C28A2158B6AB316BF34E0 /* QueryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E0232FED0EC222A5E0331771F15931 /* QueryResponse.swift */; };
+		53F9806A93B3B4BF519D401A965481B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
+		583511A298128E7E4CC3A34EC1BCF927 /* Pods-Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F8D1E1F9D6C30F9C9274611FB612004 /* Pods-Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		633E7475D44A923B6C9C0C390455AE22 /* RNCryptor-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9A97DE627AA5C1393DF2E49ABA1 /* RNCryptor-dummy.m */; };
+		77DA3A6BE026D7B0E447F1237F39BCFB /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E537B37375BB7CFA9B5B4C216F144B /* Wallet.swift */; };
+		7F266C4D92295058E99796DC3C950C57 /* RNCryptor-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 896CCD062CA66475A7F47258DDBF4E3F /* RNCryptor-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8CF14FD0DC5ADA4BFAE20A0C81911372 /* TransactionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD72CCC140233D33DC9C111ED02A580 /* TransactionResponse.swift */; };
+		A17ED0BE5EFFB01370C59011E8BD42A9 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B53D348452DBD72D2074E01E8591153 /* KeychainItemAccessibility.swift */; };
+		A55C9E598D82A483BADC1E4474C010A1 /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E73F4AAFAEFABDF7CB14B7484F2B0AE1 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A7217F7A6AE74A8C714E53D0D94940FD /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E41F2876FE0FA2463AE241E4E66B3 /* Utility.swift */; };
+		B2B38BEB4F4309C4305692C94CA7314F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B075EBF318BDCF8605141895279E346 /* Transaction.swift */; };
+		C933F1F06FB5C7968B9A206CCBF0C841 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F5F32F8B615E47CD65B558CE28FB779 /* SwiftKeychainWrapper-dummy.m */; };
+		CBDF63E4A2772A577C0D414CCA897139 /* Pocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCAA6FF522942AC79C6D51705CF1B611 /* Pocket-dummy.m */; };
+		CFE30D9D96AA85ED65E18AF695AF293C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */; };
+		D655A2B4B8C103E3874BBD744BFA1246 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341CEF23542393B4401D32D30B419598 /* KeychainWrapper.swift */; };
+		DE2120605206BE8B25297420A72338D6 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4CFAD648986FDBA2504853647D7E79 /* Query.swift */; };
+		E2D84F8FAB6566971A11F8A5A094D332 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C7B5547014F438EA281170AF900FCE /* Configuration.swift */; };
+		EC9515A62D1976DFD9D8AEF67702424F /* SwiftKeychainWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B4FB28D8B3DACE9C3290A144D552F08 /* SwiftKeychainWrapper.framework */; };
+		ECEE866D6F6EA816AD7D9DEC12DAF583 /* PocketRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD48D5CB6E49D3F2F0EBFCB02D49875F /* PocketRequestManager.swift */; };
+		F32B8F5F3505F57198DD559919E1A2C0 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6BCDEC02A4BBC8C2A55BFC8E726751 /* JSON.swift */; };
+		F6372504EB05E07683036581F0624B42 /* Pods-Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9224410074B6B90A79FC6365E88D3C75 /* Pods-Tests-dummy.m */; };
+		F86E9B8303F283D5A9EDFB2645F867C3 /* PocketPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FEA00191994BA8693C923FB3E50ADA /* PocketPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		129EE9F9F350FA310BBE985D9E5B30C4 /* PBXContainerItemProxy */ = {
+		2F4DC0E35CF044451D795D23D35A1A77 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D13ADBF638796997067E3BBA4D98199B;
+			remoteGlobalIDString = 21B85806D27D1CAC856F5BA68067A9AF;
 			remoteInfo = RNCryptor;
-		};
-		490DBF5C60C044DAAC0CB4298AFED398 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 32EED978CC5A0F16A39F7563D5FC104F;
-			remoteInfo = SwiftKeychainWrapper;
 		};
 		73E5F31F260670B0AAD267B614466772 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0EE5A924D061524CB39D6D56202032FC;
+			remoteGlobalIDString = D164A990FB46CB620A9599A8F642A374;
 			remoteInfo = Pocket;
+		};
+		798D16816545C7A1B177E8C224421E4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 262416950E2C3D8F8FFEBB76123BB0B2;
+			remoteInfo = "Pods-Example";
+		};
+		A4887C6115E6D456278A91DE1533DC60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D56249C2971E13DCE783E969EE3024B6;
+			remoteInfo = SwiftKeychainWrapper;
 		};
 		AF045774E73A7D4ADECEA5FB76FA950A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D13ADBF638796997067E3BBA4D98199B;
+			remoteGlobalIDString = 21B85806D27D1CAC856F5BA68067A9AF;
 			remoteInfo = RNCryptor;
 		};
 		E94F71F20D57928CB30B2CCF57DF2D57 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 32EED978CC5A0F16A39F7563D5FC104F;
+			remoteGlobalIDString = D56249C2971E13DCE783E969EE3024B6;
 			remoteInfo = SwiftKeychainWrapper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		021277BAB297237430ECCDA7C4E87EA8 /* Pocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pocket-dummy.m"; sourceTree = "<group>"; };
 		1280A3A8AFC9C59462B9C18D8ACC1F1B /* Pods-Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Example-umbrella.h"; sourceTree = "<group>"; };
 		1398E9A97DE627AA5C1393DF2E49ABA1 /* RNCryptor-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RNCryptor-dummy.m"; sourceTree = "<group>"; };
+		1B075EBF318BDCF8605141895279E346 /* Transaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		1D6205821C1872792596B136F6B2D209 /* Pocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pocket.modulemap; sourceTree = "<group>"; };
+		1DAC86101CEB76E7BB4EF8A640A049CA /* Pocket.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Pocket.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1E1E046AAF2DC13B5B0CBB0744CE2C3D /* RNCryptor.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = RNCryptor.modulemap; sourceTree = "<group>"; };
 		28270C62023AEAD76D54E78772DAD3D4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E50F1EB96C18AFC549A7567079429D6 /* Pods-Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Example-dummy.m"; sourceTree = "<group>"; };
 		2ECC8FC93076ABE3B39165BFD84E3F3C /* RNCryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RNCryptor.framework; path = RNCryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5827015FB8CEAAE208174C5355A825 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		314C93D75AFC8454BABBD9748531FB83 /* Pocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pocket.framework; path = Pocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3165E6F668038B225238C71BF746247A /* Pocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
 		33CB7A9E729E227227632223EAC9CEB2 /* RNCryptor.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RNCryptor.xcconfig; sourceTree = "<group>"; };
 		341CEF23542393B4401D32D30B419598 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
 		34D4A050E8749789A4A46BCF293C5321 /* Pods-Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		37965690C53643E39C6B092B31939C38 /* Pods-Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-frameworks.sh"; sourceTree = "<group>"; };
 		3B53D348452DBD72D2074E01E8591153 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
-		40753B979C6AD1B03C884C7C47E532D2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		3F6BCDEC02A4BBC8C2A55BFC8E726751 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		42BAD9AFB10C93DAA3CD832170D09803 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
 		472F03922C7EEB460322E5424C67CA18 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1E1C9222F9D48664CAC0218786C2A8 /* Pods-Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5B4FB28D8B3DACE9C3290A144D552F08 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BD8A219C640589AA29313B815CDD47A /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
-		5C060D6792E5ADA02B7488F185207CD0 /* Pocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pocket-prefix.pch"; sourceTree = "<group>"; };
+		5CD72CCC140233D33DC9C111ED02A580 /* TransactionResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		5E42325FB5FD1CB5F2DBF892B8D9DF82 /* Pods-Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tests-resources.sh"; sourceTree = "<group>"; };
 		5F5F32F8B615E47CD65B558CE28FB779 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
 		64573137DF01A343CACD5673DAF3B795 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
 		6699B9630600F2C9649D525EF1855F18 /* Pods-Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		69F7D4FC929C9849185DC95870A55E86 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		6C1A6C0006E85CA5602AA9B2F5C67266 /* Pods_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tests.framework; path = "Pods-Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D2DA6209EB9D8CD9815577ED056B32B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		6E63C39658C9189D98B446C81ADED943 /* Pods-Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7445991555C6823F50C223BB4F902BD5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		780EFAC5B98EE5CC69DA70307AF9224D /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		78400217D2641DF2F8CCF7990CB58C8A /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Example.framework; path = "Pods-Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A5575C62CBCB36BB1EB18888D24E5D1 /* Pocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pocket.xcconfig; sourceTree = "<group>"; };
 		7AD44964D63C345753D1F9A12F031A5B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EF08EB92814BBF3F5ED3B6741AA76C4 /* Wallet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		7C2168FFD51973EA74E32B0E3BC29B80 /* Pocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pocket-prefix.pch"; sourceTree = "<group>"; };
 		844CD5905A1E6D671FDE5C92A17F2AB9 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
 		896CCD062CA66475A7F47258DDBF4E3F /* RNCryptor-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-umbrella.h"; sourceTree = "<group>"; };
+		8BF05DE3248493EC7AEA66C7FFADA867 /* Pocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pocket.xcconfig; sourceTree = "<group>"; };
 		8C99691FB15F3C5AA097B7FF2A075D39 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8D656D73C4E0E4FBA97AC0F498DF9C99 /* TransactionResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		9224410074B6B90A79FC6365E88D3C75 /* Pods-Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tests-dummy.m"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9CCE31F466E0C60BA42E1B6FDF22FA64 /* RNCryptor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RNCryptor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D4CFAD648986FDBA2504853647D7E79 /* Query.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		9F8D1E1F9D6C30F9C9274611FB612004 /* Pods-Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tests-umbrella.h"; sourceTree = "<group>"; };
+		A105A9C760CBBF862CEB97D524E6BDDC /* Pocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pocket-umbrella.h"; sourceTree = "<group>"; };
+		A1E0232FED0EC222A5E0331771F15931 /* QueryResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
+		A24C7E226667D12F0D0055DEB492A182 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		A3645B916115366F0D849A407CAFE7AD /* Pods-Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-frameworks.sh"; sourceTree = "<group>"; };
-		A5D12001209162A3C53E43DD22608D95 /* Pocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pocket-umbrella.h"; sourceTree = "<group>"; };
 		AC114A82F62C3782FA5B1FA3788C625D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		AE13E8A6D8A801A19DFE4645C5EDC06E /* RNCryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RNCryptor.h; path = Sources/Cryptor/include/RNCryptor.h; sourceTree = "<group>"; };
-		AF1039D3386C70167E25E95A30776FB6 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		BC0D322263D37FB3DBA902A979CEF4C9 /* Pocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Pocket.modulemap; sourceTree = "<group>"; };
+		B6E537B37375BB7CFA9B5B4C216F144B /* Wallet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		B717431926FB36AE8B56A81154F24022 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6E147574EE5CFE13C9A691908B0178D /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		C88551AE27C21C7EC93E556566FD5D55 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		CCD34A06B50C7F83477138D107A66732 /* Pocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Pocket.swift; sourceTree = "<group>"; };
+		C6FEA00191994BA8693C923FB3E50ADA /* PocketPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PocketPlugin.swift; sourceTree = "<group>"; };
+		CCAA6FF522942AC79C6D51705CF1B611 /* Pocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pocket-dummy.m"; sourceTree = "<group>"; };
 		CF494BE5150401343ACC8D32B6DE4B99 /* Pods-Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Example.modulemap"; sourceTree = "<group>"; };
 		D90EAA12C8DCD766F7C89CAD8500D46F /* RNCryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RNCryptor.swift; path = Sources/RNCryptor/RNCryptor.swift; sourceTree = "<group>"; };
-		DAFF6798FC7C7B57929111822B142BE4 /* PocketRequestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
+		DD48D5CB6E49D3F2F0EBFCB02D49875F /* PocketRequestManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PocketRequestManager.swift; sourceTree = "<group>"; };
 		E22EDD52E26A312A3A6CDA6B07FDF428 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E243D3BD725F8C61EB13DED59391450E /* Pods-Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Example-resources.sh"; sourceTree = "<group>"; };
 		E62DE18E155CAE4FCCE76786C7008F5F /* Pods-Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tests.modulemap"; sourceTree = "<group>"; };
-		E6E16661CDC452D15EBBA58C7323ADB3 /* Transaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		E709455CF995FFC91AD13C99C51C34D7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E73F4AAFAEFABDF7CB14B7484F2B0AE1 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
-		E7E369FDEA8F98BA53E8BD1F16766DF3 /* QueryResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = QueryResponse.swift; sourceTree = "<group>"; };
 		E8231C224BAC9E9D2ACD0F8EAC9C007E /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
 		EC9CD121558EFD71C5CB0A709CE3A50B /* RNCryptor-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RNCryptor-prefix.pch"; sourceTree = "<group>"; };
-		EFD14B585EBC5F055051C844FE405E83 /* PocketPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PocketPlugin.swift; sourceTree = "<group>"; };
-		FBE0D56CF5154A6A9E490E987827048F /* Pocket.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Pocket.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		EF8E41F2876FE0FA2463AE241E4E66B3 /* Utility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		F4C7B5547014F438EA281170AF900FCE /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2496FF06B3BA2FD0D2822344C5A74401 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5DDF18A5B5A4DFDD722FE799D72DD114 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		274FC93760D0DAC39710CA19F1E1D0E8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -164,49 +165,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B6B9346798C4D73B2D9154243F6F8D0 /* Frameworks */ = {
+		40AB352260E61A31192A65BFC91ECAA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FECD87D6ED3512D5326C361D14F304B5 /* Foundation.framework in Frameworks */,
+				3C43A50D0D91D896CDD988B8C01FBB92 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4ABC9CAD0CF608E4D6AEFCC92090E2BE /* Frameworks */ = {
+		4D011A509C3106B5DE3B85F35608D47B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01589E40C10FEC4E94568076C4AE6AB7 /* Foundation.framework in Frameworks */,
-				BEEFCBC792659CEFDB69F2615A93EF70 /* RNCryptor.framework in Frameworks */,
-				640CDABF525DD7195D52B3A6B733C00E /* SwiftKeychainWrapper.framework in Frameworks */,
+				CFE30D9D96AA85ED65E18AF695AF293C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D71D5F01D310087B06E50E83E8684AF9 /* Frameworks */ = {
+		50A5C77E7AB52A993F646D0D7FB8087E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B0FF28AC7F19292A3A38710C9C04E51 /* Foundation.framework in Frameworks */,
+				27061C76FBD3FDEA4BCB75FCC390D1D7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCBA648B640B1C9F6F34B163A0716AC9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53F9806A93B3B4BF519D401A965481B4 /* Foundation.framework in Frameworks */,
+				4AC60C929ECC08CFBF5649F5671B0E02 /* RNCryptor.framework in Frameworks */,
+				EC9515A62D1976DFD9D8AEF67702424F /* SwiftKeychainWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08D4F443DA5B15C7DDEB07D86B019BFC /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5BD8A219C640589AA29313B815CDD47A /* Query.swift */,
-				E7E369FDEA8F98BA53E8BD1F16766DF3 /* QueryResponse.swift */,
-				E6E16661CDC452D15EBBA58C7323ADB3 /* Transaction.swift */,
-				8D656D73C4E0E4FBA97AC0F498DF9C99 /* TransactionResponse.swift */,
-				780EFAC5B98EE5CC69DA70307AF9224D /* Utility.swift */,
-				7EF08EB92814BBF3F5ED3B6741AA76C4 /* Wallet.swift */,
-			);
-			name = Models;
-			path = Sources/Models;
-			sourceTree = "<group>";
-		};
 		1EC2D55C6D891C5AC98B4CB9E0D356C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +229,16 @@
 			path = "Target Support Files/Pods-Tests";
 			sourceTree = "<group>";
 		};
+		2931FE3D07811E14B29D17B66AD7A0F8 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				6D2DA6209EB9D8CD9815577ED056B32B /* LICENSE */,
+				1DAC86101CEB76E7BB4EF8A640A049CA /* Pocket.podspec */,
+				A24C7E226667D12F0D0055DEB492A182 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		43410E2F1979A4C40B7AEE2BDF112FF2 /* SwiftKeychainWrapper */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,14 +251,17 @@
 			path = SwiftKeychainWrapper;
 			sourceTree = "<group>";
 		};
-		444AE2033477078702A92AE4891AFC17 /* Pod */ = {
+		487DEBCDBBF386BE277247A16748FBAF /* Pocket */ = {
 			isa = PBXGroup;
 			children = (
-				40753B979C6AD1B03C884C7C47E532D2 /* LICENSE */,
-				FBE0D56CF5154A6A9E490E987827048F /* Pocket.podspec */,
-				C88551AE27C21C7EC93E556566FD5D55 /* README.md */,
+				C7263E1AD74C978848D2159E37749A8E /* Managers */,
+				81DC261D6C0B66B68C6B25E1C62A4A6B /* Models */,
+				2931FE3D07811E14B29D17B66AD7A0F8 /* Pod */,
+				F46C5C92345CA701E5F64AA2C9A0034B /* Protocols */,
+				DE5DEDF722F55D92BEF8AB8E10F31C12 /* Support Files */,
 			);
-			name = Pod;
+			name = Pocket;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		5B690342878F702C92E4184128ADE597 /* Targets Support Files */ = {
@@ -306,22 +314,27 @@
 			);
 			sourceTree = "<group>";
 		};
+		81DC261D6C0B66B68C6B25E1C62A4A6B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F6BCDEC02A4BBC8C2A55BFC8E726751 /* JSON.swift */,
+				9D4CFAD648986FDBA2504853647D7E79 /* Query.swift */,
+				A1E0232FED0EC222A5E0331771F15931 /* QueryResponse.swift */,
+				1B075EBF318BDCF8605141895279E346 /* Transaction.swift */,
+				5CD72CCC140233D33DC9C111ED02A580 /* TransactionResponse.swift */,
+				EF8E41F2876FE0FA2463AE241E4E66B3 /* Utility.swift */,
+				B6E537B37375BB7CFA9B5B4C216F144B /* Wallet.swift */,
+			);
+			name = Models;
+			path = Sources/Models;
+			sourceTree = "<group>";
+		};
 		8CE9D0126D7E5998FE0D53ED01180E8C /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E0456D424A328D18555BA08B8EC9AAB2 /* Pocket */,
+				487DEBCDBBF386BE277247A16748FBAF /* Pocket */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		94D9A0B2F936F48C54E383EF186CA881 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				AF1039D3386C70167E25E95A30776FB6 /* Configuration.swift */,
-				EFD14B585EBC5F055051C844FE405E83 /* PocketPlugin.swift */,
-			);
-			name = Protocols;
-			path = Sources/Protocols;
 			sourceTree = "<group>";
 		};
 		98651B54784E35349D302419893A77C6 /* iOS */ = {
@@ -358,25 +371,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B6DBBD2F22B4E414D38A98545B3153F5 /* Managers */ = {
+		C7263E1AD74C978848D2159E37749A8E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				CCD34A06B50C7F83477138D107A66732 /* Pocket.swift */,
-				DAFF6798FC7C7B57929111822B142BE4 /* PocketRequestManager.swift */,
+				3165E6F668038B225238C71BF746247A /* Pocket.swift */,
+				DD48D5CB6E49D3F2F0EBFCB02D49875F /* PocketRequestManager.swift */,
 			);
 			name = Managers;
 			path = Sources/Managers;
 			sourceTree = "<group>";
 		};
-		C2155B501F79FBD7A23754E1F4758ADD /* Support Files */ = {
+		DE5DEDF722F55D92BEF8AB8E10F31C12 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E709455CF995FFC91AD13C99C51C34D7 /* Info.plist */,
-				BC0D322263D37FB3DBA902A979CEF4C9 /* Pocket.modulemap */,
-				7A5575C62CBCB36BB1EB18888D24E5D1 /* Pocket.xcconfig */,
-				021277BAB297237430ECCDA7C4E87EA8 /* Pocket-dummy.m */,
-				5C060D6792E5ADA02B7488F185207CD0 /* Pocket-prefix.pch */,
-				A5D12001209162A3C53E43DD22608D95 /* Pocket-umbrella.h */,
+				B717431926FB36AE8B56A81154F24022 /* Info.plist */,
+				1D6205821C1872792596B136F6B2D209 /* Pocket.modulemap */,
+				8BF05DE3248493EC7AEA66C7FFADA867 /* Pocket.xcconfig */,
+				CCAA6FF522942AC79C6D51705CF1B611 /* Pocket-dummy.m */,
+				7C2168FFD51973EA74E32B0E3BC29B80 /* Pocket-prefix.pch */,
+				A105A9C760CBBF862CEB97D524E6BDDC /* Pocket-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Pocket";
@@ -396,19 +409,6 @@
 			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
-		E0456D424A328D18555BA08B8EC9AAB2 /* Pocket */ = {
-			isa = PBXGroup;
-			children = (
-				B6DBBD2F22B4E414D38A98545B3153F5 /* Managers */,
-				08D4F443DA5B15C7DDEB07D86B019BFC /* Models */,
-				444AE2033477078702A92AE4891AFC17 /* Pod */,
-				94D9A0B2F936F48C54E383EF186CA881 /* Protocols */,
-				C2155B501F79FBD7A23754E1F4758ADD /* Support Files */,
-			);
-			name = Pocket;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		F122B18B84D4B2A311181ABD5BAA299F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,9 +419,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F46C5C92345CA701E5F64AA2C9A0034B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F4C7B5547014F438EA281170AF900FCE /* Configuration.swift */,
+				C6FEA00191994BA8693C923FB3E50ADA /* PocketPlugin.swift */,
+			);
+			name = Protocols;
+			path = Sources/Protocols;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		29D9B4C452720A8D0FB0CD6C95414C11 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD781A72536AF727FB5869EC6367150 /* Pocket-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		586A0BD88CE3DB16A99A67AF6CEDF797 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583511A298128E7E4CC3A34EC1BCF927 /* Pods-Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9D8763EAE7FCFADE3ADF91BCD299009E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -430,60 +456,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B48FEE7782D6C5E16241AE0DB19A3EE9 /* Headers */ = {
+		E32EB656B3169BBA17EDEA3368CB9ED4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D74395901DDA8F5943DB00E02CCADF9D /* Pocket-umbrella.h in Headers */,
+				A55C9E598D82A483BADC1E4474C010A1 /* SwiftKeychainWrapper-umbrella.h in Headers */,
+				366C131AB8E5F29934B56F7CEBC237E0 /* SwiftKeychainWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C667A63CF48E4C1B2CE38E5F3550AA9A /* Headers */ = {
+		F96A7941F8694228194B4AD1F23FA47E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABF369B4E90E0C58FCEBE713A7FDFA85 /* RNCryptor-umbrella.h in Headers */,
-				B6379B18457A01EDE72CB0E4A7FE56FC /* RNCryptor.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D66A19726577BE9D505D361D2B474488 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				00575CEA960ACFBC29637E5EA699B858 /* Pods-Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E500B0414B2878BF92B9CCF8D53D118F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0933B84928619CE1B8DFCAD486F3AD1 /* SwiftKeychainWrapper-umbrella.h in Headers */,
-				7B98638B69FAA8E33E7C15A7C27FB1F1 /* SwiftKeychainWrapper.h in Headers */,
+				7F266C4D92295058E99796DC3C950C57 /* RNCryptor-umbrella.h in Headers */,
+				313D5A740779761AD077AA9BC2209F89 /* RNCryptor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0EE5A924D061524CB39D6D56202032FC /* Pocket */ = {
+		21B85806D27D1CAC856F5BA68067A9AF /* RNCryptor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BF1053C12224ED72043D7381203F7AFF /* Build configuration list for PBXNativeTarget "Pocket" */;
+			buildConfigurationList = F684BD36756780A849ABE8AFD5742D51 /* Build configuration list for PBXNativeTarget "RNCryptor" */;
 			buildPhases = (
-				A6C411E4EDB64416C5D4AC7ACA00F7E3 /* Sources */,
-				4ABC9CAD0CF608E4D6AEFCC92090E2BE /* Frameworks */,
-				B48FEE7782D6C5E16241AE0DB19A3EE9 /* Headers */,
+				CA8C71895C6BBDC361D81E3B09A416E8 /* Sources */,
+				50A5C77E7AB52A993F646D0D7FB8087E /* Frameworks */,
+				F96A7941F8694228194B4AD1F23FA47E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				AE422024AF55D92CF3D6C8BA9A1DEE7E /* PBXTargetDependency */,
-				70BC5515C972D0BCD8861304A8492F77 /* PBXTargetDependency */,
 			);
-			name = Pocket;
-			productName = Pocket;
-			productReference = 314C93D75AFC8454BABBD9748531FB83 /* Pocket.framework */;
+			name = RNCryptor;
+			productName = RNCryptor;
+			productReference = 2ECC8FC93076ABE3B39165BFD84E3F3C /* RNCryptor.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		262416950E2C3D8F8FFEBB76123BB0B2 /* Pods-Example */ = {
@@ -506,13 +514,32 @@
 			productReference = 78400217D2641DF2F8CCF7990CB58C8A /* Pods_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		32EED978CC5A0F16A39F7563D5FC104F /* SwiftKeychainWrapper */ = {
+		D164A990FB46CB620A9599A8F642A374 /* Pocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FDD193862DA55989698C639374DE624 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
+			buildConfigurationList = D7A2D3F5D00E51384F9F674CAD47A2BA /* Build configuration list for PBXNativeTarget "Pocket" */;
 			buildPhases = (
-				E3AC8D168F75244FAA3C3883AA0B6934 /* Sources */,
-				3B6B9346798C4D73B2D9154243F6F8D0 /* Frameworks */,
-				E500B0414B2878BF92B9CCF8D53D118F /* Headers */,
+				657C5E893E7CC2B906C75DB8D9E1CDD5 /* Sources */,
+				DCBA648B640B1C9F6F34B163A0716AC9 /* Frameworks */,
+				29D9B4C452720A8D0FB0CD6C95414C11 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				52285A7861142721FD9DE76A877D6329 /* PBXTargetDependency */,
+				BD80FABBAFCC3685DD57876AE3D98F21 /* PBXTargetDependency */,
+			);
+			name = Pocket;
+			productName = Pocket;
+			productReference = 314C93D75AFC8454BABBD9748531FB83 /* Pocket.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D56249C2971E13DCE783E969EE3024B6 /* SwiftKeychainWrapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A48ADBBD1179B9968DADDCD288653A6 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
+			buildPhases = (
+				70A73739F3F407D25157BED5E7152985 /* Sources */,
+				40AB352260E61A31192A65BFC91ECAA3 /* Frameworks */,
+				E32EB656B3169BBA17EDEA3368CB9ED4 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -523,34 +550,18 @@
 			productReference = 472F03922C7EEB460322E5424C67CA18 /* SwiftKeychainWrapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D13ADBF638796997067E3BBA4D98199B /* RNCryptor */ = {
+		F3B782EEA8FA234236B8D60B7651E510 /* Pods-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C2CE47584E4F312829E732825F1D5BE /* Build configuration list for PBXNativeTarget "RNCryptor" */;
+			buildConfigurationList = D8684386D12458F7FCC5EA7F7DC21464 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
 			buildPhases = (
-				1FE3EC486464F6D15AC711A1E2C85726 /* Sources */,
-				2496FF06B3BA2FD0D2822344C5A74401 /* Frameworks */,
-				C667A63CF48E4C1B2CE38E5F3550AA9A /* Headers */,
+				61259D2ABE0E64D86FE154BEDE735A45 /* Sources */,
+				4D011A509C3106B5DE3B85F35608D47B /* Frameworks */,
+				586A0BD88CE3DB16A99A67AF6CEDF797 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = RNCryptor;
-			productName = RNCryptor;
-			productReference = 2ECC8FC93076ABE3B39165BFD84E3F3C /* RNCryptor.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		D5E4C3657303AB2F5192DA7C1BD76FBE /* Pods-Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8D5C0963E47CED7845C2E1E8B2246909 /* Build configuration list for PBXNativeTarget "Pods-Tests" */;
-			buildPhases = (
-				1635E766623EA02AED17BCC5210887CB /* Sources */,
-				D71D5F01D310087B06E50E83E8684AF9 /* Frameworks */,
-				D66A19726577BE9D505D361D2B474488 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				9ACF694F8E867BA8CF32DC67F0283DD4 /* PBXTargetDependency */,
 			);
 			name = "Pods-Tests";
 			productName = "Pods-Tests";
@@ -578,11 +589,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EE5A924D061524CB39D6D56202032FC /* Pocket */,
+				D164A990FB46CB620A9599A8F642A374 /* Pocket */,
 				262416950E2C3D8F8FFEBB76123BB0B2 /* Pods-Example */,
-				D5E4C3657303AB2F5192DA7C1BD76FBE /* Pods-Tests */,
-				D13ADBF638796997067E3BBA4D98199B /* RNCryptor */,
-				32EED978CC5A0F16A39F7563D5FC104F /* SwiftKeychainWrapper */,
+				F3B782EEA8FA234236B8D60B7651E510 /* Pods-Tests */,
+				21B85806D27D1CAC856F5BA68067A9AF /* RNCryptor */,
+				D56249C2971E13DCE783E969EE3024B6 /* SwiftKeychainWrapper */,
 			);
 		};
 /* End PBXProject section */
@@ -596,146 +607,95 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1635E766623EA02AED17BCC5210887CB /* Sources */ = {
+		61259D2ABE0E64D86FE154BEDE735A45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C063AE0EF2079E29DCD4224F16D60FB0 /* Pods-Tests-dummy.m in Sources */,
+				F6372504EB05E07683036581F0624B42 /* Pods-Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FE3EC486464F6D15AC711A1E2C85726 /* Sources */ = {
+		657C5E893E7CC2B906C75DB8D9E1CDD5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F412152C138B74390C9C5A339377E67 /* RNCryptor-dummy.m in Sources */,
-				9C122C29CE76B1A1566B4A16CDA83013 /* RNCryptor.swift in Sources */,
+				E2D84F8FAB6566971A11F8A5A094D332 /* Configuration.swift in Sources */,
+				F32B8F5F3505F57198DD559919E1A2C0 /* JSON.swift in Sources */,
+				CBDF63E4A2772A577C0D414CCA897139 /* Pocket-dummy.m in Sources */,
+				21777ABE128CFD6E2CCC0D9BB724D369 /* Pocket.swift in Sources */,
+				F86E9B8303F283D5A9EDFB2645F867C3 /* PocketPlugin.swift in Sources */,
+				ECEE866D6F6EA816AD7D9DEC12DAF583 /* PocketRequestManager.swift in Sources */,
+				DE2120605206BE8B25297420A72338D6 /* Query.swift in Sources */,
+				4E50A43C747C28A2158B6AB316BF34E0 /* QueryResponse.swift in Sources */,
+				B2B38BEB4F4309C4305692C94CA7314F /* Transaction.swift in Sources */,
+				8CF14FD0DC5ADA4BFAE20A0C81911372 /* TransactionResponse.swift in Sources */,
+				A7217F7A6AE74A8C714E53D0D94940FD /* Utility.swift in Sources */,
+				77DA3A6BE026D7B0E447F1237F39BCFB /* Wallet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6C411E4EDB64416C5D4AC7ACA00F7E3 /* Sources */ = {
+		70A73739F3F407D25157BED5E7152985 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED7042F0E1617C751614299202AB0BD3 /* Configuration.swift in Sources */,
-				99F2FAF1E621FF6FD1B0DDB8B5386C6B /* Pocket-dummy.m in Sources */,
-				6AAA577A835BA0172F22574918F4E56C /* Pocket.swift in Sources */,
-				3F3D1AEEA4FEFB83D6EAEC38493F8427 /* PocketPlugin.swift in Sources */,
-				92C52DBC16A6813AF7767D2E5FC4528D /* PocketRequestManager.swift in Sources */,
-				31B89E13F12A32D01AEB75912983858D /* Query.swift in Sources */,
-				3B9FCB6838BBA9757E189C53424C3EC3 /* QueryResponse.swift in Sources */,
-				B21A57A01724CB9C725161D3561B7169 /* Transaction.swift in Sources */,
-				C32348B4628276C4A23992E7D1F3ABBA /* TransactionResponse.swift in Sources */,
-				0D7A7848846AAF3DBF129BB221E75B81 /* Utility.swift in Sources */,
-				A6BBF23A057A7FAAA843636F9629582B /* Wallet.swift in Sources */,
+				A17ED0BE5EFFB01370C59011E8BD42A9 /* KeychainItemAccessibility.swift in Sources */,
+				D655A2B4B8C103E3874BBD744BFA1246 /* KeychainWrapper.swift in Sources */,
+				C933F1F06FB5C7968B9A206CCBF0C841 /* SwiftKeychainWrapper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3AC8D168F75244FAA3C3883AA0B6934 /* Sources */ = {
+		CA8C71895C6BBDC361D81E3B09A416E8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4140294D2CBBD8EA4E81C31BDD31B6B8 /* KeychainItemAccessibility.swift in Sources */,
-				C4D2FADD203760ADE2AF5B3C9EE32053 /* KeychainWrapper.swift in Sources */,
-				645F6915F63F2127AF4C24FC0307C2CB /* SwiftKeychainWrapper-dummy.m in Sources */,
+				633E7475D44A923B6C9C0C390455AE22 /* RNCryptor-dummy.m in Sources */,
+				142C3DF4E81DB5BB701C1B89E7B35D20 /* RNCryptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		70BC5515C972D0BCD8861304A8492F77 /* PBXTargetDependency */ = {
+		52285A7861142721FD9DE76A877D6329 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftKeychainWrapper;
-			target = 32EED978CC5A0F16A39F7563D5FC104F /* SwiftKeychainWrapper */;
-			targetProxy = 490DBF5C60C044DAAC0CB4298AFED398 /* PBXContainerItemProxy */;
+			name = RNCryptor;
+			target = 21B85806D27D1CAC856F5BA68067A9AF /* RNCryptor */;
+			targetProxy = 2F4DC0E35CF044451D795D23D35A1A77 /* PBXContainerItemProxy */;
 		};
 		8555D12089DAB236F4322CB117D62DFC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftKeychainWrapper;
-			target = 32EED978CC5A0F16A39F7563D5FC104F /* SwiftKeychainWrapper */;
+			target = D56249C2971E13DCE783E969EE3024B6 /* SwiftKeychainWrapper */;
 			targetProxy = E94F71F20D57928CB30B2CCF57DF2D57 /* PBXContainerItemProxy */;
 		};
-		AE422024AF55D92CF3D6C8BA9A1DEE7E /* PBXTargetDependency */ = {
+		9ACF694F8E867BA8CF32DC67F0283DD4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = RNCryptor;
-			target = D13ADBF638796997067E3BBA4D98199B /* RNCryptor */;
-			targetProxy = 129EE9F9F350FA310BBE985D9E5B30C4 /* PBXContainerItemProxy */;
+			name = "Pods-Example";
+			target = 262416950E2C3D8F8FFEBB76123BB0B2 /* Pods-Example */;
+			targetProxy = 798D16816545C7A1B177E8C224421E4A /* PBXContainerItemProxy */;
+		};
+		BD80FABBAFCC3685DD57876AE3D98F21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftKeychainWrapper;
+			target = D56249C2971E13DCE783E969EE3024B6 /* SwiftKeychainWrapper */;
+			targetProxy = A4887C6115E6D456278A91DE1533DC60 /* PBXContainerItemProxy */;
 		};
 		D20C2F0309E01BE22EB84D8DC9A8F137 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = RNCryptor;
-			target = D13ADBF638796997067E3BBA4D98199B /* RNCryptor */;
+			target = 21B85806D27D1CAC856F5BA68067A9AF /* RNCryptor */;
 			targetProxy = AF045774E73A7D4ADECEA5FB76FA950A /* PBXContainerItemProxy */;
 		};
 		EBD956F36FBB7573C64ED09B150FFB13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Pocket;
-			target = 0EE5A924D061524CB39D6D56202032FC /* Pocket */;
+			target = D164A990FB46CB620A9599A8F642A374 /* Pocket */;
 			targetProxy = 73E5F31F260670B0AAD267B614466772 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		00A06BEB3987B2117D563D0D7CF7ACC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		0277146DC1177E75AA126D51B0929E4B /* Debug */ = {
+		07D03D5B23A774C66914805FAF66543D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 844CD5905A1E6D671FDE5C92A17F2AB9 /* SwiftKeychainWrapper.xcconfig */;
 			buildSettings = {
@@ -758,118 +718,11 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
 				PRODUCT_NAME = SwiftKeychainWrapper;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		167B23559DFC50984CA7D01F2A8E095B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A5575C62CBCB36BB1EB18888D24E5D1 /* Pocket.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Pocket/Pocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Pocket/Pocket.modulemap";
-				PRODUCT_NAME = Pocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2A7042049E94F780A5DE1691B9257057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6E147574EE5CFE13C9A691908B0178D /* Pods-Tests.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5FD8CA451287FAD3268C2F315B93977D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33CB7A9E729E227227632223EAC9CEB2 /* RNCryptor.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RNCryptor/RNCryptor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RNCryptor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/RNCryptor/RNCryptor.modulemap";
-				PRODUCT_NAME = RNCryptor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -879,121 +732,11 @@
 			};
 			name = Release;
 		};
-		672DC3B9FBFF6D4464AD15B005187EB4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33CB7A9E729E227227632223EAC9CEB2 /* RNCryptor.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RNCryptor/RNCryptor-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RNCryptor/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/RNCryptor/RNCryptor.modulemap";
-				PRODUCT_NAME = RNCryptor;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		75C64BD369BE0FF372DD785480DF9F29 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E22EDD52E26A312A3A6CDA6B07FDF428 /* Pods-Example.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		96E739085743229B801E67347D6C36DD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A5575C62CBCB36BB1EB18888D24E5D1 /* Pocket.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Pocket/Pocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pocket/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/Pocket/Pocket.modulemap";
-				PRODUCT_NAME = Pocket;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C73E1284D33F7562EDBB704F49738A9E /* Release */ = {
+		44D2CFA9A50B7DB90165CCA3F967BE7E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2F5827015FB8CEAAE208174C5355A825 /* Pods-Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1018,7 +761,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1028,46 +771,7 @@
 			};
 			name = Release;
 		};
-		C9BDEA10BA73127A68C85392366DA058 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 69F7D4FC929C9849185DC95870A55E86 /* Pods-Example.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CCF405426857C065123D950465A8AEFA /* Debug */ = {
+		5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1099,6 +803,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1123,14 +828,166 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		D9EEA7BBFBBF1AB7655FA51044FE2B55 /* Release */ = {
+		68964CDBE40C51D3337749ED5C92DF9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69F7D4FC929C9849185DC95870A55E86 /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79B8B047F5B4853FEEFAEEB18D91DBB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E22EDD52E26A312A3A6CDA6B07FDF428 /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Example/Pods-Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85398FC0E4C6625D9341D41F8B60C191 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33CB7A9E729E227227632223EAC9CEB2 /* RNCryptor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RNCryptor/RNCryptor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RNCryptor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RNCryptor/RNCryptor.modulemap";
+				PRODUCT_MODULE_NAME = RNCryptor;
+				PRODUCT_NAME = RNCryptor;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		91AD2C950B02AE0DFD64C9CB96D8DC41 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF05DE3248493EC7AEA66C7FFADA867 /* Pocket.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pocket/Pocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Pocket/Pocket.modulemap";
+				PRODUCT_MODULE_NAME = Pocket;
+				PRODUCT_NAME = Pocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9F9B3DAB4B08B8EC44624624E6FE824C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 844CD5905A1E6D671FDE5C92A17F2AB9 /* SwiftKeychainWrapper.xcconfig */;
 			buildSettings = {
@@ -1153,7 +1010,178 @@
 					"@loader_path/Frameworks",
 				);
 				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_MODULE_NAME = SwiftKeychainWrapper;
 				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BEBE72C1BFD8C869DABAEBF561DDB60C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF05DE3248493EC7AEA66C7FFADA867 /* Pocket.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Pocket/Pocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pocket/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Pocket/Pocket.modulemap";
+				PRODUCT_MODULE_NAME = Pocket;
+				PRODUCT_NAME = Pocket;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5149FB9DA5450B7B3ED7F831CA4633C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6E147574EE5CFE13C9A691908B0178D /* Pods-Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tests/Pods-Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED07724760DB437917DB914BA5B0AC46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33CB7A9E729E227227632223EAC9CEB2 /* RNCryptor.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RNCryptor/RNCryptor-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RNCryptor/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/RNCryptor/RNCryptor.modulemap";
+				PRODUCT_MODULE_NAME = RNCryptor;
+				PRODUCT_NAME = RNCryptor;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1169,20 +1197,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C2CE47584E4F312829E732825F1D5BE /* Build configuration list for PBXNativeTarget "RNCryptor" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				672DC3B9FBFF6D4464AD15B005187EB4 /* Debug */,
-				5FD8CA451287FAD3268C2F315B93977D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CCF405426857C065123D950465A8AEFA /* Debug */,
-				00A06BEB3987B2117D563D0D7CF7ACC1 /* Release */,
+				5DC0083F57E9AB706B46C5B5D73B38D8 /* Debug */,
+				AEEA80476F98EB645C4DD53EB2BB6D88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1190,35 +1209,44 @@
 		38A6508F216E2675337BF9ACC29A9373 /* Build configuration list for PBXNativeTarget "Pods-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75C64BD369BE0FF372DD785480DF9F29 /* Debug */,
-				C9BDEA10BA73127A68C85392366DA058 /* Release */,
+				79B8B047F5B4853FEEFAEEB18D91DBB8 /* Debug */,
+				68964CDBE40C51D3337749ED5C92DF9B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8D5C0963E47CED7845C2E1E8B2246909 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
+		7A48ADBBD1179B9968DADDCD288653A6 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2A7042049E94F780A5DE1691B9257057 /* Debug */,
-				C73E1284D33F7562EDBB704F49738A9E /* Release */,
+				9F9B3DAB4B08B8EC44624624E6FE824C /* Debug */,
+				07D03D5B23A774C66914805FAF66543D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FDD193862DA55989698C639374DE624 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+		D7A2D3F5D00E51384F9F674CAD47A2BA /* Build configuration list for PBXNativeTarget "Pocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0277146DC1177E75AA126D51B0929E4B /* Debug */,
-				D9EEA7BBFBBF1AB7655FA51044FE2B55 /* Release */,
+				91AD2C950B02AE0DFD64C9CB96D8DC41 /* Debug */,
+				BEBE72C1BFD8C869DABAEBF561DDB60C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BF1053C12224ED72043D7381203F7AFF /* Build configuration list for PBXNativeTarget "Pocket" */ = {
+		D8684386D12458F7FCC5EA7F7DC21464 /* Build configuration list for PBXNativeTarget "Pods-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				167B23559DFC50984CA7D01F2A8E095B /* Debug */,
-				96E739085743229B801E67347D6C36DD /* Release */,
+				C5149FB9DA5450B7B3ED7F831CA4633C /* Debug */,
+				44D2CFA9A50B7DB90165CCA3F967BE7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F684BD36756780A849ABE8AFD5742D51 /* Build configuration list for PBXNativeTarget "RNCryptor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85398FC0E4C6625D9341D41F8B60C191 /* Debug */,
+				ED07724760DB437917DB914BA5B0AC46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -23,25 +23,18 @@ public class TransactionResponse: Codable {
     public var error = false
     public var errorMsg = ""
     public var hash = ""
-    public var metadata: [AnyHashable: Any]?
+    public var metadata: JSON?
     public var network = ""
     public var serializedTransaction = ""
-    public var transactionMetadata: [AnyHashable: Any]?
+    public var transactionMetadata: JSON?
 
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
-        
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
-        
-        let parsedTransactionMetadata = try values.decodeIfPresent(String.self, forKey: .transactionMetadata) ?? ""
-        transactionMetadata = try Utility.jsonStringToDictionary(string: parsedTransactionMetadata)
-        
+        transactionMetadata = try values.decodeIfPresent(JSON.self, forKey: .transactionMetadata)
+        metadata = try values.decodeIfPresent(JSON.self, forKey: .metadata)
         hash = try values.decodeIfPresent(String.self, forKey: .hash) ?? ""
-        
-        let stringMetadata = try values.decodeIfPresent(String.self, forKey: .metadata) ?? ""
-        metadata = try Utility.jsonStringToDictionary(string: stringMetadata)
-        
         error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
         errorMsg = try values.decodeIfPresent(String.self, forKey: .errorMsg) ?? ""
     }
@@ -50,9 +43,9 @@ public class TransactionResponse: Codable {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(serializedTransaction, forKey: .serializedTransaction)
-            try container.encode(Utility.dictionaryToJsonString(dict: transactionMetadata), forKey: .transactionMetadata)
+            try container.encode(transactionMetadata, forKey: .transactionMetadata)
             try container.encode(hash, forKey: .hash)
-            try container.encode(Utility.dictionaryToJsonString(dict: metadata), forKey: .metadata)
+            try container.encode(metadata, forKey: .metadata)
             try container.encode(error, forKey: .error)
             try container.encode(errorMsg, forKey: .errorMsg)
         } catch {

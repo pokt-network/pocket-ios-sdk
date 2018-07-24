@@ -17,8 +17,8 @@ public final class Query: Codable {
     }
     
     public var network = ""
-    public var data: [AnyHashable: Any]?
-    public var decoder: [AnyHashable: Any]?
+    public var data: JSON?
+    public var decoder: JSON?
     
     public init() {
         
@@ -26,22 +26,17 @@ public final class Query: Codable {
     
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
-        
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
-        
-        let stringDecoder = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
-        decoder = try Utility.jsonStringToDictionary(string: stringDecoder)
-        
-        let stringData = try values.decodeIfPresent(String.self, forKey: .decoder) ?? ""
-        decoder = try Utility.jsonStringToDictionary(string: stringData)
+        decoder = try values.decodeIfPresent(JSON.self, forKey: .decoder)
+        data = try values.decodeIfPresent(JSON.self, forKey: .data)
     }
     
     public func encode(to encoder: Encoder) throws {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(network, forKey: .network)
-            try container.encode(Utility.dictionaryToJsonString(dict: data), forKey: .data)
-            try container.encode(Utility.dictionaryToJsonString(dict: decoder), forKey: .decoder)
+            try container.encode(data, forKey: .data)
+            try container.encode(decoder, forKey: .decoder)
         } catch {
             print(error)
         }

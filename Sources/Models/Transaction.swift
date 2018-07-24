@@ -18,12 +18,12 @@ public class Transaction: Codable {
     
     public var network = ""
     public var serializedTransaction = ""
-    public var transactionMetadata: [AnyHashable: Any]?
+    public var transactionMetadata: JSON?
     
     public init(obj: [AnyHashable: Any]!){
         network = obj["network"] as? String ?? ""
         serializedTransaction = obj["serialized_tx"] as? String ?? ""
-        transactionMetadata = obj["tx_metadata"] as? [AnyHashable: Any] ?? [AnyHashable: Any]()
+        transactionMetadata = obj["tx_metadata"] as? JSON ?? JSON.object([String : JSON]())
     }
     
     public required init(from decodable: Decoder) throws {
@@ -31,16 +31,14 @@ public class Transaction: Codable {
         
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
-        
-        let parsedTransactionMetadata = try values.decodeIfPresent(String.self, forKey: .tranactionMetadata) ?? ""
-        transactionMetadata = try Utility.jsonStringToDictionary(string: parsedTransactionMetadata)
+        transactionMetadata = try values.decodeIfPresent(JSON.self, forKey: .tranactionMetadata)
     }
     
     public func encode(to encoder: Encoder) throws {
         do {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(serializedTransaction, forKey: .serializedTransaction)
-            try container.encode(Utility.dictionaryToJsonString(dict: transactionMetadata), forKey: .tranactionMetadata)
+            try container.encode(transactionMetadata, forKey: .tranactionMetadata)
         } catch {
             print(error)
         }

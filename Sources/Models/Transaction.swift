@@ -39,6 +39,7 @@ public class Transaction: Codable {
             var container = encoder.container(keyedBy: CodingKeys.self)
             try container.encode(serializedTransaction, forKey: .serializedTransaction)
             try container.encode(transactionMetadata, forKey: .tranactionMetadata)
+            try container.encode(network, forKey: .network)
         } catch {
             print(error)
         }

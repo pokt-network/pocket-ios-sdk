@@ -19,7 +19,7 @@ public class TransactionResponse: Codable {
         case serializedTransaction = "serialized_tx"
         case transactionMetadata = "tx_metadata"
     }
-
+    
     public var error = false
     public var errorMsg = ""
     public var hash = ""
@@ -27,7 +27,7 @@ public class TransactionResponse: Codable {
     public var network = ""
     public var serializedTransaction = ""
     public var transactionMetadata: JSON?
-
+    
     public required init(from decodable: Decoder) throws {
         let values = try decodable.container(keyedBy: CodingKeys.self)
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
@@ -48,9 +48,11 @@ public class TransactionResponse: Codable {
             try container.encode(metadata, forKey: .metadata)
             try container.encode(error, forKey: .error)
             try container.encode(errorMsg, forKey: .errorMsg)
+            try container.encode(network, forKey: .network)
         } catch {
             print(error)
         }
     }
     
 }
+

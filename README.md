@@ -19,7 +19,7 @@ For example, if you wanted to add Ethereum support for your app, you can use our
 
 ## Functionality 
 
-The `PocketPlugin` is a protocol that every Plugin needs to conform to. Please look over the Pocket Ethereum Plugin as an example for implementing for another blockchain.
+The `PocketPlugin` is a protocol that every Plugin needs to conform to. Please look over the Pocket Ethereum Plugin as an example for implementing on another blockchain.
 
 ### Create a wallet
 

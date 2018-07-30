@@ -15,7 +15,7 @@ The `PocketPlugin` is a protocol that every Plugin needs to conform to. Please l
 
 ### Create a wallet
 
-- `static func createWallet(data: [AnyHashable: Any]?) throws -> Wallet`
+`static func createWallet(data: [AnyHashable: Any]?) throws -> Wallet`
 
 Create a new wallet. Needs to take in data specific for the blockchain. Returns a `Wallet` object.
 
@@ -23,13 +23,13 @@ Wallets can be considered the identity systems or authentication for building bl
 
 ### Import a wallet
 
-- `static func importWallet(privateKey: String, address: String?, data: [AnyHashable: Any]?) throws -> Wallet`
+`static func importWallet(privateKey: String, address: String?, data: [AnyHashable: Any]?) throws -> Wallet`
 
 Import any already existing wallet. Need the private key, public key and any extra data. Returns a `Wallet` object.
 
 ### Create a transaction
 
-- `static func createTransaction(wallet: Wallet, params: [AnyHashable: Any]) throws -> Transaction`
+`static func createTransaction(wallet: Wallet, params: [AnyHashable: Any]) throws -> Transaction`
 
 Need a `Wallet` object to be able to sign the transaction with your private keys. Returns `Transaction` object. 
 
@@ -37,7 +37,7 @@ Creating a transaction is a write to a given blockchain. Depending on the blockc
 
 ### Creating a Query
 
-- `static func createQuery(params: [AnyHashable: Any], decoder: [AnyHashable: Any]?) throws -> Query`
+`static func createQuery(params: [AnyHashable: Any], decoder: [AnyHashable: Any]?) throws -> Query`
 
 Queries are reads from a blockchain. It creates a request that conforms to the Pocket Node API.
 

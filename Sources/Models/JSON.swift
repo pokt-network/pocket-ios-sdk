@@ -19,6 +19,7 @@ public enum JSON: Codable {
     case boolean(Bool)
     case array([JSON])
     case object([String: JSON])
+    case null
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -34,6 +35,8 @@ public enum JSON: Codable {
             self = .array(array)
         } else if let dict = try? container.decode([String: JSON].self) {
             self = .object(dict)
+        } else if container.decodeNil() {
+            self = .null
         } else {
             throw DecodingError.dataCorruptedError(in: container, debugDescription: "Could not decode data into a JSON-compatible value")
         }
@@ -54,10 +57,12 @@ public enum JSON: Codable {
             try container.encode(jsonArray)
         case .object(let jsonObject):
             try container.encode(jsonObject)
+        case .null:
+            try container.encodeNil()
         }
     }
     
-    public static func valueToJsonPrimitive(anyValue: Any) throws -> JSON {
+    public static func valueToJsonPrimitive(anyValue: Any?) throws -> JSON {
         let result: JSON
         if let bool = anyValue as? Bool {
             result = .boolean(bool)
@@ -79,13 +84,15 @@ public enum JSON: Codable {
                 let jsonValue = try JSON.valueToJsonPrimitive(anyValue: entry.value)
                 result[stringKey] = jsonValue
             }))
+        } else if anyValue == nil {
+            result = .null
         } else {
             throw JSONError.encodingError
         }
         return result
     }
     
-    public func value() -> Any {
+    public func value() -> Any? {
         switch self {
         case .integer(let int):
             return int
@@ -99,6 +106,9 @@ public enum JSON: Codable {
             return jsonArray
         case .object(let jsonObject):
             return jsonObject
+        case .null:
+            return nil
         }
     }
 }
+

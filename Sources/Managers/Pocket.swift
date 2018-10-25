@@ -11,6 +11,10 @@ import Foundation
 public typealias TransactionHandler = (TransactionResponse?, Error?) -> Void
 public typealias ExecuteQueryHandler = (QueryResponse?, Error?) -> Void
 
+public enum PocketError: Error {
+    case configurationError
+}
+
 public class Pocket {
 
     // Singleton
@@ -31,6 +35,7 @@ public class Pocket {
 
     public func sendTransaction(transaction: Transaction, handler: @escaping TransactionHandler) {
         guard let url = configuration?.nodeURL else {
+            handler(nil, PocketError.configurationError)
             return // Handle Error
         }
 
@@ -42,6 +47,7 @@ public class Pocket {
     
     public func executeQuery(query: Query, handler: @escaping ExecuteQueryHandler) {
         guard let url = configuration?.nodeURL else {
+            handler(nil, PocketError.configurationError)
             return // Handle Error
         }
 

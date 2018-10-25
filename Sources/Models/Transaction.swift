@@ -12,16 +12,19 @@ public class Transaction: Codable {
     
     enum CodingKeys: String, CodingKey {
         case network
+        case subnetwork
         case serializedTransaction = "serialized_tx"
         case tranactionMetadata = "tx_metadata"
     }
     
     public var network = ""
+    public var subnetwork = ""
     public var serializedTransaction = ""
     public var transactionMetadata: JSON?
     
     public init(obj: [AnyHashable: Any]!){
         network = obj["network"] as? String ?? ""
+        subnetwork = obj["subnetwork"] as? String ?? ""
         serializedTransaction = obj["serialized_tx"] as? String ?? ""
         transactionMetadata = obj["tx_metadata"] as? JSON ?? JSON.object([String : JSON]())
     }
@@ -30,6 +33,7 @@ public class Transaction: Codable {
         let values = try decodable.container(keyedBy: CodingKeys.self)
         
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
+        subnetwork = try values.decodeIfPresent(String.self, forKey: .subnetwork) ?? ""
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
         transactionMetadata = try values.decodeIfPresent(JSON.self, forKey: .tranactionMetadata)
     }
@@ -40,6 +44,7 @@ public class Transaction: Codable {
             try container.encode(serializedTransaction, forKey: .serializedTransaction)
             try container.encode(transactionMetadata, forKey: .tranactionMetadata)
             try container.encode(network, forKey: .network)
+            try container.encode(subnetwork, forKey: .subnetwork)
         } catch {
             print(error)
         }

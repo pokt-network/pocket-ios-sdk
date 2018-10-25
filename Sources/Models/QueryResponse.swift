@@ -12,6 +12,7 @@ public class QueryResponse: Codable {
 
     enum CodingKeys : String, CodingKey {
         case network
+        case subnetwork
         case data = "query"
         case result
         case decoder
@@ -22,6 +23,7 @@ public class QueryResponse: Codable {
 
     // Request
     public var network = ""
+    public var subnetwork = ""
     public var data: JSON?
     public var decoder: JSON?
     // Response
@@ -39,6 +41,7 @@ public class QueryResponse: Codable {
         error = try values.decodeIfPresent(Bool.self, forKey: .error) ?? false
         errorMsg = try values.decodeIfPresent(String.self, forKey: .errorMsg) ?? ""
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
+        subnetwork = try values.decodeIfPresent(String.self, forKey: .subnetwork) ?? ""
     }
 
     public func encode(to encoder: Encoder) throws {
@@ -49,6 +52,7 @@ public class QueryResponse: Codable {
         try container.encodeIfPresent(error, forKey: .error)
         try container.encodeIfPresent(errorMsg, forKey: .errorMsg)
         try container.encodeIfPresent(network, forKey: .network)
+        try container.encodeIfPresent(subnetwork, forKey: .subnetwork)
     }
 
 }

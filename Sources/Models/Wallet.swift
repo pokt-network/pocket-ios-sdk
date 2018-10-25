@@ -19,20 +19,25 @@ public struct Wallet {
     public var address = ""
     public var privateKey = ""
     public var network = ""
+    public var subnetwork = ""
     public var data: [AnyHashable: Any]? = [AnyHashable: Any]()
+    static let keychainWrapperServiceName = "POCKET_IOS_SDK"
+    static let keychainWrapperAccessGroup = "POCKET_IOS_SDK_ACCESS_GROUP"
 
     public init(jsonString: String) throws {
         var dict = try Utility.jsonStringToDictionary(string: jsonString) ?? [AnyHashable: Any]()
         address = dict["address"] as? String ?? ""
         privateKey = dict["privateKey"] as? String ?? ""
         network = dict["network"] as? String ?? ""
+        subnetwork = dict["subnetwork"] as? String ?? ""
         data = try Utility.jsonStringToDictionary(string: dict["data"] as? String ?? "")
     }
     
-    public init(address: String, privateKey: String, network: String, data: [AnyHashable : Any]?) {
+    public init(address: String, privateKey: String, network: String, subnetwork: String, data: [AnyHashable : Any]?) {
         self.address = address
         self.privateKey = privateKey
         self.network = network
+        self.subnetwork = subnetwork
         self.data = data
     }
     
@@ -43,22 +48,22 @@ public struct Wallet {
                 throw WalletPersistenceError.invalidWallet
             }
             let ciphertext = RNCryptor.encrypt(data: jsonData, withPassword: passphrase)
-            return  KeychainWrapper.standard.set(ciphertext, forKey: recordKey())
+            return  Wallet.getKeychainWrapper().set(ciphertext, forKey: recordKey())
         } else {
             throw WalletPersistenceError.invalidWallet
         }
     }
     
     public func delete() throws -> Bool {
-        return KeychainWrapper.standard.removeObject(forKey: recordKey())
+        return Wallet.getKeychainWrapper().removeObject(forKey: recordKey())
     }
     
     public static func retrieveWalletRecordKeys() -> [String] {
-        return Array(KeychainWrapper.standard.allKeys())
+        return Array(Wallet.getKeychainWrapper().allKeys())
     }
     
-    public static func retrieveWallet(network: String, address: String, passphrase: String) throws -> Wallet{
-        guard let encryptedWalletData = KeychainWrapper.standard.data(forKey: Wallet.recordKey(network: network, address: address)) else {
+    public static func retrieveWallet(network: String, subnetwork: String, address: String, passphrase: String) throws -> Wallet {
+        guard let encryptedWalletData = Wallet.getKeychainWrapper().data(forKey: Wallet.recordKey(network: network, subnetwork: subnetwork, address: address)) else {
             throw WalletPersistenceError.walletSerializationError
         }
         guard let decryptedWalletJSON = String.init(data: try RNCryptor.decrypt(data: encryptedWalletData, withPassword: passphrase), encoding: .utf8) else {
@@ -68,17 +73,21 @@ public struct Wallet {
         return wallet
     }
     
+    private static func getKeychainWrapper() -> KeychainWrapper {
+        return KeychainWrapper(serviceName: keychainWrapperServiceName, accessGroup: keychainWrapperAccessGroup)
+    }
+    
     // Private functions
     private func isValid() -> Bool {
         return !network.isEmpty && !address.isEmpty && !privateKey.isEmpty
     }
     
     private func recordKey() -> String {
-        return Wallet.recordKey(network: network, address: address)
+        return Wallet.recordKey(network: network, subnetwork: subnetwork, address: address)
     }
     
-    private static func recordKey(network: String, address: String) -> String {
-        return network + "/" + address
+    private static func recordKey(network: String, subnetwork: String, address: String) -> String {
+        return network + "/" + subnetwork + "/" + address
     }
     
     private func toJSONString() throws -> String {
@@ -86,11 +95,11 @@ public struct Wallet {
         object["address"] = address
         object["privateKey"] = privateKey
         object["network"] = network
+        object["subnetwork"] = subnetwork
         object["data"] = try Utility.dictionaryToJsonString(dict: data)
         guard let result = try Utility.dictionaryToJsonString(dict: object) else {
             throw WalletPersistenceError.walletSerializationError
         }
-        
         return result
     }
 }

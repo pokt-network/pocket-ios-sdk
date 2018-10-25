@@ -8,15 +8,20 @@
 
 import Foundation
 
+public enum UtilityError: Error {
+    case jsonToDictError
+    case jsonToArrayError
+}
+
 public struct Utility {
 
     public static func jsonStringToDictionary(string: String) throws -> [AnyHashable: Any]? {
         guard let object = string.data(using: .utf8, allowLossyConversion: false) else {
-            throw NSError()
+            throw UtilityError.jsonToDictError
         }
 
         guard let rawData = try JSONSerialization.jsonObject(with: object, options: .allowFragments) as? [AnyHashable: Any] else {
-            throw NSError()
+            throw UtilityError.jsonToDictError
         }
 
         return rawData
@@ -24,11 +29,11 @@ public struct Utility {
     
     public static func jsonStringToArray(string: String) throws -> [Any]? {
         guard let object = string.data(using: .utf8, allowLossyConversion: false) else {
-            throw NSError()
+            throw UtilityError.jsonToArrayError
         }
         
         guard let rawData = try JSONSerialization.jsonObject(with: object, options: .allowFragments) as? [Any] else {
-            throw NSError()
+            throw UtilityError.jsonToArrayError
         }
         
         return rawData

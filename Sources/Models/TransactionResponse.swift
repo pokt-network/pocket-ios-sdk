@@ -43,19 +43,15 @@ public class TransactionResponse: Codable {
     }
     
     public func encode(to encoder: Encoder) throws {
-        do {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(serializedTransaction, forKey: .serializedTransaction)
-            try container.encode(transactionMetadata, forKey: .transactionMetadata)
-            try container.encode(hash, forKey: .hash)
-            try container.encode(metadata, forKey: .metadata)
-            try container.encode(error, forKey: .error)
-            try container.encode(errorMsg, forKey: .errorMsg)
-            try container.encode(network, forKey: .network)
-            try container.encode(subnetwork, forKey: .subnetwork)
-        } catch {
-            print(error)
-        }
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(serializedTransaction, forKey: .serializedTransaction)
+        try container.encode(transactionMetadata, forKey: .transactionMetadata)
+        try container.encode(hash, forKey: .hash)
+        try container.encode(metadata, forKey: .metadata)
+        try container.encode(error, forKey: .error)
+        try container.encode(errorMsg, forKey: .errorMsg)
+        try container.encode(network, forKey: .network)
+        try container.encode(subnetwork, forKey: .subnetwork)
     }
     
 }

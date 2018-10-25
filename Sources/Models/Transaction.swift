@@ -22,7 +22,14 @@ public class Transaction: Codable {
     public var serializedTransaction = ""
     public var transactionMetadata: JSON?
     
-    public init(obj: [AnyHashable: Any]!){
+    public init(network: String, subnetwork: String, serializedTransaction: String, transactionMetadata: JSON?) {
+        self.network = network
+        self.subnetwork = subnetwork
+        self.serializedTransaction = serializedTransaction
+        self.transactionMetadata = transactionMetadata
+    }
+    
+    public init(obj: [AnyHashable: Any]!) {
         network = obj["network"] as? String ?? ""
         subnetwork = obj["subnetwork"] as? String ?? ""
         serializedTransaction = obj["serialized_tx"] as? String ?? ""
@@ -39,14 +46,10 @@ public class Transaction: Codable {
     }
     
     public func encode(to encoder: Encoder) throws {
-        do {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(serializedTransaction, forKey: .serializedTransaction)
-            try container.encode(transactionMetadata, forKey: .tranactionMetadata)
-            try container.encode(network, forKey: .network)
-            try container.encode(subnetwork, forKey: .subnetwork)
-        } catch {
-            print(error)
-        }
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(serializedTransaction, forKey: .serializedTransaction)
+        try container.encode(transactionMetadata, forKey: .tranactionMetadata)
+        try container.encode(network, forKey: .network)
+        try container.encode(subnetwork, forKey: .subnetwork)
     }
 }

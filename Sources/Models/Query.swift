@@ -22,8 +22,11 @@ public final class Query: Codable {
     public var data: JSON?
     public var decoder: JSON?
     
-    public init() {
-        
+    public init(network: String, subnetwork: String, data: JSON?, decoder: JSON?) {
+        self.network = network
+        self.subnetwork = subnetwork
+        self.data = data
+        self.decoder = decoder
     }
     
     public required init(from decodable: Decoder) throws {
@@ -35,14 +38,10 @@ public final class Query: Codable {
     }
     
     public func encode(to encoder: Encoder) throws {
-        do {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            try container.encode(network, forKey: .network)
-            try container.encode(network, forKey: .subnetwork)
-            try container.encode(data, forKey: .data)
-            try container.encode(decoder, forKey: .decoder)
-        } catch {
-            print(error)
-        }
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(network, forKey: .network)
+        try container.encode(network, forKey: .subnetwork)
+        try container.encode(data, forKey: .data)
+        try container.encode(decoder, forKey: .decoder)
     }
 }

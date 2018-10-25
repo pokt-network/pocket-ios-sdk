@@ -5,3 +5,4 @@ gem 'cocoapods-wholemodule'
 gem 'fastlane'
 gem 'jazzy'
 gem 'rubygems-bundler'
+gem "rubyzip", ">= 1.2.2"

@@ -21,8 +21,6 @@ public struct Wallet {
     public var network = ""
     public var subnetwork = ""
     public var data: [AnyHashable: Any]? = [AnyHashable: Any]()
-    static let keychainWrapperServiceName = "POCKET_IOS_SDK"
-    static let keychainWrapperAccessGroup = "POCKET_IOS_SDK_ACCESS_GROUP"
 
     public init(jsonString: String) throws {
         var dict = try Utility.jsonStringToDictionary(string: jsonString) ?? [AnyHashable: Any]()
@@ -74,7 +72,7 @@ public struct Wallet {
     }
     
     private static func getKeychainWrapper() -> KeychainWrapper {
-        return KeychainWrapper(serviceName: keychainWrapperServiceName, accessGroup: keychainWrapperAccessGroup)
+        return KeychainWrapper.standard
     }
     
     // Private functions

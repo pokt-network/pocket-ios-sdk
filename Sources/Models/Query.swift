@@ -40,7 +40,7 @@ public final class Query: Codable {
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(network, forKey: .network)
-        try container.encode(network, forKey: .subnetwork)
+        try container.encode(subnetwork, forKey: .subnetwork)
         try container.encode(data, forKey: .data)
         try container.encode(decoder, forKey: .decoder)
     }

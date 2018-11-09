@@ -14,7 +14,7 @@ public class Transaction: Codable {
         case network
         case subnetwork
         case serializedTransaction = "serialized_tx"
-        case tranactionMetadata = "tx_metadata"
+        case transactionMetadata = "tx_metadata"
     }
     
     public var network = ""
@@ -42,13 +42,13 @@ public class Transaction: Codable {
         network = try values.decodeIfPresent(String.self, forKey: .network) ?? ""
         subnetwork = try values.decodeIfPresent(String.self, forKey: .subnetwork) ?? ""
         serializedTransaction = try values.decodeIfPresent(String.self, forKey: .serializedTransaction) ?? ""
-        transactionMetadata = try values.decodeIfPresent(JSON.self, forKey: .tranactionMetadata)
+        transactionMetadata = try values.decodeIfPresent(JSON.self, forKey: .transactionMetadata)
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(serializedTransaction, forKey: .serializedTransaction)
-        try container.encode(transactionMetadata, forKey: .tranactionMetadata)
+        try container.encode(transactionMetadata, forKey: .transactionMetadata)
         try container.encode(network, forKey: .network)
         try container.encode(subnetwork, forKey: .subnetwork)
     }

@@ -9,13 +9,13 @@
 Pod::Spec.new do |s|
   # Meta
   s.name      = 'Pocket'
-  s.version   = '0.0.2'
+  s.version   = '0.0.3'
   s.license   = { :type => 'MIT' }
   s.homepage  = 'https://github.com/pokt-network/pocket-ios-sdk'
-  s.authors   = { 
-    'Luis C. de Leon' => 'luis@pokt.network', 
-    'Pabel Nunez Landestoy' => 'pabel@pokt.network', 
-    'Arthur Ariel Sabintsev' => 'arthur@sabintsev.com' 
+  s.authors   = {
+    'Luis C. de Leon' => 'luis@pokt.network',
+    'Pabel Nunez Landestoy' => 'pabel@pokt.network',
+    'Arthur Ariel Sabintsev' => 'arthur@sabintsev.com'
   }
   s.summary   = 'An iOS SDK to connect to the Pocket Network.'
 

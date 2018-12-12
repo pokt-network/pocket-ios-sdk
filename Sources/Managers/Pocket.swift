@@ -15,7 +15,7 @@ public enum PocketError: Error {
     case configurationError
 }
 
-public class Pocket {
+open class Pocket {
 
     // Singleton
     public static let shared = Pocket()

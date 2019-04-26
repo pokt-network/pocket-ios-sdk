@@ -1,3 +1,6 @@
+# NOTE:
+This repository has been deprecated, please visit the [PocketSwift repository for the latest on Pocket iOS client development.](https://github.com/pokt-network/pocket-swift)
+
 # pocket-ios-sdk
 The Pocket iOS SDK contains a generic interface that allows anyone to build a plugin that is specific to any blockchain. The SDK boils down to two main interactions, `sendTransaction`  for writes and `executeQuery` for reads to a given blockchain.  Each plugin will have its own metadata specific to it's own blockchain. All queries and transactions conform to what a Pocket Node is expecting. 
 
